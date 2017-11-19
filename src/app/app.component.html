@@ -1,0 +1,34 @@
+<div class="rootGrid">
+    <div class="toolBar">
+        <span>{{languageService.translate('GAME')}}:</span>
+        <select style="margin-right: 20px" [(ngModel)]="globalsService.selectedGame">
+            <option *ngFor="let game of globalsService.availableGames" [ngValue]="game">{{game.title}}</option>
+        </select>
+
+        <span>{{languageService.translate('LANGUAGE')}}:</span>
+        <select style="margin-right: 20px" [(ngModel)]="globalsService.selectedLanguage">
+            <option *ngFor="let language of globalsService.availableLanguages" [value]="language">{{language}}</option>
+        </select>
+
+        <span>{{languageService.translate('FILTER')}}:</span>
+        <input type="text" [(ngModel)]="globalsService.searchFilter"/>
+        <input id="filterAllLanguages" type="checkbox" [(ngModel)]="globalsService.isFilterAllLanguages"/>
+        <label style="margin-right: 20px" for="filterAllLanguages">{{languageService.translate('FILTER_ALL_LANGUAGES')}}</label>
+
+        <br/>
+
+        <span style="font-size: 0.75em">{{languageService.translate('FILTER_INFO')}}</span>
+        <br/>
+        <br/>
+    </div>
+
+    <div class="monstersPanel">
+        <app-monster-info></app-monster-info>
+    </div>
+
+    <span class="version">
+        <a style="vertical-align: top; margin-right: 10px; display: inline-block;" href="https://github.com/TanukiSharp/mh-monster-info" target="_blank">terms</a>
+        <pre style="display: inline-block; margin: 0">{{versionInfo}}</pre>
+    </span>
+
+</div>

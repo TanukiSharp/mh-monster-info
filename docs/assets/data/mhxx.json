@@ -1,0 +1,1662 @@
+[
+    {
+        "icon": 0,
+        "names": {
+            "EN": "Agnaktor",
+            "JP": "アグナコトル",
+            "FR": "Agnaktor"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "fire": 80,
+            "water": 330,
+            "ice": 170,
+            "thunder": 150,
+            "dragon": 230
+        }
+    },
+    {
+        "icon": 1,
+        "names": {
+            "EN": "Akantor",
+            "JP": "アカムトルム",
+            "FR": "Akantor"
+        },
+        "attack": {
+            "fire": 1,
+            "dragon": 2
+        },
+        "weak": {
+            "fire": 10,
+            "water": 130,
+            "ice": 50,
+            "thunder": 265,
+            "dragon": 310
+        }
+    },
+    {
+        "icon": 2,
+        "names": {
+            "EN": "Arzuros",
+            "JP": "アオアシラ",
+            "FR": "Arzuros"
+        },
+        "weak": {
+            "fire": 105,
+            "water": 25,
+            "thunder": 70,
+            "ice": 90
+        }
+    },
+    {
+        "icon": 3,
+        "names": {
+            "EN": "Redhelm Arzuros",
+            "JP": "紅兜アオアシラ",
+            "FR": "Arzuros Crâne-Ardent"
+        },
+        "weak": {
+            "fire": 50,
+            "thunder": 15,
+            "ice": 45
+        }
+    },
+    {
+        "icon": 4,
+        "names": {
+            "EN": "Astalos",
+            "JP": "ライゼクス",
+            "FR": "Astalos"
+        },
+        "attack": {
+            "thunder": 1,
+            "paralysis": 2,
+            "stun": 3
+        },
+        "weak": {
+            "fire": 60,
+            "water": 62,
+            "ice": 95,
+            "dragon": 40
+        }
+    },
+    {
+        "icon": 5,
+        "names": {
+            "EN": "Azurebolt Astalos",
+            "JP": "青電主ライゼクス",
+            "FR": "Astalos Exotique"
+        },
+        "attack": {
+            "thunder": 1,
+            "paralysis": 2
+        },
+        "weak": {
+            "fire": 55,
+            "water": 57,
+            "ice": 90,
+            "dragon": 35
+        }
+    },
+    {
+        "icon": 6,
+        "names": {
+            "EN": "Atlal Ka",
+            "JP": "アトラル・カ",
+            "FR": "Atlal Ka"
+        },
+        "weak": {
+            "water": 80,
+            "thunder": 115,
+            "ice": 20
+        }
+    },
+    {
+        "icon": 7,
+        "names": {
+            "EN": "Barioth",
+            "JP": "ベリオロス",
+            "FR": "Barioth"
+        },
+        "attack": {
+            "ice": 1,
+            "snowman": 2
+        },
+        "weak": {
+            "fire": 115,
+            "water": 25,
+            "thunder": 85,
+            "dragon": 50
+        }
+    },
+    {
+        "icon": 8,
+        "names": {
+            "EN": "Barroth",
+            "JP": "ボルボロス",
+            "FR": "Barroth"
+        },
+        "attack": {
+            "muddy": 1,
+            "water": 2
+        },
+        "weak": {
+            "fire": 150,
+            "ice": 90,
+            "dragon": 40
+        }
+    },
+    {
+        "icon": 9,
+        "names": {
+            "EN": "Basarios",
+            "JP": "バサルモス",
+            "FR": "Basarios"
+        },
+        "attack": {
+            "fire": 1,
+            "poison": 2,
+            "sleep": 3
+        },
+        "weak": {
+            "fire": 80,
+            "water": 115,
+            "thunder": 80,
+            "ice": 80,
+            "dragon": 133
+        }
+    },
+    {
+        "icon": 10,
+        "names": {
+            "EN": "Blangonga",
+            "JP": "ドドブランゴ",
+            "FR": "Blangonga"
+        },
+        "attack": {
+            "ice": 1,
+            "snowman": 2
+        },
+        "weak": {
+            "fire": 95,
+            "water": 25,
+            "thunder": 75
+        }
+    },
+    {
+        "icon": 11,
+        "names": {
+            "EN": "Brachydios",
+            "JP": "ブラキディオス",
+            "FR": "Brachydios"
+        },
+        "attack": {
+            "blast": 1
+        },
+        "weak": {
+            "water": 100,
+            "thunder": 30,
+            "ice": 70,
+            "dragon": 20
+        }
+    },
+    {
+        "icon": 12,
+        "names": {
+            "EN": "Raging Brachydios",
+            "JP": "猛り爆ぜるブラキディオス",
+            "FR": "Brachydios Critique"
+        },
+        "attack": {
+            "blast": 1
+        },
+        "weak": {
+            "water": 150,
+            "thunder": 70,
+            "ice": 220,
+            "dragon": 40
+        }
+    },
+    {
+        "icon": 13,
+        "names": {
+            "EN": "Bulldrome",
+            "JP": "ドスファンゴ",
+            "FR": "Bulldrome"
+        },
+        "weak": {
+            "fire": 30,
+            "water": 15,
+            "thunder": 50,
+            "ice": 5
+        }
+    },
+    {
+        "icon": 14,
+        "names": {
+            "EN": "Cephadrome",
+            "JP": "ドスガレオス",
+            "FR": "Cephadrome"
+        },
+        "attack": {
+            "water": 1,
+            "paralysis": 2
+        },
+        "weak": {
+            "fire": 5,
+            "water": 82,
+            "thunder": 95,
+            "ice": 132,
+            "dragon": 35
+        }
+    },
+    {
+        "icon": 15,
+        "names": {
+            "EN": "Congalala",
+            "JP": "ババコンガ",
+            "FR": "Congalala"
+        },
+        "attack": {
+            "fire": 1,
+            "sleep": 2,
+            "soiled": 3,
+            "poison": 4,
+            "paralysis": 5
+        },
+        "weak": {
+            "fire": 155,
+            "water": 80,
+            "thunder": 80,
+            "ice": 95
+        }
+    },
+    {
+        "icon": 16,
+        "names": {
+            "EN": "Daimyo Hermitaur",
+            "JP": "ダイミョウザザミ",
+            "FR": "Hermitaur Daimyo"
+        },
+        "attack": {
+            "water": 1,
+            "poison": 2
+        },
+        "weak": {
+            "fire": 355,
+            "water": 115,
+            "thunder": 290,
+            "ice": 170,
+            "dragon": 35
+        }
+    },
+    {
+        "icon": 17,
+        "names": {
+            "EN": "Stonefist Hermitaur",
+            "JP": "矛砕ダイミョウザザミ",
+            "FR": "Hermitaur Poing-fer"
+        },
+        "attack": {
+            "water": 1
+        },
+        "weak": {
+            "fire": 70,
+            "thunder": 195,
+            "ice": 105
+        }
+    },
+    {
+        "icon": 18,
+        "names": {
+            "EN": "Deviljho",
+            "JP": "イビルジョー",
+            "FR": "Deviljho"
+        },
+        "attack": {
+            "dragon": 1,
+            "defdown": 2,
+            "fire": 3,
+            "ice": 4,
+            "water": 5
+        },
+        "weak": {
+            "fire": 110,
+            "water": 110,
+            "thunder": 215,
+            "ice": 85,
+            "dragon": 215
+        }
+    },
+    {
+        "icon": 19,
+        "names": {
+            "EN": "Savage Deviljho",
+            "JP": "怒り喰らうイビルジョー",
+            "FR": "Deviljho Affamé"
+        },
+        "attack": {
+            "dragon": 1,
+            "defdown": 2,
+            "fire": 3,
+            "ice": 4,
+            "water": 5
+        },
+        "weak": {
+            "fire": 200,
+            "water": 200,
+            "thunder": 320,
+            "ice": 200,
+            "dragon": 200
+        }
+    },
+    {
+        "icon": 20,
+        "names": {
+            "EN": "Diablos",
+            "JP": "ディアブロス",
+            "FR": "Diablos"
+        },
+        "weak": {
+            "fire": 20,
+            "water": 90,
+            "thunder": 90,
+            "ice": 143,
+            "dragon": 90
+        }
+    },
+    {
+        "icon": 21,
+        "names": {
+            "EN": "Massacre Demon Diablos",
+            "JP": "鏖魔ディアブロス"
+        },
+        "weak": {
+            "water": 276,
+            "thunder": 175,
+            "ice": 175,
+            "dragon": 175
+        }
+    },
+    {
+        "icon": 22,
+        "names": {
+            "EN": "Duramboros",
+            "JP": "ドボルベルク",
+            "FR": "Duramboros"
+        },
+        "attack": {
+            "stun": 1
+        },
+        "weak": {
+            "fire": 280,
+            "water": 75,
+            "thunder": 175,
+            "ice": 195,
+            "dragon": 150
+        }
+    },
+    {
+        "icon": 23,
+        "names": {
+            "EN": "Gammoth",
+            "JP": "ガムート",
+            "FR": "Gammoth"
+        },
+        "attack": {
+            "ice": 1,
+            "snowman": 2
+        },
+        "weak": {
+            "fire": 220,
+            "water": 35,
+            "thunder": 105
+        }
+    },
+    {
+        "icon": 24,
+        "names": {
+            "EN": "Silver Ridge Gammoth",
+            "JP": "銀嶺ガムート"
+        },
+        "attack": {
+            "ice": 1,
+            "snowman": 2
+        },
+        "weak": {
+            "fire": 150,
+            "water": 30,
+            "thunder": 95
+        }
+    },
+    {
+        "icon": 25,
+        "names": {
+            "EN": "Gendrome",
+            "JP": "ドスゲネポス",
+            "FR": "Gendrome"
+        },
+        "attack": {
+            "paralysis": 1,
+            "stun": 2
+        },
+        "weak": {
+            "fire": 35,
+            "water": 35,
+            "thunder": 55,
+            "ice": 70,
+            "dragon": 15
+        }
+    },
+    {
+        "icon": 26,
+        "names": {
+            "EN": "Giadrome",
+            "JP": "ドスギアノス",
+            "FR": "Giadrome"
+        },
+        "attack": {
+            "ice": 1,
+            "snowman": 2
+        },
+        "weak": {
+            "fire": 70,
+            "water": 35,
+            "thunder": 55,
+            "ice": 10,
+            "dragon": 15
+        }
+    },
+    {
+        "icon": 27,
+        "names": {
+            "EN": "Glavenus",
+            "JP": "ディノバルド",
+            "FR": "Glavenus"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 310,
+            "thunder": 110,
+            "ice": 160,
+            "dragon": 120
+        }
+    },
+    {
+        "icon": 28,
+        "names": {
+            "EN": "Hellblade Glavenus",
+            "JP": "燼滅刃ディノバルド",
+            "FR": "Glavenus Lame-chaos"
+        },
+        "attack": {
+            "fire": 1,
+            "blast": 2
+        },
+        "weak": {
+            "water": 215,
+            "thunder": 175,
+            "ice": 190,
+            "dragon": 175
+        }
+    },
+    {
+        "icon": 29,
+        "names": {
+            "EN": "Gore Magala",
+            "JP": "ゴア・マガラ",
+            "FR": "Gore Magala"
+        },
+        "attack": {
+            "virus": 1
+        },
+        "weak": {
+            "fire": 235,
+            "thunder": 150,
+            "ice": 70,
+            "dragon": 125
+        }
+    },
+    {
+        "icon": 30,
+        "names": {
+            "EN": "Chaotic Gore Magala",
+            "JP": "渾沌に呻くゴア・マガラ",
+            "FR": "Gore Magala du chaos"
+        },
+        "attack": {
+            "virus": 1
+        },
+        "weak": {
+            "fire": 270,
+            "thunder": 160,
+            "ice": 70,
+            "dragon": 190
+        }
+    },
+    {
+        "icon": 31,
+        "names": {
+            "EN": "Gravios",
+            "JP": "グラビモス",
+            "FR": "Gravios"
+        },
+        "attack": {
+            "fire": 1,
+            "sleep": 2
+        },
+        "weak": {
+            "fire": 20,
+            "water": 430,
+            "thunder": 80,
+            "ice": 110,
+            "dragon": 265
+        }
+    },
+    {
+        "icon": 32,
+        "names": {
+            "EN": "Great Maccao",
+            "JP": "ドスマッカォ",
+            "FR": "Grand Maccao"
+        },
+        "weak": {
+            "fire": 80,
+            "water": 50,
+            "thunder": 30,
+            "ice": 50,
+            "dragon": 10
+        }
+    },
+    {
+        "icon": 33,
+        "names": {
+            "EN": "Gypceros",
+            "JP": "ゲリョス",
+            "FR": "Gypceros"
+        },
+        "attack": {
+            "poison": 1,
+            "stun": 2
+        },
+        "weak": {
+            "fire": 260,
+            "water": 90,
+            "ice": 180,
+            "dragon": 140
+        }
+    },
+    {
+        "icon": 34,
+        "names": {
+            "EN": "Malfestio",
+            "JP": "ホロロホルル",
+            "FR": "Malfestio"
+        },
+        "attack": {
+            "sleep": 1,
+            "confusion": 2
+        },
+        "weak": {
+            "fire": 45,
+            "water": 80,
+            "thunder": 35,
+            "ice": 30,
+            "dragon": 30
+        }
+    },
+    {
+        "icon": 35,
+        "names": {
+            "EN": "Hidden Haze Malfestio",
+            "JP": "朧隠ホロロホルル"
+        },
+        "attack": {
+            "sleep": 1,
+            "confusion": 2
+        },
+        "weak": {
+            "fire": 45,
+            "water": 80,
+            "thunder": 35,
+            "ice": 30,
+            "dragon": 30
+        }
+    },
+    {
+        "icon": 36,
+        "names": {
+            "EN": "Iodrome",
+            "JP": "ドスイーオス",
+            "FR": "Iodrome"
+        },
+        "attack": {
+            "poison": 1
+        },
+        "weak": {
+            "fire": 35,
+            "water": 55,
+            "thunder": 55,
+            "ice": 20,
+            "dragon": 15
+        }
+    },
+    {
+        "icon": 37,
+        "names": {
+            "EN": "Kecha Wacha",
+            "JP": "ケチャワチャ",
+            "FR": "Kecha-Wacha"
+        },
+        "attack": {
+            "water": 1
+        },
+        "weak": {
+            "fire": 195,
+            "thunder": 105,
+            "ice": 75
+        }
+    },
+    {
+        "icon": 38,
+        "names": {
+            "EN": "Khezu",
+            "JP": "フルフル",
+            "FR": "Khezu"
+        },
+        "attack": {
+            "thunder": 1,
+            "paralysis": 2,
+            "stun": 3
+        },
+        "weak": {
+            "fire": 270,
+            "water": 60,
+            "ice": 60,
+            "dragon": 60
+        }
+    },
+    {
+        "icon": 39,
+        "names": {
+            "EN": "Lagiacrus",
+            "JP": "ラギアクルス",
+            "FR": "Lagiacrus"
+        },
+        "attack": {
+            "thunder": 1,
+            "water": 2
+        },
+        "weak": {
+            "fire": 95,
+            "ice": 60,
+            "dragon": 60
+        }
+    },
+    {
+        "icon": 40,
+        "names": {
+            "EN": "Lagombi",
+            "JP": "ウルクスス",
+            "FR": "Lagombi"
+        },
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 100,
+            "thunder": 55
+        }
+    },
+    {
+        "icon": 41,
+        "names": {
+            "EN": "Snowbaron Lagombi",
+            "JP": "大雪主ウルクスス",
+            "FR": "Lagombi Maître-neige"
+        },
+        "attack": {
+            "ice": 1,
+            "snowman": 2
+        },
+        "weak": {
+            "fire": 80,
+            "thunder": 55
+        }
+    },
+    {
+        "icon": 42,
+        "names": {
+            "EN": "Lavasioth",
+            "JP": "ヴォルガノス",
+            "FR": "Lavasioth"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 110,
+            "thunder": 70,
+            "ice": 70,
+            "dragon": 35
+        }
+    },
+    {
+        "icon": 43,
+        "names": {
+            "EN": "Mizutsune",
+            "JP": "タマミツネ",
+            "FR": "Mizutsune"
+        },
+        "attack": {
+            "water": 1
+        },
+        "weak": {
+            "fire": 116,
+            "thunder": 260,
+            "ice": 100,
+            "dragon": 171
+        }
+    },
+    {
+        "icon": 44,
+        "names": {
+            "EN": "Heavenly Eye Mizutsune",
+            "JP": "天眼タマミツネ"
+        },
+        "attack": {
+            "water": 1,
+            "fire": 2
+        },
+        "weak": {
+            "fire": 116,
+            "thunder": 220,
+            "ice": 100,
+            "dragon": 171
+        }
+    },
+    {
+        "icon": 45,
+        "names": {
+            "EN": "Najarala",
+            "JP": "ガララアジャラ",
+            "FR": "Najarala"
+        },
+        "attack": {
+            "paralysis": 1,
+            "stun": 2
+        },
+        "weak": {
+            "fire": 60,
+            "water": 150,
+            "thunder": 90,
+            "ice": 270,
+            "dragon": 40
+        }
+    },
+    {
+        "icon": 46,
+        "names": {
+            "EN": "Nargacuga",
+            "JP": "ナルガクルガ",
+            "FR": "Nargacuga"
+        },
+        "weak": {
+            "fire": 220,
+            "water": 60,
+            "thunder": 300,
+            "ice": 90,
+            "dragon": 160
+        }
+    },
+    {
+        "icon": 47,
+        "names": {
+            "EN": "Silverwind Nargacuga",
+            "JP": "白疾風ナルガクルガ",
+            "FR": "Nargacuga Vent-acier"
+        },
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 220,
+            "water": 65,
+            "thunder": 305,
+            "ice": 100,
+            "dragon": 170
+        }
+    },
+    {
+        "icon": 48,
+        "names": {
+            "EN": "Nerscylla",
+            "JP": "ネルスキュラ",
+            "FR": "Nerscylla"
+        },
+        "attack": {
+            "poison": 1,
+            "npoison": 2,
+            "sleep": 3
+        },
+        "weak": {
+            "fire": 150,
+            "thunder": 150,
+            "ice": 50
+        }
+    },
+    {
+        "icon": 49,
+        "names": {
+            "EN": "Nibelsnarf",
+            "JP": "ハプルボッカ",
+            "FR": "Nibelsnarf"
+        },
+        "attack": {
+            "water": 1
+        },
+        "weak": {
+            "water": 170,
+            "thunder": 230,
+            "ice": 270,
+            "dragon": 80
+        }
+    },
+    {
+        "icon": 50,
+        "names": {
+            "EN": "Plesioth",
+            "JP": "ガノトトス",
+            "FR": "Plesioth"
+        },
+        "attack": {
+            "water": 1,
+            "sleep": 2
+        },
+        "weak": {
+            "fire": 130,
+            "thunder": 155,
+            "ice": 35,
+            "dragon": 35
+        }
+    },
+    {
+        "icon": 51,
+        "names": {
+            "EN": "Rajang",
+            "JP": "ラージャン",
+            "FR": "Rajang"
+        },
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "fire": 10,
+            "water": 50,
+            "ice": 180
+        }
+    },
+    {
+        "icon": 52,
+        "names": {
+            "EN": "Furious Rajang",
+            "JP": "激昂したラージャン",
+            "FR": "Rajang Furieux"
+        },
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "fire": 10,
+            "water": 50,
+            "ice": 180
+        }
+    },
+    {
+        "icon": 53,
+        "names": {
+            "EN": "Rathalos",
+            "JP": "リオレウス",
+            "FR": "Rathalos"
+        },
+        "attack": {
+            "fire": 1,
+            "stun": 2,
+            "poison": 3
+        },
+        "weak": {
+            "fire": 15,
+            "water": 55,
+            "thunder": 110,
+            "ice": 55,
+            "dragon": 130
+        }
+    },
+    {
+        "icon": 54,
+        "names": {
+            "EN": "Dreadking Rathalos",
+            "JP": "黒炎王リオレウス",
+            "FR": "Rathalos Roi-enfer"
+        },
+        "attack": {
+            "fire": 1,
+            "npoison": 2
+        },
+        "weak": {
+            "fire": 30,
+            "water": 110,
+            "thunder": 220,
+            "ice": 110,
+            "dragon": 295
+        }
+    },
+    {
+        "icon": 55,
+        "names": {
+            "EN": "Silver Rathalos",
+            "JP": "リオレウス希少種",
+            "FR": "Rathalos d'argent"
+        },
+        "attack": {
+            "fire": 1,
+            "stun": 2,
+            "poison": 3
+        },
+        "weak": {
+            "fire": 20,
+            "water": 300,
+            "thunder": 230,
+            "ice": 145
+        }
+    },
+    {
+        "icon": 56,
+        "names": {
+            "EN": "Rathian",
+            "JP": "リオレイア",
+            "FR": "Rathian"
+        },
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "fire": 15,
+            "water": 60,
+            "thunder": 105,
+            "ice": 60,
+            "dragon": 145
+        }
+    },
+    {
+        "icon": 57,
+        "names": {
+            "EN": "Dreadqueen Rathian",
+            "JP": "紫毒姫リオレイア",
+            "FR": "Rathian Reine-poison"
+        },
+        "attack": {
+            "fire": 1,
+            "poison": 2,
+            "npoison": 3,
+            "dpoison": 4
+        },
+        "weak": {
+            "fire": 30,
+            "water": 120,
+            "thunder": 220,
+            "ice": 120,
+            "dragon": 295
+        }
+    },
+    {
+        "icon": 58,
+        "names": {
+            "EN": "Gold Rathian",
+            "JP": "リオレイア希少種",
+            "FR": "Rathian d'or"
+        },
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "fire": 20,
+            "water": 200,
+            "thunder": 285,
+            "ice": 115
+        }
+    },
+    {
+        "icon": 59,
+        "names": {
+            "EN": "Royal Ludroth",
+            "JP": "ロアルドロス",
+            "FR": "Ludroth Royal"
+        },
+        "attack": {
+            "water": 1
+        },
+        "weak": {
+            "fire": 200,
+            "thunder": 65,
+            "ice": 50,
+            "dragon": 10
+        }
+    },
+    {
+        "icon": 60,
+        "names": {
+            "EN": "Seltas",
+            "JP": "アルセルタス",
+            "FR": "Seltas"
+        },
+        "attack": {
+            "defdown": 1,
+            "fatigue": 2
+        },
+        "weak": {
+            "fire": 80,
+            "water": 40,
+            "thunder": 110,
+            "ice": 40
+        }
+    },
+    {
+        "icon": 61,
+        "names": {
+            "EN": "Seltas Queen",
+            "JP": "ゲネル・セルタス",
+            "FR": "Reine Seltas"
+        },
+        "attack": {
+            "water": 1,
+            "soiled": 2,
+            "stun": 3
+        },
+        "weak": {
+            "fire": 230,
+            "thunder": 100,
+            "ice": 210
+        }
+    },
+    {
+        "icon": 62,
+        "names": {
+            "EN": "Seregios",
+            "JP": "セルレギオス",
+            "FR": "Seregios"
+        },
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 30,
+            "water": 130,
+            "thunder": 270,
+            "ice": 150,
+            "dragon": 80
+        }
+    },
+    {
+        "icon": 63,
+        "names": {
+            "EN": "Shogun Ceanataur",
+            "JP": "ショウグンギザミ",
+            "FR": "Ceanataur Shogun"
+        },
+        "attack": {
+            "water": 1,
+            "bleeding": 2
+        },
+        "weak": {
+            "fire": 145,
+            "water": 55,
+            "thunder": 190,
+            "ice": 105
+        }
+    },
+    {
+        "icon": 64,
+        "names": {
+            "EN": "Armor Shredder Shogun Ceanataur",
+            "JP": "鎧裂ショウグンギザミ"
+        },
+        "attack": {
+            "water": 1,
+            "bleeding": 2,
+            "defdown": 3
+        },
+        "weak": {
+            "fire": 145,
+            "water": 80,
+            "thunder": 225,
+            "ice": 145
+        }
+    },
+    {
+        "icon": 65,
+        "names": {
+            "EN": "Tetsucabra",
+            "JP": "テツカブラ",
+            "FR": "Tetsucabra"
+        },
+        "attack": {
+            "fatigue": 1,
+            "ice": 2
+        },
+        "weak": {
+            "water": 270,
+            "thunder": 235,
+            "ice": 95,
+            "dragon": 80
+        }
+    },
+    {
+        "icon": 66,
+        "names": {
+            "EN": "Drilltusk Tetsucabra",
+            "JP": "岩穿テツカブラ",
+            "FR": "Tetsucabra Féroce"
+        },
+        "attack": {
+            "fatigue": 1,
+            "stun": 2,
+            "ice": 3
+        },
+        "weak": {
+            "water": 170,
+            "thunder": 145,
+            "ice": 60,
+            "dragon": 80
+        }
+    },
+    {
+        "icon": 67,
+        "names": {
+            "EN": "Tigrex",
+            "JP": "ティガレックス",
+            "FR": "Tigrex"
+        },
+        "attack": {
+            "snowman": 1,
+            "water": 2,
+            "ice": 3
+        },
+        "weak": {
+            "fire": 30,
+            "water": 140,
+            "thunder": 245,
+            "ice": 80,
+            "dragon": 160
+        }
+    },
+    {
+        "icon": 68,
+        "names": {
+            "EN": "Grimclaw Tigrex",
+            "JP": "荒鉤爪ティガレックス",
+            "FR": "Tigrex Griffe-sombre"
+        },
+        "attack": {
+            "ice": 1,
+            "water": 2
+        },
+        "weak": {
+            "fire": 30,
+            "water": 160,
+            "thunder": 275,
+            "ice": 110,
+            "dragon": 200
+        }
+    },
+    {
+        "icon": 69,
+        "names": {
+            "EN": "Ukanlos",
+            "JP": "ウカムルバス",
+            "FR": "Ukanlos"
+        },
+        "attack": {
+            "ice": 1,
+            "snowman": 2
+        },
+        "weak": {
+            "fire": 265,
+            "water": 70,
+            "thunder": 220,
+            "dragon": 185
+        }
+    },
+    {
+        "icon": 70,
+        "names": {
+            "EN": "Uragaan",
+            "JP": "ウラガンキン",
+            "FR": "Uragaan"
+        },
+        "attack": {
+            "fire": 1,
+            "sleep": 2
+        },
+        "weak": {
+            "water": 370,
+            "thunder": 40,
+            "ice": 210,
+            "dragon": 335
+        }
+    },
+    {
+        "icon": 71,
+        "names": {
+            "EN": "Crystalbeard Uragaan",
+            "JP": "宝纏ウラガンキン",
+            "FR": "Uragaan Roi-cristal"
+        },
+        "attack": {
+            "fire": 1,
+            "sleep": 2,
+            "stun": 3
+        },
+        "weak": {
+            "water": 270,
+            "thunder": 80,
+            "ice": 120,
+            "dragon": 205
+        }
+    },
+    {
+        "icon": 72,
+        "names": {
+            "EN": "Velocidrome",
+            "JP": "ドスランポス",
+            "FR": "Velocidrome"
+        },
+        "attack": {
+            "soiled": 1,
+            "defdown": 2
+        },
+        "weak": {
+            "fire": 55,
+            "water": 55,
+            "thunder": 55,
+            "ice": 70,
+            "dragon": 15
+        }
+    },
+    {
+        "icon": 73,
+        "names": {
+            "EN": "Volvidon",
+            "JP": "ラングロトラ",
+            "FR": "Volvidon"
+        },
+        "attack": {
+            "paralysis": 1,
+            "soiled": 2
+        },
+        "weak": {
+            "water": 105,
+            "thunder": 55,
+            "ice": 75
+        }
+    },
+    {
+        "icon": 74,
+        "names": {
+            "EN": "Yian Garuga",
+            "JP": "イャンガルルガ",
+            "FR": "Yian Garuga"
+        },
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "fire": 25,
+            "water": 145,
+            "thunder": 25,
+            "ice": 85,
+            "dragon": 65
+        }
+    },
+    {
+        "icon": 75,
+        "names": {
+            "EN": "Deadeye Yian Garuga",
+            "JP": "隻眼イャンガルルガ",
+            "FR": "Yian Garuga Œil-mort"
+        },
+        "attack": {
+            "fire": 1,
+            "poison": 2,
+            "npoison": 3,
+            "dpoison": 4
+        },
+        "weak": {
+            "fire": 50,
+            "water": 270,
+            "thunder": 50,
+            "ice": 170,
+            "dragon": 130
+        }
+    },
+    {
+        "icon": 76,
+        "names": {
+            "EN": "Yian Kut-Ku",
+            "JP": "イャンクック",
+            "FR": "Yian Kut-Ku"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "fire": 45,
+            "water": 100,
+            "thunder": 125,
+            "ice": 150,
+            "dragon": 20
+        }
+    },
+    {
+        "icon": 77,
+        "names": {
+            "EN": "Zamtrios",
+            "JP": "ザボアザギル",
+            "FR": "Zamtrios"
+        },
+        "attack": {
+            "water": 1,
+            "ice": 2,
+            "snowman": 3
+        },
+        "weak": {
+            "fire": 270,
+            "thunder": 275,
+            "dragon": 90
+        }
+    },
+    {
+        "icon": 78,
+        "names": {
+            "EN": "Zinogre",
+            "JP": "ジンオウガ",
+            "FR": "Zinogre"
+        },
+        "attack": {
+            "thunder": 1,
+            "paralysis": 2
+        },
+        "weak": {
+            "fire": 125,
+            "water": 165,
+            "ice": 230,
+            "dragon": 85
+        }
+    },
+    {
+        "icon": 79,
+        "names": {
+            "EN": "Thunderlord Zinogre",
+            "JP": "金雷公ジンオウガ",
+            "FR": "Zinogre Feu-du-ciel"
+        },
+        "attack": {
+            "thunder": 1,
+            "stun": 2
+        },
+        "weak": {
+            "fire": 125,
+            "water": 155,
+            "ice": 245,
+            "dragon": 85
+        }
+    },
+    {
+        "icon": 80,
+        "names": {
+            "EN": "Alatreon",
+            "JP": "アルバトリオン",
+            "FR": "Alatreon"
+        },
+        "attack": {
+            "dragon": 1,
+            "ice": 2,
+            "thunder": 3,
+            "fire": 4,
+            "snowman": 5
+        },
+        "weak": {
+            "fire": 95,
+            "water": 115,
+            "thunder": 30,
+            "ice": 85,
+            "dragon": 150
+        }
+    },
+    {
+        "icon": 81,
+        "names": {
+            "EN": "Amatsu",
+            "JP": "アマツマガツチ",
+            "FR": "Amatsu"
+        },
+        "attack": {
+            "water": 1
+        },
+        "weak": {
+            "fire": 250,
+            "thunder": 70,
+            "ice": 80,
+            "dragon": 230
+        }
+    },
+    {
+        "icon": 82,
+        "names": {
+            "EN": "Chameleos",
+            "JP": "オオナズチ",
+            "FR": "Chameleos"
+        },
+        "attack": {
+            "dragon": 1,
+            "poison": 2
+        },
+        "weak": {
+            "fire": 345,
+            "thunder": 205,
+            "ice": 10,
+            "dragon": 270
+        }
+    },
+    {
+        "icon": 80,
+        "names": {
+            "EN": "Fatalis",
+            "JP": "ミラボレアス",
+            "FR": "Fatalis"
+        },
+        "attack": {
+            "dragon": 1,
+            "fire": 2
+        },
+        "weak": {
+            "fire": 115,
+            "water": 40,
+            "thunder": 40,
+            "ice": 80,
+            "dragon": 140
+        }
+    },
+    {
+        "icon": 80,
+        "names": {
+            "EN": "Crimson Fatalis",
+            "JP": "ミラボレアス（紅龍）",
+            "FR": "Fatalis Pourpre"
+        },
+        "attack": {
+            "dragon": 1,
+            "fire": 2,
+            "blast": 3
+        },
+        "weak": {
+            "fire": 40,
+            "water": 170,
+            "thunder": 85,
+            "ice": 280,
+            "dragon": 290
+        }
+    },
+    {
+        "icon": 80,
+        "names": {
+            "EN": "White Fatalis",
+            "JP": "ミラボレアス(祖龍)",
+            "FR": "Fatalis Blanc"
+        },
+        "attack": {
+            "thunder": 1,
+            "dragon": 2
+        },
+        "weak": {
+            "fire": 200,
+            "water": 80,
+            "thunder": 80,
+            "ice": 160,
+            "dragon": 215
+        }
+    },
+    {
+        "icon": 83,
+        "names": {
+            "EN": "Kirin",
+            "JP": "キリン",
+            "FR": "Kirin"
+        },
+        "attack": {
+            "thunder": 1,
+            "paralysis": 2
+        },
+        "weak": {
+            "fire": 70,
+            "water": 70,
+            "ice": 60,
+            "dragon": 40
+        }
+    },
+    {
+        "icon": 84,
+        "names": {
+            "EN": "Kushala Daora",
+            "JP": "クシャルダオラ",
+            "FR": "Kushala Daora"
+        },
+        "attack": {
+            "dragon": 1,
+            "ice": 2,
+            "snowman": 3
+        },
+        "weak": {
+            "fire": 135,
+            "water": 50,
+            "thunder": 355,
+            "dragon": 355
+        }
+    },
+    {
+        "icon": 85,
+        "names": {
+            "EN": "Lao-Shan Lung",
+            "JP": "ラオシャンロン",
+            "FR": "Lao-Shan Lung"
+        },
+        "weak": {
+            "fire": 210,
+            "water": 50,
+            "thunder": 140,
+            "ice": 50,
+            "dragon": 225
+        }
+    },
+    {
+        "icon": 86,
+        "names": {
+            "EN": "Nakarkos",
+            "JP": "オストガロア",
+            "FR": "Nakarkos"
+        },
+        "attack": {
+            "dragon": 1,
+            "fire": 2,
+            "blast": 3,
+            "thunder": 4,
+            "paralysis": 5
+        },
+        "weak": {
+            "fire": 105,
+            "thunder": 40,
+            "dragon": 160
+        }
+    },
+    {
+        "icon": 87,
+        "names": {
+            "EN": "Shagaru Magala",
+            "JP": "シャガルマガラ",
+            "FR": "Shagaru Magala"
+        },
+        "attack": {
+            "virus": 1
+        },
+        "weak": {
+            "fire": 240,
+            "thunder": 150,
+            "ice": 80,
+            "dragon": 280
+        }
+    },
+    {
+        "icon": 88,
+        "names": {
+            "EN": "Teostra",
+            "JP": "テオ・テスカトル",
+            "FR": "Teostra"
+        },
+        "attack": {
+            "dragon": 1,
+            "fire": 2,
+            "blast": 3,
+            "stun": 4
+        },
+        "weak": {
+            "water": 145,
+            "thunder": 80,
+            "ice": 150,
+            "dragon": 150
+        }
+    },
+    {
+        "icon": 89,
+        "names": {
+            "EN": "Valphalk",
+            "JP": "バルファルク",
+            "FR": "Valphalk"
+        },
+        "attack": {
+            "dragon": 1
+        },
+        "weak": {
+            "fire": 255,
+            "water": 255,
+            "thunder": 255,
+            "ice": 255
+        }
+    }
+]

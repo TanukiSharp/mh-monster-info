@@ -1,0 +1,27 @@
+.rootGrid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr auto;
+    height: 100%;
+}
+
+.toolBar {
+    margin: 6px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.monstersPanel {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    overflow-y: auto;
+}
+
+.version {
+    padding: 4px;
+    font-size: 0.75em;
+    text-align: right;
+    grid-row: 1;
+    grid-column: 3;
+}

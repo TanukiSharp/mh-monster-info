@@ -1,0 +1,29 @@
+{
+    "EN": {
+        "GAME": "Game",
+        "LANGUAGE": "Language",
+        "FILTER": "Filter",
+        "FILTER_INFO": "Filter can have several values, separated by commas. Put an equal (=) sign before the filter for an exact match.",
+        "ATTACK": "Attack",
+        "WEAKNESS": "Weakness",
+        "FILTER_ALL_LANGUAGES": "all languages"
+    },
+    "JP": {
+        "GAME": "ゲーム",
+        "LANGUAGE": "言語",
+        "FILTER": "フィルター",
+        "FILTER_INFO": "フィルターをする用に複数値を入力する可能です。コンマで分割になります。完全対応ようフィルターの前にイコール（=）字を入力する可能です。",
+        "ATTACK": "攻撃属性",
+        "WEAKNESS": "弱点属性",
+        "FILTER_ALL_LANGUAGES": "すべての言語"
+    },
+    "FR": {
+        "GAME": "Jeu",
+        "LANGUAGE": "Langue",
+        "FILTER": "Filtre",
+        "FILTER_INFO": "Le filtre peux comprendre plusieurs valeurs, sépararées par des virgules. Mettez un signe égal (=) avant le valeur pour une correspondance exacte.",
+        "ATTACK": "Attaque",
+        "WEAKNESS": "Faiblesse",
+        "FILTER_ALL_LANGUAGES": "toutes les langues"
+    }
+}

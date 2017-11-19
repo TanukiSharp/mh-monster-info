@@ -1,0 +1,20 @@
+<div class="rootPanel" [hidden]="!monsterInfoViewModel.isVisible">
+    <div class="monsterGrid">
+        <div class="monsterAttack">
+            <span style="font-size: 0.65em;">{{languageService.translate('ATTACK')}}</span>
+            <div *ngFor="let attribute of monsterInfoViewModel.monsterInfo.attacks">
+                <app-attribute [showValues]="false" [attribute]="attribute"></app-attribute>
+            </div>
+        </div>
+
+        <span class="monsterName"><b>{{languageService.getName(monsterInfoViewModel.monsterInfo.names)}}</b></span>
+        <img class="monsterIcon" src="./assets/images/monsters/{{globalsService.selectedGame.fileNamePart}}/{{monsterInfoViewModel.monsterInfo.iconNumber}}.png" width="120" height="120"/>
+
+        <div class="monsterWeak">
+            <span style="font-size: 0.65em;">{{languageService.translate('WEAKNESS')}}</span>
+            <div *ngFor="let attribute of monsterInfoViewModel.monsterInfo.weaks">
+                <app-attribute [attribute]="attribute"></app-attribute>
+            </div>
+        </div>
+    </div>
+</div>

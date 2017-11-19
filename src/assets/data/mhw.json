@@ -1,0 +1,254 @@
+[
+    {
+        "icon": 0,
+        "names": {
+            "EN": "Anjanath",
+            "JP": "ジアンジャナフ",
+            "FR": "Anjanath"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": -1,
+            "ice": -2
+        }
+    },
+    {
+        "icon": 1,
+        "names": {
+            "EN": "Barroth",
+            "FR": "Barroth",
+            "JP": "ボルボロス"
+        },
+        "attack": {
+            "muddy": 1,
+            "water": 2
+        },
+        "weak": {
+            "water": -1,
+            "fire": -2,
+            "ice": -3
+        }
+    },
+    {
+        "icon": 2,
+        "names": {
+            "EN": "Diablos",
+            "JP": "ディアブロス",
+            "FR": "Diablos"
+        },
+        "attack": {
+        },
+        "weak": {
+            "ice": -1
+        }
+    },
+    {
+        "icon": 3,
+        "names": {
+            "EN": "Great Girros",
+            "JP": "ドスギルオス",
+            "FR": "Grand Girros"
+        },
+        "attack": {
+            "paralysis": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 4,
+        "names": {
+            "EN": "Great Jagras",
+            "JP": "ドスジャグラス",
+            "FR": "Grand Jagras"
+        },
+        "attack": {
+        },
+        "weak": {
+            "fire": -1,
+            "thunder": -2
+        }
+    },
+    {
+        "icon": 5,
+        "names": {
+            "EN": "Jyuratodus",
+            "JP": "ジュラトドス",
+            "FR": "Jyuratodus"
+        },
+        "attack": {
+            "water": 1,
+            "muddy": 2
+        },
+        "weak": {
+            "thunder": -1,
+            "fire": -2
+        }
+    },
+    {
+        "icon": 6,
+        "names": {
+            "EN": "Kulu-Ya-Ku",
+            "JP": "クルルヤック",
+            "FR": "Kulu-Ya-Ku"
+        },
+        "attack": {
+        },
+        "weak": {
+            "water": -1
+        }
+    },
+    {
+        "icon": 7,
+        "names": {
+            "EN": "Legiana",
+            "JP": "レイギエナ",
+            "FR": "Legiana"
+        },
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 8,
+        "names": {
+            "EN": "Nergigante",
+            "JP": "ネルギガンテ",
+            "FR": "Nergigante"
+        },
+        "attack": {
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 9,
+        "names": {
+            "EN": "Odogaron",
+            "JP": "オドガロン",
+            "FR": "Odogaron"
+        },
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 10,
+        "names": {
+            "EN": "Paolumu",
+            "JP": "パオウルムー",
+            "FR": "Paolumu"
+        },
+        "attack": {
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 11,
+        "names": {
+            "EN": "Pukei-Pukei",
+            "JP": "プケプケ",
+            "FR": "Pukei-Pukei"
+        },
+        "attack": {
+            "poison": 1
+        },
+        "weak": {
+            "thunder": -1
+        }
+    },
+    {
+        "icon": 12,
+        "names": {
+            "EN": "Radobaan",
+            "JP": "ラドバルキン",
+            "FR": "Radobaan"
+        },
+        "attack": {
+            "sleep": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 13,
+        "names": {
+            "EN": "Rathalos",
+            "JP": "リオレウス",
+            "FR": "Rathalos"
+        },
+        "attack": {
+            "fire": 1,
+            "stun": 2,
+            "poison": 3
+        },
+        "weak": {
+            "dragon": -1,
+            "thunder": -2,
+            "ice": -3,
+            "water": -4
+        }
+    },
+    {
+        "icon": 14,
+        "names": {
+            "EN": "Rathian",
+            "JP": "リオレイア",
+            "FR": "Rathian"
+        },
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "dragon": -1,
+            "thunder": -2
+        }
+    },
+    {
+        "icon": 15,
+        "names": {
+            "EN": "Tobi-Kadachi",
+            "JP": "トビカガチ",
+            "FR": "Tobi-Kadachi"
+        },
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "water": -1
+        }
+    },
+    {
+        "icon": 16,
+        "names": {
+            "EN": "Tzitzi-Ya-Ku",
+            "JP": "ツィツィヤック",
+            "FR": "Tzitzi-Ya-Ku"
+        },
+        "attack": {
+            "stun": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 17,
+        "names": {
+            "EN": "Zorah Magdaros",
+            "JP": "ゾラ・マグダラオス",
+            "FR": "Zorah Magdaros"
+        },
+        "attack": {
+        },
+        "weak": {
+        }
+    }
+]
