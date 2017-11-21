@@ -1,5 +1,11 @@
 Web application: https://tanukisharp.github.io/mh-monster-info
 
+This project is a rewrite in TypeScript with Angular, of this project https://github.com/TanukiSharp/MHMonstersElements which was written in C# with WPF.
+
+The purpose for this is slightly different, that's why element weakness summary and recommended weapon features disappeared, and that attack attribute appeared.
+
+Also, bear in ming that this is more like a self training course than a really useful application.
+
 # Terms of use
 
 *Monster Hunter*™ is a registered trademark or trademark of *Capcom Co., Ltd*.
