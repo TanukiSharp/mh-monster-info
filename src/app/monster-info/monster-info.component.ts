@@ -50,6 +50,7 @@ export class MonsterInfoComponent implements OnInit {
         let filename = `./assets/data/${gameInfo.fileNamePart.toLowerCase()}.json`;
 
         let monsterInfo: IMonsterInfo[]|null;
+
         try {
             monsterInfo = await this.dataLoaderService.loadMonsterFile(filename);
         } catch (err) {
@@ -136,6 +137,11 @@ export class MonsterInfoComponent implements OnInit {
     }
 
     private clearDeaccentedSearchStrings() {
+
+        if (!this.monsterInfoViewModels) {
+            return;
+        }
+
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
             this.monsterInfoViewModels[i].deaccentedSearchString = null;
         }
