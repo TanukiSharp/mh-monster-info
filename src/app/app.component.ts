@@ -30,6 +30,56 @@ export class AppComponent implements OnInit {
         });
     }
 
+    private setupInputParameters() {
+
+        let language: string|undefined = undefined;
+        let game: string|undefined = undefined;
+
+        let search: string = window.location.search;
+
+        if (!search) {
+            return;
+        }
+
+        search = search.trim();
+
+        if (search[0] !== '?') {
+            return;
+        }
+
+        let parts: string[] = search
+            .slice(1)
+            .split('&');
+
+        for (let i = 0; i < parts.length; i += 1) {
+            let subParts = parts[i].split('=');
+
+            if (subParts.length < 2) {
+                continue;
+            }
+
+            if (subParts[0] === 'lang') {
+                let temp: string = subParts[1].trim().toUpperCase();
+                if (this.globalsService.availableLanguages.indexOf(temp) >= 0) {
+                    language = temp;
+                }
+            } else if (subParts[0] === 'game') {
+                let temp: string = subParts[1];
+                if (this.globalsService.isGameAvailable(temp)) {
+                    game = temp;
+                }
+            }
+        }
+
+        if (game) {
+            this.globalsService.selectGameByName(game);
+        }
+
+        if (language) {
+            this.globalsService.selectedLanguage = language;
+        }
+    }
+
     async setupVersionInfo() {
         try {
             let response: Response = await this.http.get('./assets/git-info.json').toPromise();
@@ -52,5 +102,7 @@ export class AppComponent implements OnInit {
         this.languageService.currentLanguage = this.globalsService.availableLanguages[0];
 
         await this.setupVersionInfo();
+
+        this.setupInputParameters();
     }
 }

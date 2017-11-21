@@ -27,6 +27,33 @@ export class GlobalsService {
         return this._availableGames;
     }
 
+    public isGameAvailable(game: string): boolean {
+
+        game = game.toLowerCase();
+
+        for (let i = 0; i < this._availableGames.length; i += 1) {
+            if (this._availableGames[i].fileNamePart.toLowerCase() === game) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public selectGameByName(game: string) {
+
+        game = game.toLowerCase();
+
+        for (let i = 0; i < this._availableGames.length; i += 1) {
+            if (this._availableGames[i].fileNamePart.toLowerCase() === game) {
+                this.selectedGame = this._availableGames[i];
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private _selectedGame: IGameInfo;
     public get selectedGame(): IGameInfo {
         return this._selectedGame;
