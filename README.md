@@ -140,8 +140,173 @@ In such a case, change the order of the elements in the tool, in file `Program.c
 elements = new [] { "fire", "water", "thunder", "ice", "dragon" };
 ```
 
+# For contributors
+
+## Add a new game
+
+Hereafter is how to add a new game.
+
+Add an entry in the `_availableGames` private field of the `GlobalsService` class found in file `src/app/globals.service.ts`.
+
+```
+private _availableGames: IGameInfo[] = [
+    { fileNamePart: 'mh3u', title: 'MH 3U' },
+    { fileNamePart: 'mh4u', title: 'MH 4U' },
+    { fileNamePart: 'mhxx', title: 'MH XX' },
+    { fileNamePart: 'mhw', title: 'MH World' },
+    { fileNamePart: 'my', title: 'MH My' } // <-- add description of new game here
+];
+```
+
+Then add a JSON file named as the `fileNamePart` in the `src/assets/data/` directory, such as `src/assets/data/my.json`.
+
+Eventually, add a folder named as the `fileNamePart` in the `src/assets/images/monsters/` directory, such as `src/assets/images/monsters/my` and put monster icons in there.
+
+That's it.
+
+About the content of the JSON file, the root object is an array, and the items are as follow:
+
+```
+[
+    ...
+    {
+        "icon": 17,
+        "names": {
+            "EN": "Rathalos",
+            "JP": "リオレウス",
+            "FR": "Rathalos"
+        },
+        "attack": {
+            "fire": 1,
+            "stun": 2,
+            "poison": 3
+        },
+        "weak": {
+            "fire": 15,
+            "water": 70,
+            "thunder": 120,
+            "ice": 70,
+            "dragon": 160
+        }
+    },
+    ...
+]
+```
+
+### icon
+
+The `icon` member describes the name of the monster image to display, as `17` implies there must be an image `src/assets/images/monsters/my/17.png`.
+Order does not matters.
+
+### names
+
+The `names` member holds the different names of the monster, in different languages.
+The English `EN` is mandatory, others are optional and the name of the monster will simply fallback to English for other languages if not provided.
+
+### attack
+
+*See bellow section for details on available attributes and naming.*
+
+The `attack` member contains the types of attribute damage (*element* and/or *ailment*) the monster deals.
+In this example, the monster deals ![Fire][fire] (fire), ![Stun][stun] (stun) and ![Poison][poison] (poison) damage.
+
+Some monsters do not deal attributed damade, in this case you can simply remove the whole `attack` member, or keep it empty.
+
+The number beside the attribute is not displayed in the UI, since it's more an indicator of the type of damages dealt than a numeric value.
+
+![Attack is an indicator, not a value](doc/images/attack_values.png "Attack is an indicator, not a value")
+
+You are free to set the value you see fit, it will simply be used to sort the icons on the UI, so you can arrange them in order of importance.
+Sorting is ascending, so top to bottom are smaller to bigger values.
+
+### weak
+
+*See bellow section for details on available attributes and naming.*
+
+The `weak` member holds numeric values of the monster's weakness per attribute.
+The value I've put in available games are sums of all different weaknesses per part of the monster, so it is a mere approximation.
+If you are an amateur of extreme accuracy, pass your way.
+
+See `Hit data gathering tool` section above for more details.
+
+Weakness values are displayed in term of percentage of the most sensitive attribute, because I believe displaying the numeric values would not make sense.
+
+![Weaknesses display](doc/images/weakness_values.png "Weaknesses display")
+
+Values are sorted in descending order, so top to bottom are bigger to smaller values.
+
+In case of problem with monster data files, bear in mind you have to respect the JSON format standard: http://json.org/
+
+### Available attributes and naming
+
+For the `attack` and `weak` members of the monster data, hereafter is the list of available attributes and the name you have to respect when listing the attributes.
+
+- ![Fire][fire] "fire"
+- ![Water][water] "water"
+- ![Thunder][thunder] "thunder"
+- ![Ice][ice] "ice"
+- ![Dragon][dragon] "dragon"
+- ![Poison][poison] "poison"
+- ![Noxious Poison][npoison] "npoison"
+- ![Deadly Poison][dpoison] "dpoison"
+- ![Sleep][sleep] "sleep"
+- ![Paralysis][paralysis] "paralysis"
+- ![Blast][blast] "blast"
+- ![Virus][virus] "virus"
+- ![Bleeding][bleeding] "bleeding"
+- ![Fatigue][fatigue] "fatigue"
+- ![Muddy][muddy] "muddy"
+- ![Snowman][snowman] "snowman"
+- ![Soiled][soiled] "soiled"
+- ![Stun][stun] "stun"
+- ![Defense Down][defdown] "defsown"
+- ![Confusion][confusion] "confusion"
+
+## Add a new language
+
+In order to add a new language, you fist have to add an entry in the `_availableLanguages` private field of the `GlobalsService` class in the found in the file `src/app/globals.service.ts`.
+
+Then in the `src/assets/localization.json` file, add a new item in the root object, as follow:
+
+```
+    ...
+    "EN": {
+        "GAME": "Game",
+        "LANGUAGE": "Language",
+        "FILTER": "Filter",
+        "FILTER_INFO": "Filter can have several values [...]",
+        "ATTACK": "Attack",
+        "WEAKNESS": "Weakness",
+        "FILTER_ALL_LANGUAGES": "all languages"
+    },
+    ...
+```
+
+The name of the member, here `EN` is displayed on the UI, and is also used to match the name in the monster data file.
+
+Unfortunately, the browser's JSON parser do not allow JSON files to contains comments, so no context can be given in the file. However, all member are pretty obvious I guess.
+
+The last part is the hard one, add monster names to all existing monster data files in `src/assets/data/*.json`.
+
+*See the above section about adding a new game for more details.*
+
 [fire]: doc/images/fire.png "Fire"
 [water]: doc/images/water.png "Water"
 [thunder]: doc/images/thunder.png "Thunder"
 [ice]: doc/images/ice.png "Ice"
 [dragon]: doc/images/dragon.png "Dragon"
+[poison]: doc/images/poison.png "Poison"
+[npoison]: doc/images/npoison.png "Noxious Poison"
+[dpoison]: doc/images/dpoison.png "Deadly Poison"
+[sleep]: doc/images/sleep.png "Sleep"
+[paralysis]: doc/images/paralysis.png "Paralysis"
+[blast]: doc/images/blast.png "Blast"
+[virus]: doc/images/virus.png "Virus"
+[bleeding]: doc/images/bleeding.png "Bleeding"
+[fatigue]: doc/images/fatigue.png "Fatigue"
+[muddy]: doc/images/muddy.png "Muddy"
+[snowman]: doc/images/snowman.png "Snowman"
+[soiled]: doc/images/soiled.png "Soiled"
+[stun]: doc/images/stun.png "Stun"
+[defdown]: doc/images/defdown.png "Defense Down"
+[confusion]: doc/images/confusion.png "Confusion"
