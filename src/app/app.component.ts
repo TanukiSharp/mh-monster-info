@@ -49,10 +49,11 @@ export class AppComponent implements OnInit {
 
         let parts: string[] = search
             .slice(1)
+            .toLowerCase()
             .split('&');
 
         for (let i = 0; i < parts.length; i += 1) {
-            let subParts = parts[i].split('=');
+            let subParts = parts[i].trim().split('=');
 
             if (subParts.length < 2) {
                 continue;
@@ -64,7 +65,7 @@ export class AppComponent implements OnInit {
                     language = temp;
                 }
             } else if (subParts[0] === 'game') {
-                let temp: string = subParts[1];
+                let temp: string = subParts[1].trim();
                 if (this.globalsService.isGameAvailable(temp)) {
                     game = temp;
                 }

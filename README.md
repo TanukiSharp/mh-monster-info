@@ -290,6 +290,29 @@ The last part is the hard one, add monster names to all existing monster data fi
 
 *See the above section about adding a new game for more details.*
 
+## Hidden feature
+
+If you want to provide a link to a friend, or bookmark one for yourself, you can add parameters to the link in order to preset the UI input controls.
+
+At the end of the URL, add a `?` symbol, and then the arguments.
+It is possible to provide multiple arguments by separating them with a `&` symbol.
+Eventually, arguments are made of a key and value, which are separated by an `=` symbole.
+
+Available arguments:
+
+- `lang`: the language to set
+- `game`: the game to set
+
+Filer cannot be preset.
+Casing of argument name and value do not matter.
+
+Hereafter are examples of links:
+
+- https://tanukisharp.github.io/mh-monster-info?lang=EN&game=mhw
+- https://tanukisharp.github.io/mh-monster-info?lang=JP&game=mhxx
+- https://tanukisharp.github.io/mh-monster-info?lang=FR
+- https://tanukisharp.github.io/mh-monster-info?game=mh3u
+
 [fire]: doc/images/fire.png "Fire"
 [water]: doc/images/water.png "Water"
 [thunder]: doc/images/thunder.png "Thunder"
