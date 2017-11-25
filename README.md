@@ -233,6 +233,8 @@ Weakness values are displayed in term of percentage of the most sensitive attrib
 
 ![Weaknesses display](doc/images/weakness_values.png "Weaknesses display")
 
+Also, for ailments, such as ![Poison][poison] or ![Sleep][sleep], you can input negative value, so they will be arranged at the bottom and the numeric value will not be displayed, it will just become an indicator.
+
 Values are sorted in descending order, so top to bottom are bigger to smaller values.
 
 In case of problem with monster data files, bear in mind you have to respect the JSON format standard: http://json.org/
