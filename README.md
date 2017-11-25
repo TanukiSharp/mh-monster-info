@@ -4,7 +4,7 @@ This project is a rewrite in TypeScript with Angular, of this project https://gi
 
 The purpose for this is slightly different, that's why element weakness summary and recommended weapon features disappeared, and that attack attribute appeared.
 
-Also, bear in ming that this is more like a self training course than a really useful application.
+Also, bear in mind that this is more like a self training course than a really useful application.
 
 # Terms of use
 
@@ -14,6 +14,7 @@ All data and images are taken from:
 - http://monsterhunter.wikia.com/wiki/Monster_Hunter_Wiki
 - http://fr.mogapedia.wikia.com/wiki/Wikia_Monster_Hunter
 - http://kiranico.com
+- TradeSy from discord [Monster Hunter FR](https://discordapp.com/channels/152129764734271488/290080391459766273) for MH3U high quality images
 
 # How to use the application
 
