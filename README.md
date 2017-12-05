@@ -15,6 +15,7 @@ All data and images are taken from:
 - http://fr.mogapedia.wikia.com/wiki/Wikia_Monster_Hunter
 - http://kiranico.com
 - TradeSy from discord [Monster Hunter FR](https://discordapp.com/channels/152129764734271488/290080391459766273) for MH3U high quality images
+- Hutskuchi from [Mogapedia](http://fr.mogapedia.wikia.com) for some Monster Hunter: World renders
 
 # How to use the application
 
