@@ -21,7 +21,7 @@
         "GAME": "Jeu",
         "LANGUAGE": "Langue",
         "FILTER": "Filtre",
-        "FILTER_INFO": "Le filtre peux comprendre plusieurs valeurs, sépararées par des virgules. Mettez un signe égal (=) avant le valeur pour une correspondance exacte.",
+        "FILTER_INFO": "Le filtre peux comprendre plusieurs valeurs, sépararées par des virgules. Mettez un signe égal (=) avant une valeur pour une correspondance exacte.",
         "ATTACK": "Attaque",
         "WEAKNESS": "Faiblesse",
         "FILTER_ALL_LANGUAGES": "toutes les langues"
