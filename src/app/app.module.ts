@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { MonsterInfoComponent } from './monster-info/monster-info.component';
 import { MonsterComponent } from './monster/monster.component';
 import { AttributeComponent } from './attribute/attribute.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         MonsterInfoComponent,
         MonsterComponent,
-        AttributeComponent
+        AttributeComponent,
+        TooltipComponent
     ],
     imports: [
         FormsModule,

@@ -1,0 +1,30 @@
+.tooltip-bg {
+    grid-column: 1;
+    grid-row: 1;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    background-color: rgba(32, 32, 32, 0.8);
+    z-index: 1;
+}
+
+.tooltip-fg {
+    margin: 4px;
+    padding: 4px;
+    grid-column: 1;
+    grid-row: 1;
+    color: whitesmoke;
+    z-index: 2;
+}
+
+.tooltip-root {
+    position: absolute;
+    display: grid;
+}
+
+.root-hidden {
+    visibility: collapse;
+}
+
+.root-visible {
+    visibility: visible;
+}
