@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Attribute, IAttributeInfo } from '../data-structures/attribute-info';
 import { DataLoaderService } from '../data-loader.service';
+import { LanguageService } from '../language.service';
 
 @Component({
     selector: 'app-attribute',
@@ -24,10 +25,16 @@ export class AttributeComponent implements OnInit {
         return this.attribute.value + '%';
     }
 
-    constructor(private dataLoaderService: DataLoaderService) { }
+    constructor(
+        private dataLoaderService: DataLoaderService,
+        private langugeService: LanguageService,
+    ) {
+
+    }
 
     public getAttributeString() {
-        return this.dataLoaderService.attributeToString(this.attribute.type);
+        let key: string = this.dataLoaderService.attributeToTranslationKey(this.attribute.type);
+        return this.langugeService.translate(key);
     }
 
     ngOnInit() {

@@ -11,28 +11,28 @@ export class DataLoaderService {
     constructor(private http: Http) { }
 
     // from attribute to display data
-    public attributeToString(type: Attribute): string {
+    public attributeToTranslationKey(type: Attribute): string {
         switch (type) {
-            case Attribute.Fire: return 'Fire';
-            case Attribute.Water: return 'Water';
-            case Attribute.Thunder: return 'Thunder';
-            case Attribute.Ice: return 'Ice';
-            case Attribute.Dragon: return 'Dragon';
-            case Attribute.Poison: return 'Poison';
-            case Attribute.NoxiousPoison: return 'Noxious Poison';
-            case Attribute.DeadlyPoison: return 'Deadly Poison';
-            case Attribute.Sleep: return 'Sleep';
-            case Attribute.Paralysis: return 'Paralysis';
-            case Attribute.Blast: return 'Blast';
-            case Attribute.Virus: return 'Virus';
-            case Attribute.Bleeding: return 'Bleeding';
-            case Attribute.Fatigue: return 'Fatigue';
-            case Attribute.Muddy: return 'Muddy';
-            case Attribute.Snowman: return 'Snowman';
-            case Attribute.Soiled: return 'Soiled';
-            case Attribute.Stun: return 'Stun';
-            case Attribute.DefenseDown: return 'Defense Down';
-            case Attribute.Confusion: return 'Confusion';
+            case Attribute.Fire: return 'FIRE';
+            case Attribute.Water: return 'WATER';
+            case Attribute.Thunder: return 'THUNDER';
+            case Attribute.Ice: return 'ICE';
+            case Attribute.Dragon: return 'DRAGON';
+            case Attribute.Poison: return 'POISON';
+            case Attribute.NoxiousPoison: return 'NOXIOUS_POISON';
+            case Attribute.DeadlyPoison: return 'DEADLY_POISON';
+            case Attribute.Sleep: return 'SLEEP';
+            case Attribute.Paralysis: return 'PARALYSIS';
+            case Attribute.Blast: return 'BLAST';
+            case Attribute.Virus: return 'VIRUS';
+            case Attribute.Bleeding: return 'BLEEDING';
+            case Attribute.Fatigue: return 'FATIGUE';
+            case Attribute.Muddy: return 'MUDDY';
+            case Attribute.Snowman: return 'SNOWMAN';
+            case Attribute.Soiled: return 'SOILED';
+            case Attribute.Stun: return 'STUN';
+            case Attribute.DefenseDown: return 'DEFENSE_DOWN';
+            case Attribute.Confusion: return 'CONFUSION';
         }
         return '?';
     }
