@@ -101,6 +101,20 @@
         }
     },
     {
+        "icon": 18,
+        "names": {
+            "EN": "Lavasioth",
+            "JP": "ヴォルガノス",
+            "FR": "Lavasioth"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": -1
+        }
+    },
+    {
         "icon": 7,
         "names": {
             "EN": "Legiana",
@@ -237,6 +251,22 @@
             "stun": 1
         },
         "weak": {
+        }
+    },
+    {
+        "icon": 19,
+        "names": {
+            "EN": "Uragaan",
+            "JP": "ウラガンキン",
+            "FR": "Uragaan"
+        },
+        "attack": {
+            "fire": 1,
+            "sleep": 2
+        },
+        "weak": {
+            "water": -1,
+            "dragon": -2
         }
     },
     {
