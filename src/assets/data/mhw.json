@@ -280,5 +280,71 @@
         },
         "weak": {
         }
+    },
+    {
+        "icon": 20,
+        "names": {
+            "EN": "Deviljho",
+            "JP": "イビルジョー",
+            "FR": "Deviljho"
+        },
+        "attack": {
+            "dragon": 1,
+            "defdown": 2,
+            "fire": 3,
+            "ice": 4,
+            "water": 5
+        },
+        "weak": {
+            "dragon": -1,
+            "thunder": -2
+        }
+    },
+    {
+        "icon": 21,
+        "names": {
+            "EN": "Dodogama",
+            "JP": "ドドガマル",
+            "FR": "Dodogama"
+        },
+        "attack": {
+            "blast": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 22,
+        "names": {
+            "EN": "Kushala Daora",
+            "JP": "クシャルダオラ",
+            "FR": "Kushala Daora"
+        },
+        "attack": {
+            "dragon": 1,
+            "ice": 2,
+            "snowman": 3
+        },
+        "weak": {
+            "dragon": -1,
+            "thunder": -2
+        }
+    },
+    {
+        "icon": 23,
+        "names": {
+            "EN": "Teostra",
+            "JP": "テオ・テスカトル",
+            "FR": "Teostra"
+        },
+        "attack": {
+            "fire": 1,
+            "dragon": 2,
+            "blast": 3
+        },
+        "weak": {
+            "dragon": -1,
+            "water": -2
+        }
     }
 ]
