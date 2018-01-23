@@ -184,11 +184,11 @@ export class MonsterInfoComponent implements OnInit {
         if (this.globalsService.isFilterAllLanguages) {
             this.applySearchAllLanguages(value, filters);
         } else {
-            this.applySearchCurrantLanguage(value, filters);
+            this.applySearchCurrentLanguage(value, filters);
         }
     }
 
-    private applySearchCurrantLanguage(value: string, filters: string[]) {
+    private applySearchCurrentLanguage(value: string, filters: string[]) {
 
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
 
