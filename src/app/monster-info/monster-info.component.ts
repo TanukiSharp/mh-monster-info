@@ -21,6 +21,11 @@ export class MonsterInfoComponent implements OnInit {
 
     public monsterInfoViewModels: IMonsterInfoViewModel[];
 
+    private _monsterCountString: string;
+    public monsterCountString(): string {
+        return this._monsterCountString;
+    }
+
     constructor(
         private globalsService: GlobalsService,
         private dataLoaderService: DataLoaderService,
@@ -29,20 +34,24 @@ export class MonsterInfoComponent implements OnInit {
         this.globalsService.registerGameChanged(async (sender, gameInfo) => {
             await this.selectGameInternal(gameInfo);
             this.globalsService.reapplySearchFilter();
+            this.updateMonsterCount();
         });
 
         this.globalsService.registerLanguageChanged(async (sender, language) => {
             await this.selectGameInternal(this.globalsService.selectedGame);
             this.resetDeaccentedSearchStrings();
             this.globalsService.reapplySearchFilter();
+            this.updateMonsterCount();
         });
 
         this.globalsService.registerIsFilterAllLanguagesChanged((sender, value) => {
             this.globalsService.reapplySearchFilter();
+            this.updateMonsterCount();
         });
 
         this.globalsService.registerSearchFilterChanged((sender, value) => {
             this.applySearchFilter(value);
+            this.updateMonsterCount();
         });
     }
 
@@ -185,6 +194,24 @@ export class MonsterInfoComponent implements OnInit {
             this.applySearchAllLanguages(value, filters);
         } else {
             this.applySearchCurrentLanguage(value, filters);
+        }
+    }
+
+    private updateMonsterCount() {
+
+        let visibleMonsterCount: number = 0;
+        for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
+            if (this.monsterInfoViewModels[i].isVisible) {
+                visibleMonsterCount += 1;
+            }
+        }
+
+        if (visibleMonsterCount === 0) {
+            this._monsterCountString = this.languageService.translate('NO_MONSTER');
+        } else if (visibleMonsterCount === 1) {
+            this._monsterCountString = this.languageService.translate('ONE_MONSTER');
+        } else {
+            this._monsterCountString = visibleMonsterCount + this.languageService.translate('N_MONSTERS');
         }
     }
 

@@ -26,7 +26,10 @@
         "SOILED": "Soiled",
         "STUN": "Stun",
         "DEFENSE_DOWN": "Defense Down",
-        "CONFUSION": "Confusion"
+        "CONFUSION": "Confusion",
+        "NO_MONSTER": "No monster",
+        "ONE_MONSTER": "1 monster",
+        "N_MONSTERS": " monsters"
     },
     "JP": {
         "GAME": "ゲーム",
@@ -55,7 +58,10 @@
         "SOILED": "一部アイテム使用不可",
         "STUN": "気絶",
         "DEFENSE_DOWN": "防御力低下",
-        "CONFUSION": "混乱状態"
+        "CONFUSION": "混乱状態",
+        "NO_MONSTER": "モンスターありません",
+        "ONE_MONSTER": "1 モンスター",
+        "N_MONSTERS": " モンスター"
     },
     "FR": {
         "GAME": "Jeu",
@@ -84,6 +90,9 @@
         "SOILED": "Puanteur",
         "STUN": "Etourdissement",
         "DEFENSE_DOWN": "Défense -",
-        "CONFUSION": "Confusion"
+        "CONFUSION": "Confusion",
+        "NO_MONSTER": "Pas de monstre",
+        "ONE_MONSTER": "1 monstre",
+        "N_MONSTERS": " monstres"
     }
 }
