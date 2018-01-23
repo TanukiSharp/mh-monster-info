@@ -31,8 +31,9 @@ export class MonsterInfoComponent implements OnInit {
             this.globalsService.reapplySearchFilter();
         });
 
-        this.globalsService.registerLanguageChanged((sender, language) => {
-            this.clearDeaccentedSearchStrings();
+        this.globalsService.registerLanguageChanged(async (sender, language) => {
+            await this.selectGameInternal(this.globalsService.selectedGame);
+            this.resetDeaccentedSearchStrings();
             this.globalsService.reapplySearchFilter();
         });
 
@@ -64,11 +65,26 @@ export class MonsterInfoComponent implements OnInit {
         }
 
         this.monsterInfoViewModels = monsterInfo.map(m => {
+            let monsterName = this.languageService.getName(m.names).toLowerCase();
             return {
                 isVisible: true,
-                deaccentedSearchString: null,
+                deaccentedSearchString: this.deaccentString(monsterName),
                 monsterInfo: m
             };
+        })
+        .sort((a, b) => {
+            if (!a || !b) {
+                return 0;
+            }
+
+            let aStr: string|null = a.deaccentedSearchString;
+            let bStr: string|null = b.deaccentedSearchString;
+
+            if (aStr === null || bStr === null) {
+                return 0;
+            }
+
+            return aStr.localeCompare(bStr);
         });
     }
 
@@ -136,14 +152,15 @@ export class MonsterInfoComponent implements OnInit {
         return result;
     }
 
-    private clearDeaccentedSearchStrings() {
+    private resetDeaccentedSearchStrings() {
 
         if (!this.monsterInfoViewModels) {
             return;
         }
 
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
-            this.monsterInfoViewModels[i].deaccentedSearchString = null;
+            let monsterName = this.languageService.getName(this.monsterInfoViewModels[i].monsterInfo.names).toLowerCase();
+            this.monsterInfoViewModels[i].deaccentedSearchString = this.deaccentString(monsterName);
         }
     }
 
