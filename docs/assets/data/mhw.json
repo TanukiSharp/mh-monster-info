@@ -346,5 +346,33 @@
             "dragon": -1,
             "water": -2
         }
+    },
+    {
+        "icon": 24,
+        "names": {
+            "EN": "Vaal Hazak",
+            "JP": "ヴァルハザク",
+            "FR": "Vaal Hazak"
+        },
+        "attack": {
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 25,
+        "names": {
+            "EN": "Kirin",
+            "JP": "キリン",
+            "FR": "Kirin"
+        },
+        "attack": {
+            "thunder": 1,
+            "stun": 2
+        },
+        "weak": {
+            "fire": -1,
+            "water": -2
+        }
     }
 ]
