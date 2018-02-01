@@ -55,6 +55,9 @@
             "paralysis": 1
         },
         "weak": {
+            "water": -1,
+            "fire": -2,
+            "ice": -3
         }
     },
     {
@@ -125,6 +128,8 @@
             "ice": 1
         },
         "weak": {
+            "thunder": -1,
+            "fire": -2
         }
     },
     {
@@ -137,6 +142,8 @@
         "attack": {
         },
         "weak": {
+            "thunder": -1,
+            "water": -2
         }
     },
     {
@@ -150,6 +157,8 @@
             "bleeding": 1
         },
         "weak": {
+            "ice": -1,
+            "thunder": -2
         }
     },
     {
@@ -162,6 +171,8 @@
         "attack": {
         },
         "weak": {
+            "fire": -1,
+            "thunder": -2
         }
     },
     {
@@ -189,6 +200,8 @@
             "sleep": 1
         },
         "weak": {
+            "dragon": -1,
+            "ice": -2
         }
     },
     {
@@ -251,6 +264,8 @@
             "stun": 1
         },
         "weak": {
+            "thunder": -1,
+            "ice": -2
         }
     },
     {
@@ -277,6 +292,7 @@
             "FR": "Zorah Magdaros"
         },
         "attack": {
+            "fire": 1
         },
         "weak": {
         }
@@ -311,6 +327,7 @@
             "blast": 1
         },
         "weak": {
+            "thunder": -1
         }
     },
     {
@@ -357,6 +374,9 @@
         "attack": {
         },
         "weak": {
+            "fire": -1,
+            "dragon": -2,
+            "ice": -3
         }
     },
     {
@@ -373,6 +393,84 @@
         "weak": {
             "fire": -1,
             "water": -2
+        }
+    },
+    {
+        "icon": 26,
+        "names": {
+            "EN": "Black Diablos",
+            "JP": "ディアブロス（亜種）",
+            "FR": "Diablos Noire"
+        },
+        "attack": {
+        },
+        "weak": {
+            "ice": -1
+        }
+    },
+    {
+        "icon": 27,
+        "names": {
+            "EN": "Azure Rathalos",
+            "JP": "リオレウス亜種",
+            "FR": "Rathalos Azur"
+        },
+        "attack": {
+            "fire": 1,
+            "stun": 2,
+            "poison": 3
+        },
+        "weak": {
+            "dragon": -1,
+            "ice": -2
+        }
+    },
+    {
+        "icon": 28,
+        "names": {
+            "EN": "Pink Rathian",
+            "JP": "リオレイア（亜種）",
+            "FR": "Rathian Sakura"
+        },
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "dragon": -1,
+            "thunder": -2
+        }
+    },
+    {
+        "icon": 29,
+        "names": {
+            "EN": "Xeno'jiiva",
+            "JP": "ゼノ・ジーヴァ",
+            "FR": "Xeno'jiiva"
+        },
+        "attack": {
+            "dragon": 1,
+            "fire": 2
+        },
+        "weak": {
+            "dragon": -1,
+            "fire": -2
+        }
+    },
+    {
+        "icon": 30,
+        "names": {
+            "EN": "Bazelgeuse",
+            "JP": "バゼルギウス",
+            "FR": "Bazelgeuse"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "thunder": -1,
+            "ice": -2,
+            "dragon": -3
         }
     }
 ]
