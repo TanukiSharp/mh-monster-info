@@ -61,6 +61,7 @@ export class GlobalsService {
     public set selectedGame(value: IGameInfo) {
         if (this._selectedGame !== value) {
             this._selectedGame = value;
+            this.saveSettings();
             this.gameChangedEvent.raise(this, value);
         }
     }
@@ -88,6 +89,7 @@ export class GlobalsService {
     public set selectedLanguage(value: string) {
         if (this._selectedLanguage !== value) {
             this._selectedLanguage = value;
+            this.saveSettings();
             this.languageChangedEvent.raise(this, value);
         }
     }
@@ -159,6 +161,58 @@ export class GlobalsService {
 
     public unregisterSearchFilterChanged(handler: EventHandler<string>) {
         this.searchFilterChangedEvent.unregister(handler);
+    }
+
+    public loadSettings() {
+
+        let value: string = document.cookie;
+
+        if (!value) {
+            return;
+        }
+
+        let parts: string[] = value.split('|');
+
+        for (let i: number = 0; i < parts.length; i += 1) {
+            let part: string = parts[i];
+            if (!part) {
+                continue;
+            }
+
+            let keyValue: string[] = part.split(':');
+            if (keyValue.length != 2) {
+                continue;
+            }
+
+            switch (keyValue[0]) {
+                case 'game':
+                    this.selectGameByName(keyValue[1].toLowerCase());
+                    break;
+                case 'lang':
+                    this.selectedLanguage = keyValue[1].toUpperCase();
+                    break;
+                case 'filterMode':
+                    this.filterMode = <FilterMode>keyValue[1].toUpperCase();
+                    break;
+            }
+        }
+    }
+
+    public saveSettings() {
+
+        let value: string = '';
+
+        if (this.selectedGame) {
+            value += `game:${this.selectedGame.fileNamePart}|`;
+        }
+        if (this.selectedLanguage) {
+            value += `lang:${this.selectedLanguage}|`;
+        }
+        if (this.filterMode) {
+            value += `filterMode:${this.filterMode}|`;
+        }
+
+        document.cookie = value + '; expires=Fri, 31 Dec 9999 23:59:59 GMT';
     }
 
     // ============================================

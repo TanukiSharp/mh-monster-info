@@ -105,5 +105,7 @@ export class AppComponent implements OnInit {
         await this.setupVersionInfo();
 
         this.setupInputParameters();
+
+        this.globalsService.loadSettings();
     }
 }
