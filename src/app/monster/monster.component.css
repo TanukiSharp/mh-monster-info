@@ -5,6 +5,10 @@
     margin: 4px;
 }
 
+.shaded {
+    opacity: 0.25;
+}
+
 .monsterGrid {
     display: grid;
 }

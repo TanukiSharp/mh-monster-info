@@ -13,6 +13,11 @@
         <span>{{languageService.translate('FILTER')}}:</span>
         <input autofocus  type="text" [(ngModel)]="globalsService.searchFilter"/>
 
+        <span>{{languageService.translate('FILTER_MODE')}}:</span>
+        <select style="margin-right: 20px" [(ngModel)]="globalsService.filterMode">
+            <option *ngFor="let filterMode of globalsService.availableFilterModes" [value]="filterMode">{{languageService.translate(filterMode)}}</option>
+        </select>
+
         <input id="filterAllLanguages" type="checkbox" [(ngModel)]="globalsService.isFilterAllLanguages"/>
         <label style="margin-right: 20px" for="filterAllLanguages">{{languageService.translate('FILTER_ALL_LANGUAGES')}}</label>
 

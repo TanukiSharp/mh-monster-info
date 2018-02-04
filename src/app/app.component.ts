@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { DataLoaderService } from './data-loader.service';
-import { GlobalsService } from './globals.service';
+import { GlobalsService, FilterMode } from './globals.service';
 import { LanguageService } from './language.service';
 import { IMonsterInfo } from './data-structures/monster-info';
 import { MonsterInfoComponent } from './monster-info/monster-info.component';

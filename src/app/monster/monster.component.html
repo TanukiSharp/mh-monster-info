@@ -1,4 +1,4 @@
-<div class="rootPanel" [hidden]="!monsterInfoViewModel.isVisible">
+<div class="rootPanel" [hidden]="globalsService.isHidden(monsterInfoViewModel.isVisible)" [ngClass]="{'shaded': globalsService.isShaded(monsterInfoViewModel.isVisible)}">
     <div class="monsterGrid">
         <div class="monsterAttack">
             <span style="font-size: 0.65em;">{{languageService.translate('ATTACK')}}</span>

@@ -5,8 +5,15 @@ import { EventHandler, Event } from './utils';
 export type GameChangedHandler = (gameInfo: IGameInfo) => void;
 export type LanguageChangedHandler = (language: string) => void;
 
+export enum FilterMode {
+    Hide = 'HIDE',
+    Shade = 'SHADE'
+}
+
 @Injectable()
 export class GlobalsService {
+
+    private _filterMode: FilterMode = FilterMode.Shade;
 
     private _availableGames: IGameInfo[] = [
         { fileNamePart: 'mh3u', title: 'MH 3U' },
@@ -20,6 +27,36 @@ export class GlobalsService {
         'JP',
         'FR'
     ];
+
+    // ============================================
+
+    public get filterMode(): FilterMode {
+        return this._filterMode;
+    }
+
+    public set filterMode(value: FilterMode) {
+        this._filterMode = value;
+        this.saveSettings();
+        this.reapplySearchFilter();
+    }
+
+    public get availableFilterModes(): FilterMode[] {
+        return [ FilterMode.Hide, FilterMode.Shade ];
+    }
+
+    public isHidden(isVisible: boolean): boolean {
+        if (this._filterMode === FilterMode.Hide) {
+            return !isVisible;
+        }
+        return false;
+    }
+
+    public isShaded(isVisible: boolean): boolean {
+        if (this._filterMode === FilterMode.Shade) {
+            return !isVisible;
+        }
+        return false;
+    }
 
     // ============================================
 
