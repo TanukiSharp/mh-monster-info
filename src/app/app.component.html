@@ -11,7 +11,8 @@
         </select>
 
         <span>{{languageService.translate('FILTER')}}:</span>
-        <input type="text" [(ngModel)]="globalsService.searchFilter"/>
+        <input autofocus  type="text" [(ngModel)]="globalsService.searchFilter"/>
+
         <input id="filterAllLanguages" type="checkbox" [(ngModel)]="globalsService.isFilterAllLanguages"/>
         <label style="margin-right: 20px" for="filterAllLanguages">{{languageService.translate('FILTER_ALL_LANGUAGES')}}</label>
 
