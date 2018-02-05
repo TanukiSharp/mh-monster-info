@@ -29,7 +29,7 @@ Supported games are:
 - Monster Hunter 3 Ultimate
 - Monster Hunter 4 Ultimate
 - Monster Huner Double Cross
-- Monster Hunter: World *(partially)*
+- Monster Hunter: World *(in development)*
 
 It is not planed to add other games for the moment. If you want to add another one, feel free to do so and make a pull request.
 
@@ -79,13 +79,19 @@ However, this is not very useful when you know the name of a monster in a langua
 
 ![Filter](doc/images/filter_05.png "Filter")
 
-In such a case, you can check the **all languages** (in English) check box beside the **filter** input box, to allow filtering to match any language.
+In such a case, you can check the **all languages** (in English) check box beside the **filter mode** dropdown, to allow filtering to match any language.
 
 ![Filter](doc/images/filter_06.png "Filter")
 
 This is also useful when you want to learn the name of monsters in another language.
 
 ![Filter](doc/images/filter_07.png "Filter")
+
+The **filter mode** allow you to chose wether filtered out monsters are hidden or grayed. The *hide* filter mode is shown in above screen shots, hereafter is when the *shade* filter mode is used:
+
+![Filter mode](doc/images/filter_08.png "Filter mode")
+
+In such a case, the monsters do not move on the page whereas filtered and unfiltered. Also, you keep keep track of filtered out monsters if needed.
 
 ## Attack values
 
@@ -295,6 +301,12 @@ The last part is the hard one, add monster names to all existing monster data fi
 *See the above section about adding a new game for more details.*
 
 ## Hidden feature
+
+### Cookies
+
+The game, language and filter mode you select are persisted to a browser cookie, so when you close your browser and reopen it later on, the page remembers the last game, language and filter mode you used.
+
+### Links
 
 If you want to provide a link to a friend, or bookmark one for yourself, you can add parameters to the link in order to preset the UI input controls.
 
