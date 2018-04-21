@@ -2,8 +2,12 @@
     <div class="monsterGrid">
         <div class="monsterAttack">
             <span style="font-size: 0.65em;">{{languageService.translate('ATTACK')}}</span>
-            <div *ngFor="let attribute of monsterInfoViewModel.monsterInfo.attacks">
-                <app-attribute [showValues]="false" [attribute]="attribute"></app-attribute>
+            <div class="monsterWeakDetails">
+                <div style="grid-column: 1">
+                    <div *ngFor="let attribute of monsterInfoViewModel.monsterInfo.attacks">
+                        <app-attribute [showValues]="false" [attribute]="attribute"></app-attribute>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -12,8 +16,17 @@
 
         <div class="monsterWeak">
             <span style="font-size: 0.65em;">{{languageService.translate('WEAKNESS')}}</span>
-            <div *ngFor="let attribute of monsterInfoViewModel.monsterInfo.weaks">
-                <app-attribute [attribute]="attribute"></app-attribute>
+            <div class="monsterWeakDetails">
+                <div style="grid-column: 1">
+                    <div *ngFor="let attribute of filterElemental(monsterInfoViewModel.monsterInfo.weaks)">
+                        <app-attribute [attribute]="attribute"></app-attribute>
+                    </div>
+                </div>
+                <div style="grid-column: 2">
+                    <div *ngFor="let attribute of filterNonElemental(monsterInfoViewModel.monsterInfo.weaks)">
+                        <app-attribute [attribute]="attribute"></app-attribute>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
