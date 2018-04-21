@@ -11,7 +11,7 @@ import { LanguageService } from '../language.service';
 export class AttributeComponent implements OnInit {
 
     @Input()
-    public attribute: IAttributeInfo | undefined;
+    public attribute: IAttributeInfo;
     @Input()
     public showValues = true;
 

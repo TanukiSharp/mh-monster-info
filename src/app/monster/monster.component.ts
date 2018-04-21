@@ -12,7 +12,7 @@ import { IAttributeInfo, Attribute } from '../data-structures/attribute-info';
 export class MonsterComponent implements OnInit {
 
     @Input()
-    public monsterInfoViewModel: IMonsterInfoViewModel | undefined;
+    public monsterInfoViewModel: IMonsterInfoViewModel;
 
     constructor(
         public languageService: LanguageService,
