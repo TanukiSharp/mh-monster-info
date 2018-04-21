@@ -3,15 +3,15 @@ import { Http, Response } from '@angular/http';
 
 import { IMonsterName } from './data-structures/monster-name';
 import { resetFakeAsyncZone } from '@angular/core/testing';
+import { GlobalsService } from './globals.service';
 
 @Injectable()
 export class LanguageService {
 
     private commonData: any;
 
-    constructor(private http: Http) {
-        this.http.get('./assets/localization.json').subscribe((response: Response) =>
-        {
+    constructor(private http: Http, private globalsService: GlobalsService) {
+        this.http.get('./assets/localization.json').subscribe((response: Response) => {
             let jsonRoot;
             try {
                 jsonRoot = response.json();
@@ -23,7 +23,7 @@ export class LanguageService {
         });
     }
 
-    public currentLanguage: string;
+    public currentLanguage: string = this.globalsService.availableLanguages[0];
 
     private makeDefaultKey(key: string): string {
         return '<<' + key + '>>';
@@ -39,13 +39,13 @@ export class LanguageService {
             return null;
         }
 
-        let language = this.commonData[this.currentLanguage];
+        const language = this.commonData[this.currentLanguage];
 
         if (!language) {
             return this.makeDefaultKey(key);
         }
 
-        let result = language[key];
+        const result = language[key];
 
         if (!result || result.length === 0) {
             return this.makeDefaultKey(key);
@@ -57,7 +57,7 @@ export class LanguageService {
     public getName(names: IMonsterName[]) {
 
         for (let i = 0; i < names.length; i += 1) {
-            if (names[i].language == this.currentLanguage) {
+            if (names[i].language === this.currentLanguage) {
                 return names[i].value || this.makeDefaultName(names);
             }
         }

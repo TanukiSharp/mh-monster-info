@@ -66,7 +66,7 @@ export class DataLoaderService {
 
     async loadMonsterFile(monsterFilename: string): Promise<IMonsterInfo[]|null> {
 
-        let response: Response = await this.http.get(monsterFilename).toPromise();
+        const response: Response = await this.http.get(monsterFilename).toPromise();
         let jsonRoot: any[];
 
         try {
@@ -81,7 +81,7 @@ export class DataLoaderService {
             return null;
         }
 
-        let result: IMonsterInfo[] = [];
+        const result: IMonsterInfo[] = [];
 
         for (let i = 0; i < jsonRoot.length; i += 1) {
 
@@ -90,8 +90,8 @@ export class DataLoaderService {
                 return null;
             }
 
-            let nameKeys: string[] = Object.keys(jsonRoot[i].names);
-            let names: IMonsterName[] = [];
+            const nameKeys: string[] = Object.keys(jsonRoot[i].names);
+            const names: IMonsterName[] = [];
 
             for (let j = 0; j < nameKeys.length; j += 1) {
                 names.push({
@@ -100,10 +100,10 @@ export class DataLoaderService {
                 });
             }
 
-            let attacks: IAttributeInfo[] = [];
+            const attacks: IAttributeInfo[] = [];
 
             if (jsonRoot[i].attack) {
-                let attackKeys: string[] = Object.keys(jsonRoot[i].attack);
+                const attackKeys: string[] = Object.keys(jsonRoot[i].attack);
 
                 for (let j = 0; j < attackKeys.length; j += 1) {
 
@@ -116,10 +116,10 @@ export class DataLoaderService {
                 attacks.sort((a, b) => a.value - b.value);
             }
 
-            let weaks: IAttributeInfo[] = [];
+            const weaks: IAttributeInfo[] = [];
 
             if (jsonRoot[i].weak) {
-                let weakKeys: string[] = Object.keys(jsonRoot[i].weak);
+                const weakKeys: string[] = Object.keys(jsonRoot[i].weak);
 
                 for (let j = 0; j < weakKeys.length; j += 1) {
 

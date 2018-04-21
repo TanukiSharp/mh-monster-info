@@ -19,9 +19,9 @@ export interface IMonsterInfoViewModel {
 })
 export class MonsterInfoComponent implements OnInit {
 
-    public monsterInfoViewModels: IMonsterInfoViewModel[];
+    public monsterInfoViewModels: IMonsterInfoViewModel[] | undefined = undefined;
 
-    private _monsterCountString: string;
+    private _monsterCountString = '0';
     public monsterCountString(): string {
         return this._monsterCountString;
     }
@@ -57,7 +57,7 @@ export class MonsterInfoComponent implements OnInit {
 
     private async selectGameInternal(gameInfo: IGameInfo) {
 
-        let filename = `./assets/data/${gameInfo.fileNamePart.toLowerCase()}.json`;
+        const filename = `./assets/data/${gameInfo.fileNamePart.toLowerCase()}.json`;
 
         let monsterInfo: IMonsterInfo[]|null;
 
@@ -74,7 +74,7 @@ export class MonsterInfoComponent implements OnInit {
         }
 
         this.monsterInfoViewModels = monsterInfo.map(m => {
-            let monsterName = this.languageService.getName(m.names).toLowerCase();
+            const monsterName = this.languageService.getName(m.names).toLowerCase();
             return {
                 isVisible: true,
                 deaccentedSearchString: this.deaccentString(monsterName),
@@ -86,8 +86,8 @@ export class MonsterInfoComponent implements OnInit {
                 return 0;
             }
 
-            let aStr: string|null = a.deaccentedSearchString;
-            let bStr: string|null = b.deaccentedSearchString;
+            const aStr: string|null = a.deaccentedSearchString;
+            const bStr: string|null = b.deaccentedSearchString;
 
             if (aStr === null || bStr === null) {
                 return 0;
@@ -99,10 +99,10 @@ export class MonsterInfoComponent implements OnInit {
 
     private deaccentString(input: string): string {
 
-        let result: string = '';
+        let result = '';
 
         for (let i = 0; i < input.length; i += 1) {
-            let c = input[i]
+            const c = input[i];
             switch (c) {
                 case 'à':
                 case 'á':
@@ -168,7 +168,7 @@ export class MonsterInfoComponent implements OnInit {
         }
 
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
-            let monsterName = this.languageService.getName(this.monsterInfoViewModels[i].monsterInfo.names).toLowerCase();
+            const monsterName = this.languageService.getName(this.monsterInfoViewModels[i].monsterInfo.names).toLowerCase();
             this.monsterInfoViewModels[i].deaccentedSearchString = this.deaccentString(monsterName);
         }
     }
@@ -184,7 +184,7 @@ export class MonsterInfoComponent implements OnInit {
             return;
         }
 
-        let filters: string[] = value
+        const filters: string[] = value
             .toLowerCase()
             .split(',')
             .map(x => x.trim())
@@ -199,7 +199,11 @@ export class MonsterInfoComponent implements OnInit {
 
     private updateMonsterCount() {
 
-        let visibleMonsterCount: number = 0;
+        if (!this.monsterInfoViewModels) {
+            return;
+        }
+
+        let visibleMonsterCount = 0;
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
             if (this.monsterInfoViewModels[i].isVisible) {
                 visibleMonsterCount += 1;
@@ -217,21 +221,25 @@ export class MonsterInfoComponent implements OnInit {
 
     private applySearchCurrentLanguage(value: string, filters: string[]) {
 
+        if (!this.monsterInfoViewModels) {
+            return;
+        }
+
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
 
-            let vm = this.monsterInfoViewModels[i];
+            const vm = this.monsterInfoViewModels[i];
 
-            let monsterName = this.languageService.getName(vm.monsterInfo.names).toLowerCase();
+            const monsterName = this.languageService.getName(vm.monsterInfo.names).toLowerCase();
 
             if (!vm.deaccentedSearchString) {
                 vm.deaccentedSearchString = this.deaccentString(monsterName);
             }
 
-            let altMonsterName = vm.deaccentedSearchString;
+            const altMonsterName = vm.deaccentedSearchString;
 
             vm.isVisible = Utils.any(filters, f => {
                 if (f[0] === '=') {
-                    let exactMatch = f.substring(1).trim();
+                    const exactMatch = f.substring(1).trim();
                     return altMonsterName === exactMatch || monsterName === exactMatch;
                 } else {
                     return altMonsterName.indexOf(f) >= 0 || monsterName.indexOf(f) >= 0;
@@ -242,19 +250,23 @@ export class MonsterInfoComponent implements OnInit {
 
     private applySearchAllLanguages(value: string, filters: string[]) {
 
+        if (!this.monsterInfoViewModels) {
+            return;
+        }
+
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
 
-            let isVisible: boolean = false;
-            let vm = this.monsterInfoViewModels[i];
+            let isVisible = false;
+            const vm = this.monsterInfoViewModels[i];
 
             for (let j = 0; j < vm.monsterInfo.names.length; j += 1) {
 
-                let monsterName = vm.monsterInfo.names[j].value.toLowerCase();
-                let altMonsterName = this.deaccentString(monsterName);
+                const monsterName = vm.monsterInfo.names[j].value.toLowerCase();
+                const altMonsterName = this.deaccentString(monsterName);
 
                 if (Utils.any(filters, f => {
                     if (f[0] === '=') {
-                        let exactMatch = f.substring(1).trim();
+                        const exactMatch = f.substring(1).trim();
                         return altMonsterName === exactMatch || monsterName === exactMatch;
                     } else {
                         return altMonsterName.indexOf(f) >= 0 || monsterName.indexOf(f) >= 0;
@@ -270,6 +282,11 @@ export class MonsterInfoComponent implements OnInit {
     }
 
     private showAll() {
+
+        if (!this.monsterInfoViewModels) {
+            return;
+        }
+
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
             this.monsterInfoViewModels[i].isVisible = true;
         }

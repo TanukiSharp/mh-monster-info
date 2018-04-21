@@ -13,8 +13,6 @@ export enum FilterMode {
 @Injectable()
 export class GlobalsService {
 
-    private _filterMode: FilterMode = FilterMode.Shade;
-
     private _availableGames: IGameInfo[] = [
         { fileNamePart: 'mh3u', title: 'MH 3U' },
         { fileNamePart: 'mh4u', title: 'MH 4U' },
@@ -27,6 +25,19 @@ export class GlobalsService {
         'JP',
         'FR'
     ];
+
+    private _searchFilter = '';
+    private _lastSearchFilter: string = this._searchFilter;
+    private _searchFilterChangedEvent: Event<string> = new Event<string>();
+
+    private _languageChangedEvent: Event<string> = new Event<string>();
+    private _gameChangedEvent: Event<IGameInfo> = new Event<IGameInfo>();
+    private _isFilterAllLanguagesChangedEvent: Event<boolean> = new Event<boolean>();
+
+    private _selectedGame: IGameInfo = this._availableGames[0];
+    private _selectedLanguage: string = this._availableLanguages[0];
+    private _filterMode: FilterMode = FilterMode.Shade;
+    private _isFilterAllLanguages = false;
 
     // ============================================
 
@@ -91,7 +102,6 @@ export class GlobalsService {
         return false;
     }
 
-    private _selectedGame: IGameInfo;
     public get selectedGame(): IGameInfo {
         return this._selectedGame;
     }
@@ -99,18 +109,16 @@ export class GlobalsService {
         if (this._selectedGame !== value) {
             this._selectedGame = value;
             this.saveSettings();
-            this.gameChangedEvent.raise(this, value);
+            this._gameChangedEvent.raise(this, value);
         }
     }
 
-    private gameChangedEvent: Event<IGameInfo> = new Event<IGameInfo>();
-
     public registerGameChanged(handler: EventHandler<IGameInfo>) {
-        this.gameChangedEvent.register(handler);
+        this._gameChangedEvent.register(handler);
     }
 
     public unregisterGameChanged(handler: EventHandler<IGameInfo>) {
-        this.gameChangedEvent.unregister(handler);
+        this._gameChangedEvent.unregister(handler);
     }
 
     // ============================================
@@ -119,7 +127,6 @@ export class GlobalsService {
         return this._availableLanguages;
     }
 
-    private _selectedLanguage: string;
     public get selectedLanguage(): string {
         return this._selectedLanguage;
     }
@@ -127,50 +134,40 @@ export class GlobalsService {
         if (this._selectedLanguage !== value) {
             this._selectedLanguage = value;
             this.saveSettings();
-            this.languageChangedEvent.raise(this, value);
+            this._languageChangedEvent.raise(this, value);
         }
     }
 
-    private languageChangedEvent: Event<string> = new Event<string>();
-
     public registerLanguageChanged(handler: EventHandler<string>) {
-        this.languageChangedEvent.register(handler);
+        this._languageChangedEvent.register(handler);
     }
 
     public unregisterLanguageChanged(handler: EventHandler<string>) {
-        this.languageChangedEvent.unregister(handler);
+        this._languageChangedEvent.unregister(handler);
     }
 
     // ============================================
 
-    private _isFilterAllLanguages: boolean;
     public get isFilterAllLanguages(): boolean {
         return this._isFilterAllLanguages;
     }
     public set isFilterAllLanguages(value: boolean) {
         if (this._isFilterAllLanguages !== value) {
             this._isFilterAllLanguages = value;
-            this.isFilterAllLanguagesChangedEvent.raise(this, value);
+            this._isFilterAllLanguagesChangedEvent.raise(this, value);
         }
     }
 
-    private isFilterAllLanguagesChangedEvent: Event<boolean> = new Event<boolean>();
-
     public registerIsFilterAllLanguagesChanged(handler: EventHandler<boolean>) {
-        this.isFilterAllLanguagesChangedEvent.register(handler);
+        this._isFilterAllLanguagesChangedEvent.register(handler);
     }
 
     public unregisterIsFilterAllLanguagesChanged(handler: EventHandler<boolean>) {
-        this.isFilterAllLanguagesChangedEvent.unregister(handler);
+        this._isFilterAllLanguagesChangedEvent.unregister(handler);
     }
 
     // ============================================
 
-    private lastSearchFilter: string;
-
-    private searchFilterChangedEvent: Event<string> = new Event<string>();
-
-    private _searchFilter: string;
     public get searchFilter(): string {
         return this._searchFilter;
     }
@@ -182,42 +179,42 @@ export class GlobalsService {
 
         if (this._searchFilter !== value) {
             this._searchFilter = value;
-            this.lastSearchFilter = value;
-            this.searchFilterChangedEvent.raise(this, value);
+            this._lastSearchFilter = value;
+            this._searchFilterChangedEvent.raise(this, value);
         }
     }
     public reapplySearchFilter() {
-        if (this.lastSearchFilter) {
-            this.searchFilterChangedEvent.raise(this, this.lastSearchFilter);
+        if (this._lastSearchFilter) {
+            this._searchFilterChangedEvent.raise(this, this._lastSearchFilter);
         }
     }
 
     public registerSearchFilterChanged(handler: EventHandler<string>) {
-        this.searchFilterChangedEvent.register(handler);
+        this._searchFilterChangedEvent.register(handler);
     }
 
     public unregisterSearchFilterChanged(handler: EventHandler<string>) {
-        this.searchFilterChangedEvent.unregister(handler);
+        this._searchFilterChangedEvent.unregister(handler);
     }
 
     public loadSettings() {
 
-        let value: string = document.cookie;
+        const value: string = document.cookie;
 
         if (!value) {
             return;
         }
 
-        let parts: string[] = value.split('|');
+        const parts: string[] = value.split('|');
 
-        for (let i: number = 0; i < parts.length; i += 1) {
-            let part: string = parts[i];
+        for (let i = 0; i < parts.length; i += 1) {
+            const part: string = parts[i];
             if (!part) {
                 continue;
             }
 
-            let keyValue: string[] = part.split(':');
-            if (keyValue.length != 2) {
+            const keyValue: string[] = part.split(':');
+            if (keyValue.length !== 2) {
                 continue;
             }
 
@@ -237,7 +234,7 @@ export class GlobalsService {
 
     public saveSettings() {
 
-        let value: string = '';
+        let value = '';
 
         if (this.selectedGame) {
             value += `game:${this.selectedGame.fileNamePart}|`;
@@ -255,7 +252,7 @@ export class GlobalsService {
     // ============================================
 
     constructor() {
-        //this._selectedGame = this.availableGames[0];
+        // this._selectedGame = this.availableGames[0];
         this._selectedLanguage = this.availableLanguages[0];
     }
 }

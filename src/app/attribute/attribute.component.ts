@@ -11,11 +11,16 @@ import { LanguageService } from '../language.service';
 export class AttributeComponent implements OnInit {
 
     @Input()
-    public attribute: IAttributeInfo;
+    public attribute: IAttributeInfo | undefined;
     @Input()
-    public showValues: boolean = true;
+    public showValues = true;
 
     public get displayValue(): string {
+
+        if (!this.attribute) {
+            return '';
+        }
+
         if (this.attribute.value < 0) {
             return '';
         }
@@ -33,7 +38,10 @@ export class AttributeComponent implements OnInit {
     }
 
     public getAttributeString() {
-        let key: string = this.dataLoaderService.attributeToTranslationKey(this.attribute.type);
+        if (!this.attribute) {
+            return '';
+        }
+        const key: string = this.dataLoaderService.attributeToTranslationKey(this.attribute.type);
         return this.langugeService.translate(key);
     }
 

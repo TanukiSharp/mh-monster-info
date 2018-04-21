@@ -16,9 +16,9 @@ import { IGameInfo } from './data-structures/game-info';
 })
 export class AppComponent implements OnInit {
 
-    private title: string = 'Monster Hunter - Monster Info';
+    private title = 'Monster Hunter - Monster Info';
 
-    public versionInfo: string;
+    public versionInfo = '-';
 
     constructor(
         private http: Http,
@@ -32,8 +32,8 @@ export class AppComponent implements OnInit {
 
     private setupInputParameters() {
 
-        let language: string|undefined = undefined;
-        let game: string|undefined = undefined;
+        let language: string|undefined;
+        let game: string|undefined;
 
         let search: string = window.location.search;
 
@@ -47,25 +47,25 @@ export class AppComponent implements OnInit {
             return;
         }
 
-        let parts: string[] = search
+        const parts: string[] = search
             .slice(1)
             .toLowerCase()
             .split('&');
 
         for (let i = 0; i < parts.length; i += 1) {
-            let subParts = parts[i].trim().split('=');
+            const subParts = parts[i].trim().split('=');
 
             if (subParts.length < 2) {
                 continue;
             }
 
             if (subParts[0] === 'lang') {
-                let temp: string = subParts[1].trim().toUpperCase();
+                const temp: string = subParts[1].trim().toUpperCase();
                 if (this.globalsService.availableLanguages.indexOf(temp) >= 0) {
                     language = temp;
                 }
             } else if (subParts[0] === 'game') {
-                let temp: string = subParts[1].trim();
+                const temp: string = subParts[1].trim();
                 if (this.globalsService.isGameAvailable(temp)) {
                     game = temp;
                 }
@@ -83,7 +83,7 @@ export class AppComponent implements OnInit {
 
     async setupVersionInfo() {
         try {
-            let response: Response = await this.http.get('./assets/git-info.json').toPromise();
+            const response: Response = await this.http.get('./assets/git-info.json').toPromise();
             let jsonRoot: IGitInfo;
 
             try {

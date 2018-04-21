@@ -10,15 +10,19 @@ export class TooltipComponent implements OnInit {
     private parentElement: any;
 
     @ViewChild('root')
-    private rootChild: ElementRef;
+    private rootChild: ElementRef | undefined;
 
     constructor(private elementRef: ElementRef) {
     }
 
     ngOnInit() {
 
-        let parentElement = this.elementRef.nativeElement.parentElement;
-        let rootElement = this.rootChild.nativeElement;
+        if (!this.rootChild) {
+            return;
+        }
+
+        const parentElement = this.elementRef.nativeElement.parentElement;
+        const rootElement = this.rootChild.nativeElement;
 
         parentElement.onmousemove = function (e: MouseEvent) {
 

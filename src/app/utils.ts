@@ -10,7 +10,7 @@ export class Event<TArgs> {
     }
 
     public unregister(handler: EventHandler<TArgs>) {
-        let index = this.handers.indexOf(handler);
+        const index = this.handers.indexOf(handler);
         if (index >= 0) {
             this.handers.splice(index, 1);
         }

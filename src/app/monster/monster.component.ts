@@ -11,7 +11,7 @@ import { GlobalsService } from '../globals.service';
 export class MonsterComponent implements OnInit {
 
     @Input()
-    public monsterInfoViewModel: IMonsterInfoViewModel;
+    public monsterInfoViewModel: IMonsterInfoViewModel | undefined;
 
     constructor(
         public languageService: LanguageService,
