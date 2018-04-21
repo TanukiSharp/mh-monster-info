@@ -26,9 +26,16 @@
             "water": 2
         },
         "weak": {
-            "water": -1,
-            "fire": -2,
-            "ice": -3
+            "fire": 1.5,
+            "water": 1.5,
+            "thunder": 0,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 3,
+            "stun": 1
         }
     },
     {
@@ -70,8 +77,16 @@
         "attack": {
         },
         "weak": {
-            "fire": -1,
-            "thunder": -2
+            "fire": 3,
+            "water": 0,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 3,
+            "paralysis": 3,
+            "blast": 3,
+            "stun": 3
         }
     },
     {
@@ -100,7 +115,16 @@
         "attack": {
         },
         "weak": {
-            "water": -1
+            "fire": 2,
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -186,7 +210,16 @@
             "poison": 1
         },
         "weak": {
-            "thunder": -1
+            "fire": 2,
+            "water": 0,
+            "thunder": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 3,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -295,6 +328,16 @@
             "fire": 1
         },
         "weak": {
+            "fire": 0,
+            "water": 3,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 0,
+            "sleep": 0,
+            "paralysis": 0,
+            "blast": 0,
+            "stun": 0
         }
     },
     {
@@ -312,8 +355,16 @@
             "water": 5
         },
         "weak": {
-            "dragon": -1,
-            "thunder": -2
+            "fire": 2,
+            "water": 2,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -471,6 +522,29 @@
             "thunder": -1,
             "ice": -2,
             "dragon": -3
+        }
+    },
+    {
+        "icon": 31,
+        "names": {
+            "EN": "Kulve Taroth",
+            "JP": "マム・タロト",
+            "FR": "Kulve Taroth"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "fire": 0.5,
+            "water": 2,
+            "thunder": 1.5,
+            "ice": 1.5,
+            "dragon": 1.5,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
         }
     }
 ]
