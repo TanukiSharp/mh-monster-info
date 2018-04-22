@@ -203,12 +203,27 @@ export class MonsterInfoComponent implements OnInit {
             return;
         }
 
-        let visibleMonsterCount = 0;
+        const monsterSet: Set<string> = new Set<string>();
+
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
+
             if (this.monsterInfoViewModels[i].isVisible) {
-                visibleMonsterCount += 1;
+
+                let name: string | null = this.monsterInfoViewModels[i].deaccentedSearchString;
+                if (!name) {
+                    continue;
+                }
+
+                const index = name.indexOf('(');
+                if (index >= 0) {
+                    name = name.substr(0, index).trim();
+                }
+
+                monsterSet.add(name);
             }
         }
+
+        const visibleMonsterCount: number = monsterSet.size;
 
         if (visibleMonsterCount === 0) {
             this._monsterCountString = this.languageService.translate('NO_MONSTER');
