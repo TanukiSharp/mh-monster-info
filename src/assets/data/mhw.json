@@ -10,24 +10,56 @@
             "fire": 1
         },
         "weak": {
-            "water": -1,
-            "ice": -2
+            "fire": 0,
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
         }
     },
     {
         "icon": 1,
         "names": {
-            "EN": "Barroth",
-            "FR": "Barroth",
-            "JP": "ボルボロス"
+            "EN": "Barroth (covered in mud)",
+            "FR": "Barroth (covered in mud)",
+            "JP": "ボルボロス (covered in mud)"
         },
         "attack": {
             "muddy": 1,
             "water": 2
         },
         "weak": {
-            "fire": 1.5,
-            "water": 1.5,
+            "fire": 0,
+            "water": 3,
+            "thunder": 0,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 3,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 1,
+        "names": {
+            "EN": "Barroth (not covered in mud)",
+            "FR": "Barroth (not covered in mud)",
+            "JP": "ボルボロス (not covered in mud)"
+        },
+        "attack": {
+            "muddy": 1,
+            "water": 2
+        },
+        "weak": {
+            "fire": 3,
+            "water": 0,
             "thunder": 0,
             "ice": 2,
             "dragon": 1,
@@ -48,7 +80,16 @@
         "attack": {
         },
         "weak": {
-            "ice": -1
+            "fire": 0,
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 1
         }
     },
     {
@@ -62,9 +103,16 @@
             "paralysis": 1
         },
         "weak": {
-            "water": -1,
-            "fire": -2,
-            "ice": -3
+            "fire": 2,
+            "water": 3,
+            "thunder": 0,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 3,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -92,17 +140,49 @@
     {
         "icon": 5,
         "names": {
-            "EN": "Jyuratodus",
-            "JP": "ジュラトドス",
-            "FR": "Jyuratodus"
+            "EN": "Jyuratodus (covered in mud)",
+            "JP": "ジュラトドス (covered in mud)",
+            "FR": "Jyuratodus (covered in mud)"
         },
         "attack": {
             "water": 1,
             "muddy": 2
         },
         "weak": {
-            "thunder": -1,
-            "fire": -2
+            "fire": 0,
+            "water": 3,
+            "thunder": 0,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 5,
+        "names": {
+            "EN": "Jyuratodus (not covered in mud)",
+            "JP": "ジュラトドス (not covered in mud)",
+            "FR": "Jyuratodus (not covered in mud)"
+        },
+        "attack": {
+            "water": 1,
+            "muddy": 2
+        },
+        "weak": {
+            "fire": 1,
+            "water": 0,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 3
         }
     },
     {
@@ -130,15 +210,47 @@
     {
         "icon": 18,
         "names": {
-            "EN": "Lavasioth",
-            "JP": "ヴォルガノス",
-            "FR": "Lavasioth"
+            "EN": "Lavasioth (when hardened)",
+            "JP": "ヴォルガノス (when hardened)",
+            "FR": "Lavasioth (when hardened)"
         },
         "attack": {
             "fire": 1
         },
         "weak": {
-            "water": -1
+            "fire": 1,
+            "water": 2,
+            "thunder": 0,
+            "ice": 0,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 18,
+        "names": {
+            "EN": "Lavasioth (not hardened)",
+            "JP": "ヴォルガノス (not hardened)",
+            "FR": "Lavasioth (not hardened)"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "fire": 0,
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
         }
     },
     {
@@ -152,8 +264,16 @@
             "ice": 1
         },
         "weak": {
-            "thunder": -1,
-            "fire": -2
+            "fire": 2,
+            "water": 1,
+            "thunder": 3,
+            "ice": 0,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -166,8 +286,16 @@
         "attack": {
         },
         "weak": {
-            "thunder": -1,
-            "water": -2
+            "fire": 1,
+            "water": 1,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -181,8 +309,16 @@
             "bleeding": 1
         },
         "weak": {
-            "ice": -1,
-            "thunder": -2
+            "fire": 1,
+            "water": 1,
+            "thunder": 2,
+            "ice": 3,
+            "dragon": 0,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -195,8 +331,16 @@
         "attack": {
         },
         "weak": {
-            "fire": -1,
-            "thunder": -2
+            "fire": 3,
+            "water": 0,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 3
         }
     },
     {
@@ -233,8 +377,16 @@
             "sleep": 1
         },
         "weak": {
-            "dragon": -1,
-            "ice": -2
+            "fire": 1,
+            "water": 1,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 2
         }
     },
     {
@@ -250,10 +402,16 @@
             "poison": 3
         },
         "weak": {
-            "dragon": -1,
-            "thunder": -2,
-            "ice": -3,
-            "water": -4
+            "fire": 0,
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
         }
     },
     {
@@ -268,8 +426,16 @@
             "poison": 2
         },
         "weak": {
-            "dragon": -1,
-            "thunder": -2
+            "fire": 0,
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 3
         }
     },
     {
@@ -283,7 +449,16 @@
             "thunder": 1
         },
         "weak": {
-            "water": -1
+            "fire": 2,
+            "water": 3,
+            "thunder": 0,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -297,8 +472,16 @@
             "stun": 1
         },
         "weak": {
-            "thunder": -1,
-            "ice": -2
+            "fire": 2,
+            "water": 2,
+            "thunder": 3,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -313,8 +496,16 @@
             "sleep": 2
         },
         "weak": {
-            "water": -1,
-            "dragon": -2
+            "fire": 0,
+            "water": 3,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 3
         }
     },
     {
@@ -378,7 +569,16 @@
             "blast": 1
         },
         "weak": {
-            "thunder": -1
+            "fire": 0,
+            "water": 2,
+            "thunder": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
         }
     },
     {
@@ -394,8 +594,16 @@
             "snowman": 3
         },
         "weak": {
-            "dragon": -1,
-            "thunder": -2
+            "fire": 1,
+            "water": 0,
+            "thunder": 3,
+            "ice": 0,
+            "dragon": 2,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 3,
+            "stun": 2
         }
     },
     {
@@ -411,8 +619,16 @@
             "blast": 3
         },
         "weak": {
-            "dragon": -1,
-            "water": -2
+            "fire": 0,
+            "water": 3,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 2
         }
     },
     {
@@ -425,9 +641,16 @@
         "attack": {
         },
         "weak": {
-            "fire": -1,
-            "dragon": -2,
-            "ice": -3
+            "fire": 3,
+            "water": 0,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
         }
     },
     {
@@ -442,8 +665,16 @@
             "stun": 2
         },
         "weak": {
-            "fire": -1,
-            "water": -2
+            "fire": 3,
+            "water": 2,
+            "thunder": 0,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 0,
+            "blast": 2,
+            "stun": 1
         }
     },
     {
@@ -456,7 +687,16 @@
         "attack": {
         },
         "weak": {
-            "ice": -1
+            "fire": 0,
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 0,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 1
         }
     },
     {
@@ -472,8 +712,16 @@
             "poison": 3
         },
         "weak": {
-            "dragon": -1,
-            "ice": -2
+            "fire": 0,
+            "water": 1,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
         }
     },
     {
@@ -488,8 +736,16 @@
             "poison": 2
         },
         "weak": {
-            "dragon": -1,
-            "thunder": -2
+            "fire": 0,
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 3
         }
     },
     {
@@ -504,8 +760,16 @@
             "fire": 2
         },
         "weak": {
-            "dragon": -1,
-            "fire": -2
+            "fire": 2,
+            "water": 2,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 3,
+            "sleep": 0,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 1
         }
     },
     {
@@ -519,27 +783,57 @@
             "fire": 1
         },
         "weak": {
-            "thunder": -1,
-            "ice": -2,
-            "dragon": -3
+            "fire": 0,
+            "water": 1,
+            "thunder": 3,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 1
         }
     },
     {
         "icon": 31,
         "names": {
-            "EN": "Kulve Taroth",
-            "JP": "マム・タロト",
-            "FR": "Kulve Taroth"
+            "EN": "Kulve Taroth (covered in gold)",
+            "JP": "マム・タロト (covered in gold)",
+            "FR": "Kulve Taroth (covered in gold)"
         },
         "attack": {
             "fire": 1
         },
         "weak": {
-            "fire": 0.5,
+            "fire": 1,
             "water": 2,
-            "thunder": 1.5,
-            "ice": 1.5,
-            "dragon": 1.5,
+            "thunder": 3,
+            "ice": 0,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 31,
+        "names": {
+            "EN": "Kulve Taroth (not covered in gold)",
+            "JP": "マム・タロト (not covered in gold)",
+            "FR": "Kulve Taroth (not covered in gold)"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "fire": 0,
+            "water": 2,
+            "thunder": 0,
+            "ice": 3,
+            "dragon": 2,
             "poison": 1,
             "sleep": 1,
             "paralysis": 1,
