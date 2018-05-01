@@ -5,6 +5,7 @@ import { LanguageService } from '../language.service';
 import { IMonsterInfo } from '../data-structures/monster-info';
 import { IGameInfo } from '../data-structures/game-info';
 import { Utils } from '../utils';
+import { Attribute, IAttributeInfo } from '../data-structures/attribute-info';
 
 export interface IMonsterInfoViewModel {
     isVisible: boolean;
@@ -21,7 +22,18 @@ export class MonsterInfoComponent implements OnInit {
 
     public monsterInfoViewModels: IMonsterInfoViewModel[] | undefined = undefined;
 
+    private _totalAttacks: Attribute[] = [];
+    private _averageWeaks: IAttributeInfo[] = [];
     private _monsterCountString = '0';
+
+    public totalAttacks(): Attribute[] {
+        return this._totalAttacks;
+    }
+
+    public averageWeaks(): IAttributeInfo[] {
+        return this._averageWeaks;
+    }
+
     public monsterCountString(): string {
         return this._monsterCountString;
     }
@@ -205,9 +217,30 @@ export class MonsterInfoComponent implements OnInit {
 
         const monsterSet: Set<string> = new Set<string>();
 
+        let averageWeakCount = 0;
+        const averageWeaks: { [key: string]: number; } = {};
+        const totalAttacks: Set<Attribute> = new Set<Attribute>();
+
         for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
 
             if (this.monsterInfoViewModels[i].isVisible) {
+
+                const attacks = this.monsterInfoViewModels[i].monsterInfo.attacks;
+                const weaks = this.monsterInfoViewModels[i].monsterInfo.weaks;
+
+                for (let j = 0; j < attacks.length; j += 1) {
+                    totalAttacks.add(attacks[j].type);
+                }
+
+                for (let j = 0; j < weaks.length; j += 1) {
+                    const weakTypeStr: string = weaks[j].type.toString();
+                    if (averageWeaks[weakTypeStr] === undefined) {
+                        averageWeaks[weakTypeStr] = 0;
+                    }
+                    averageWeaks[weakTypeStr] += weaks[j].value;
+                }
+
+                averageWeakCount += 1;
 
                 let name: string | null = this.monsterInfoViewModels[i].deaccentedSearchString;
                 if (!name) {
@@ -222,6 +255,25 @@ export class MonsterInfoComponent implements OnInit {
                 monsterSet.add(name);
             }
         }
+
+        let key: string;
+
+        this._totalAttacks = [];
+        this._averageWeaks = [];
+
+        this._totalAttacks = Array.from(totalAttacks.values());
+
+        for (key in averageWeaks) {
+            if (averageWeaks.hasOwnProperty(key)) {
+                this._averageWeaks.push({
+                    type: <Attribute>Number.parseInt(key, 10),
+                    value: averageWeaks[key] / averageWeakCount
+                });
+            }
+        }
+
+        this._totalAttacks.sort((a, b) => a - b);
+        this.dataLoaderService.normalizeAttributes(this._averageWeaks);
 
         const visibleMonsterCount: number = monsterSet.size;
 

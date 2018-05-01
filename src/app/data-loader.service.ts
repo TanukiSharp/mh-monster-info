@@ -64,6 +64,24 @@ export class DataLoaderService {
         return Attribute.Unknown;
     }
 
+    public normalizeAttributes(attributes: IAttributeInfo[]) {
+        if (attributes.length <= 0) {
+            return;
+        }
+
+        attributes.sort((a, b) => b.value - a.value);
+
+        for (let i = 1; i < attributes.length; i += 1) {
+            if (attributes[i].value >= 0) {
+                attributes[i].value = Math.round(attributes[i].value * 100 / attributes[0].value);
+            }
+        }
+
+        if (attributes[0].value >= 0) {
+            attributes[0].value = 100;
+        }
+    }
+
     async loadMonsterFile(monsterFilename: string): Promise<IMonsterInfo[]|null> {
 
         const response: Response = await this.http.get(monsterFilename).toPromise();
@@ -129,19 +147,7 @@ export class DataLoaderService {
                     });
                 }
 
-                if (weaks.length > 0) {
-                    weaks.sort((a, b) => b.value - a.value);
-
-                    for (let j = 1; j < weakKeys.length; j += 1) {
-                        if (weaks[j].value >= 0) {
-                            weaks[j].value = Math.round(weaks[j].value * 100 / weaks[0].value);
-                        }
-                    }
-
-                    if (weaks[0].value >= 0) {
-                        weaks[0].value = 100;
-                    }
-                }
+                this.normalizeAttributes(weaks);
             }
 
             result.push({
