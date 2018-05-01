@@ -32,7 +32,9 @@
         "CONFUSION": "Confusion",
         "NO_MONSTER": "No monster",
         "ONE_MONSTER": "1 monster",
-        "N_MONSTERS": " monsters"
+        "N_MONSTERS": " monsters",
+        "TOTAL_ATTACKS": "All attacks",
+        "AVERAGE_WEAKS": "Average weaknesses"
     },
     "JP": {
         "GAME": "ゲーム",
@@ -67,7 +69,9 @@
         "CONFUSION": "混乱状態",
         "NO_MONSTER": "モンスターありません",
         "ONE_MONSTER": "1 モンスター",
-        "N_MONSTERS": " モンスター"
+        "N_MONSTERS": " モンスター",
+        "TOTAL_ATTACKS": "すべての攻撃の属性",
+        "AVERAGE_WEAKS": "弱点属性の平均"
     },
     "FR": {
         "GAME": "Jeu",
@@ -102,6 +106,8 @@
         "CONFUSION": "Confusion",
         "NO_MONSTER": "Pas de monstre",
         "ONE_MONSTER": "1 monstre",
-        "N_MONSTERS": " monstres"
+        "N_MONSTERS": " monstres",
+        "TOTAL_ATTACKS": "Toutes les attaques",
+        "AVERAGE_WEAKS": "Moyenne des faiblesses"
     }
 }
