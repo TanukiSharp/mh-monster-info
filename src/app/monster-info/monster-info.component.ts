@@ -22,26 +22,29 @@ export class MonsterInfoComponent implements OnInit {
 
     public monsterInfoViewModels: IMonsterInfoViewModel[] | undefined = undefined;
 
-    private _totalAttacks: Attribute[] = [];
+    private _totalAttacks: IAttributeInfo[] = [];
     private _averageWeaks: IAttributeInfo[] = [];
     private _monsterCountString = '0';
 
-    public totalAttacks(): Attribute[] {
+    public get totalAttacks(): IAttributeInfo[] {
         return this._totalAttacks;
     }
+    private setTotalAttacks(attributes: Attribute[]) {
+        this._totalAttacks = attributes.map(x => ({ type: x, value: 0}));
+    }
 
-    public averageWeaks(): IAttributeInfo[] {
+    public get averageWeaks(): IAttributeInfo[] {
         return this._averageWeaks;
     }
 
-    public monsterCountString(): string {
+    public get monsterCountString(): string {
         return this._monsterCountString;
     }
 
     constructor(
         private globalsService: GlobalsService,
         private dataLoaderService: DataLoaderService,
-        private languageService: LanguageService
+        public languageService: LanguageService
     ) {
         this.globalsService.registerGameChanged(async (sender, gameInfo) => {
             await this.selectGameInternal(gameInfo);
@@ -258,11 +261,9 @@ export class MonsterInfoComponent implements OnInit {
 
         let key: string;
 
-        this._totalAttacks = [];
+        this.setTotalAttacks(Array.from(totalAttacks.values()).sort((a, b) => a - b));
+
         this._averageWeaks = [];
-
-        this._totalAttacks = Array.from(totalAttacks.values());
-
         for (key in averageWeaks) {
             if (averageWeaks.hasOwnProperty(key)) {
                 this._averageWeaks.push({
@@ -272,7 +273,6 @@ export class MonsterInfoComponent implements OnInit {
             }
         }
 
-        this._totalAttacks.sort((a, b) => a - b);
         this.dataLoaderService.normalizeAttributes(this._averageWeaks);
 
         const visibleMonsterCount: number = monsterSet.size;

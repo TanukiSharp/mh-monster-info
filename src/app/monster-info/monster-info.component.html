@@ -1,5 +1,21 @@
 <div>
-    <div style="margin: 4px">{{monsterCountString()}}</div>
+    <div style="margin: 4px">{{monsterCountString}}</div>
+
+    <br/>
+
+    <div style="font-size: 0.65em;">{{languageService.translate('TOTAL_ATTACKS')}}</div>
+    <div style="display: flex;">
+        <div *ngFor="let attribute of totalAttacks">
+            <app-attribute [showValues]="false" [attribute]="attribute"></app-attribute>
+        </div>
+    </div>
+
+    <div style="font-size: 0.65em;">{{languageService.translate('AVERAGE_WEAKS')}}</div>
+    <div style="display: flex;">
+        <div *ngFor="let attribute of averageWeaks">
+            <app-attribute [showValues]="true" [attribute]="attribute"></app-attribute>
+        </div>
+    </div>
 
     <div *ngFor="let monsterInfoViewModel of monsterInfoViewModels" style="display: inline-block;">
         <app-monster [monsterInfoViewModel]="monsterInfoViewModel"></app-monster>
