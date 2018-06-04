@@ -840,5 +840,28 @@
             "blast": 1,
             "stun": 1
         }
+    },
+    {
+        "icon": 32,
+        "names": {
+            "EN": "Lunastra",
+            "JP": "ナナ・テスカトリ",
+            "FR": "Lunastra"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "fire": 0,
+            "water": 1,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
+        }
     }
 ]
