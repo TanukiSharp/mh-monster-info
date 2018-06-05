@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { IGameInfo } from './data-structures/game-info';
 import { EventHandler, Event } from './utils';
 
@@ -41,6 +42,24 @@ export class GlobalsService {
 
     // ============================================
 
+    public numberToFilterMode(filterMode: number): FilterMode {
+        switch (filterMode) {
+            case 1: return FilterMode.Hide;
+            case 2: return FilterMode.Shade;
+        }
+        return FilterMode.Hide;
+    }
+
+    public filterModeToNumber(filterMode: FilterMode): number {
+        switch (filterMode) {
+            case FilterMode.Hide: return 1;
+            case FilterMode.Shade: return 2;
+        }
+        return 1;
+    }
+
+    // ============================================
+
     public get filterMode(): FilterMode {
         return this._filterMode;
     }
@@ -49,6 +68,8 @@ export class GlobalsService {
         this._filterMode = value;
         this.saveSettings();
         this.reapplySearchFilter();
+
+        this.updateLink();
     }
 
     public get availableFilterModes(): FilterMode[] {
@@ -181,6 +202,8 @@ export class GlobalsService {
             this._searchFilter = value;
             this._lastSearchFilter = value;
             this._searchFilterChangedEvent.raise(this, value);
+
+            this.updateLink();
         }
     }
     public reapplySearchFilter() {
@@ -246,13 +269,26 @@ export class GlobalsService {
             value += `filterMode:${this.filterMode}|`;
         }
 
+        this.updateLink();
+
         document.cookie = value + '; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+    }
+
+    private updateLink(): void {
+
+        const game = this.selectedGame.fileNamePart;
+        const lang = this.selectedLanguage;
+        const filter = this.searchFilter;
+        const fmode = this.filterModeToNumber(this.filterMode).toString();
+
+        const url: string = encodeURI(`?game=${game}&lang=${lang}&filter=${filter}&fmode=${fmode}`);
+
+        this.router.navigateByUrl(url);
     }
 
     // ============================================
 
-    constructor() {
-        // this._selectedGame = this.availableGames[0];
+    constructor(private router: Router) {
         this._selectedLanguage = this.availableLanguages[0];
     }
 }

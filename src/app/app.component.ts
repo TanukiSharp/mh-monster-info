@@ -34,6 +34,8 @@ export class AppComponent implements OnInit {
 
         let language: string|undefined;
         let game: string|undefined;
+        let filter: string|undefined;
+        let filterMode: FilterMode|undefined;
 
         let search: string = window.location.search;
 
@@ -50,7 +52,8 @@ export class AppComponent implements OnInit {
         const parts: string[] = search
             .slice(1)
             .toLowerCase()
-            .split('&');
+            .split('&')
+            .map(decodeURI);
 
         for (let i = 0; i < parts.length; i += 1) {
             const subParts = parts[i].trim().split('=');
@@ -59,16 +62,21 @@ export class AppComponent implements OnInit {
                 continue;
             }
 
+            const argValue: string = subParts[1].trim();
+
             if (subParts[0] === 'lang') {
-                const temp: string = subParts[1].trim().toUpperCase();
+                const temp: string = argValue.toUpperCase();
                 if (this.globalsService.availableLanguages.indexOf(temp) >= 0) {
                     language = temp;
                 }
             } else if (subParts[0] === 'game') {
-                const temp: string = subParts[1].trim();
-                if (this.globalsService.isGameAvailable(temp)) {
-                    game = temp;
+                if (this.globalsService.isGameAvailable(argValue)) {
+                    game = argValue;
                 }
+            } else if (subParts[0] === 'filter') {
+                filter = argValue;
+            } else if (subParts[0] === 'fmode') {
+                filterMode = this.globalsService.numberToFilterMode(parseInt(argValue, 10));
             }
         }
 
@@ -78,6 +86,14 @@ export class AppComponent implements OnInit {
 
         if (language) {
             this.globalsService.selectedLanguage = language;
+        }
+
+        if (filter) {
+            this.globalsService.searchFilter = filter;
+        }
+
+        if (filterMode) {
+            this.globalsService.filterMode = filterMode;
         }
     }
 

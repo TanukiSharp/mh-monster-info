@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MonsterInfoComponent } from './monster-info/monster-info.component';
@@ -21,7 +22,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
     imports: [
         FormsModule,
         BrowserModule,
-        HttpModule
+        HttpModule,
+        RouterModule.forRoot([{ path: '', component: AppComponent}])
     ],
     providers: [],
     bootstrap: [AppComponent]
