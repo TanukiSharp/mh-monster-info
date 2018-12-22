@@ -863,5 +863,30 @@
             "blast": 2,
             "stun": 2
         }
+    },
+    {
+        "icon": 33,
+        "names": {
+            "EN": "Behemoth",
+            "JP": "ベヒーモス",
+            "FR": "Behemoth"
+        },
+        "attack": {
+            "fire": 1,
+            "thunder": 2,
+            "bleeding": 3
+        },
+        "weak": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
     }
 ]
