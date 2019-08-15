@@ -888,5 +888,47 @@
             "blast": 2,
             "stun": 2
         }
+    },
+    {
+        "icon": 34,
+        "names": {
+            "EN": "Leshen",
+            "JP": "レーシェン",
+            "FR": "Leshen"
+        },
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 3,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 35,
+        "names": {
+            "EN": "Ancient Leshen",
+            "JP": "エンシェント・レーシェン",
+            "FR": "Vieux Leshen"
+        },
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 2,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
     }
 ]
