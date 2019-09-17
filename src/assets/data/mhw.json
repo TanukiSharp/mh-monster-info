@@ -10,7 +10,6 @@
             "fire": 1
         },
         "weak": {
-            "fire": 0,
             "water": 3,
             "thunder": 2,
             "ice": 2,
@@ -34,9 +33,7 @@
             "water": 2
         },
         "weak": {
-            "fire": 0,
             "water": 3,
-            "thunder": 0,
             "ice": 2,
             "dragon": 1,
             "poison": 3,
@@ -59,8 +56,6 @@
         },
         "weak": {
             "fire": 3,
-            "water": 0,
-            "thunder": 0,
             "ice": 2,
             "dragon": 1,
             "poison": 3,
@@ -80,7 +75,6 @@
         "attack": {
         },
         "weak": {
-            "fire": 0,
             "water": 2,
             "thunder": 1,
             "ice": 3,
@@ -105,7 +99,6 @@
         "weak": {
             "fire": 2,
             "water": 3,
-            "thunder": 0,
             "ice": 2,
             "dragon": 1,
             "poison": 2,
@@ -126,7 +119,6 @@
         },
         "weak": {
             "fire": 3,
-            "water": 0,
             "thunder": 2,
             "ice": 2,
             "dragon": 1,
@@ -149,9 +141,7 @@
             "muddy": 2
         },
         "weak": {
-            "fire": 0,
             "water": 3,
-            "thunder": 0,
             "ice": 1,
             "dragon": 1,
             "poison": 2,
@@ -174,7 +164,6 @@
         },
         "weak": {
             "fire": 1,
-            "water": 0,
             "thunder": 3,
             "ice": 1,
             "dragon": 1,
@@ -220,8 +209,6 @@
         "weak": {
             "fire": 1,
             "water": 2,
-            "thunder": 0,
-            "ice": 0,
             "dragon": 1,
             "poison": 3,
             "sleep": 1,
@@ -241,7 +228,6 @@
             "fire": 1
         },
         "weak": {
-            "fire": 0,
             "water": 3,
             "thunder": 2,
             "ice": 2,
@@ -267,7 +253,6 @@
             "fire": 2,
             "water": 1,
             "thunder": 3,
-            "ice": 0,
             "dragon": 1,
             "poison": 3,
             "sleep": 2,
@@ -313,7 +298,6 @@
             "water": 1,
             "thunder": 2,
             "ice": 3,
-            "dragon": 0,
             "poison": 1,
             "sleep": 2,
             "paralysis": 3,
@@ -332,7 +316,6 @@
         },
         "weak": {
             "fire": 3,
-            "water": 0,
             "thunder": 2,
             "ice": 1,
             "dragon": 1,
@@ -355,7 +338,6 @@
         },
         "weak": {
             "fire": 2,
-            "water": 0,
             "thunder": 3,
             "ice": 2,
             "dragon": 1,
@@ -402,7 +384,6 @@
             "poison": 3
         },
         "weak": {
-            "fire": 0,
             "water": 1,
             "thunder": 2,
             "ice": 1,
@@ -426,7 +407,6 @@
             "poison": 2
         },
         "weak": {
-            "fire": 0,
             "water": 1,
             "thunder": 2,
             "ice": 1,
@@ -451,7 +431,6 @@
         "weak": {
             "fire": 2,
             "water": 3,
-            "thunder": 0,
             "ice": 2,
             "dragon": 1,
             "poison": 3,
@@ -496,7 +475,6 @@
             "sleep": 2
         },
         "weak": {
-            "fire": 0,
             "water": 3,
             "thunder": 1,
             "ice": 2,
@@ -519,16 +497,10 @@
             "fire": 1
         },
         "weak": {
-            "fire": 0,
             "water": 3,
             "thunder": 1,
             "ice": 2,
-            "dragon": 3,
-            "poison": 0,
-            "sleep": 0,
-            "paralysis": 0,
-            "blast": 0,
-            "stun": 0
+            "dragon": 3
         }
     },
     {
@@ -569,7 +541,6 @@
             "blast": 1
         },
         "weak": {
-            "fire": 0,
             "water": 2,
             "thunder": 3,
             "ice": 2,
@@ -595,9 +566,7 @@
         },
         "weak": {
             "fire": 1,
-            "water": 0,
             "thunder": 3,
-            "ice": 0,
             "dragon": 2,
             "poison": 3,
             "sleep": 1,
@@ -619,7 +588,6 @@
             "blast": 3
         },
         "weak": {
-            "fire": 0,
             "water": 3,
             "thunder": 1,
             "ice": 3,
@@ -642,7 +610,6 @@
         },
         "weak": {
             "fire": 3,
-            "water": 0,
             "thunder": 1,
             "ice": 2,
             "dragon": 3,
@@ -667,12 +634,10 @@
         "weak": {
             "fire": 3,
             "water": 2,
-            "thunder": 0,
             "ice": 2,
             "dragon": 1,
             "poison": 1,
             "sleep": 2,
-            "paralysis": 0,
             "blast": 2,
             "stun": 1
         }
@@ -687,11 +652,9 @@
         "attack": {
         },
         "weak": {
-            "fire": 0,
             "water": 2,
             "thunder": 1,
             "ice": 3,
-            "dragon": 0,
             "poison": 2,
             "sleep": 2,
             "paralysis": 3,
@@ -712,7 +675,6 @@
             "poison": 3
         },
         "weak": {
-            "fire": 0,
             "water": 1,
             "thunder": 1,
             "ice": 2,
@@ -736,7 +698,6 @@
             "poison": 2
         },
         "weak": {
-            "fire": 0,
             "water": 1,
             "thunder": 2,
             "ice": 1,
@@ -766,7 +727,6 @@
             "ice": 2,
             "dragon": 2,
             "poison": 3,
-            "sleep": 0,
             "paralysis": 1,
             "blast": 2,
             "stun": 1
@@ -783,7 +743,6 @@
             "fire": 1
         },
         "weak": {
-            "fire": 0,
             "water": 1,
             "thunder": 3,
             "ice": 2,
@@ -809,7 +768,6 @@
             "fire": 1,
             "water": 2,
             "thunder": 3,
-            "ice": 0,
             "dragon": 1,
             "poison": 1,
             "sleep": 1,
@@ -829,9 +787,7 @@
             "fire": 1
         },
         "weak": {
-            "fire": 0,
             "water": 2,
-            "thunder": 0,
             "ice": 3,
             "dragon": 2,
             "poison": 1,
@@ -852,7 +808,6 @@
             "fire": 1
         },
         "weak": {
-            "fire": 0,
             "water": 1,
             "thunder": 1,
             "ice": 3,
