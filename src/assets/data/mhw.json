@@ -885,5 +885,91 @@
             "blast": 1,
             "stun": 1
         }
+    },
+    {
+        "icon": 36,
+        "names": {
+            "EN": "Beotodus",
+            "JP": "ブラントドス",
+            "FR": "Beotodus"
+        },
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 37,
+        "names": {
+            "EN": "Banbaro",
+            "JP": "ヴァルハザク",
+            "FR": "Banbaro"
+        },
+        "attack": {
+        },
+        "weak": {
+            "fire": 2,
+            "thunder": 1,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 38,
+        "names": {
+            "EN": "Viper Tobi-Kadachi",
+            "JP": "パオウルムー亜種",
+            "FR": "Tobi-Kadachi Vipère"
+        },
+        "attack": {
+            "npoison": 3,
+            "poison": 2,
+            "paralysis": 1
+        },
+        "weak": {
+            "fire": 1,
+            "thunder": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 39,
+        "names": {
+            "EN": "Nightshade Paolumu",
+            "JP": "パオウルムー亜種",
+            "FR": "Paolumu Belladone"
+        },
+        "attack": {
+            "sleep": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 3,
+            "thunder": 1,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
     }
 ]
