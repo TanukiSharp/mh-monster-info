@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { DataLoaderService } from './data-loader.service';
 import { GlobalsService, FilterMode } from './globals.service';
 import { LanguageService } from './language.service';
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     public versionInfo = '-';
 
     constructor(
-        private http: Http,
+        private http: HttpClient,
         public globalsService: GlobalsService,
         public languageService: LanguageService
     ) {
@@ -99,16 +99,7 @@ export class AppComponent implements OnInit {
 
     async setupVersionInfo() {
         try {
-            const response: Response = await this.http.get('./assets/git-info.json').toPromise();
-            let jsonRoot: IGitInfo;
-
-            try {
-                jsonRoot = response.json();
-            } catch (err) {
-                console.error(err);
-                return null;
-            }
-
+            const jsonRoot: any = await this.http.get('./assets/git-info.json').toPromise();
             this.versionInfo = jsonRoot.gitRemoteOriginUrl + '\n' + jsonRoot.gitCommit + '\n' + jsonRoot.gitBranch;
         } catch (err) {
             this.versionInfo = err.toString();
