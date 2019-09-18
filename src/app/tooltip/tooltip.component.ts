@@ -9,7 +9,7 @@ export class TooltipComponent implements OnInit {
 
     private parentElement: any;
 
-    @ViewChild('root')
+    @ViewChild('root', { static: true })
     private rootChild: ElementRef | undefined;
 
     constructor(private elementRef: ElementRef) {

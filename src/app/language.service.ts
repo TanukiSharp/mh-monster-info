@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 import { IMonsterName } from './data-structures/monster-name';
 import { resetFakeAsyncZone } from '@angular/core/testing';
@@ -10,16 +10,9 @@ export class LanguageService {
 
     private commonData: any;
 
-    constructor(private http: Http, private globalsService: GlobalsService) {
-        this.http.get('./assets/localization.json').subscribe((response: Response) => {
-            let jsonRoot;
-            try {
-                jsonRoot = response.json();
-            } catch (err) {
-                console.error(err);
-                return;
-            }
-            this.commonData = jsonRoot;
+    constructor(private http: HttpClient, private globalsService: GlobalsService) {
+        this.http.get('./assets/localization.json').subscribe((response: any) => {
+            this.commonData = response;
         });
     }
 

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -22,7 +22,7 @@ import { TooltipComponent } from './tooltip/tooltip.component';
     imports: [
         FormsModule,
         BrowserModule,
-        HttpModule,
+        HttpClientModule,
         RouterModule.forRoot([{ path: '', component: AppComponent}])
     ],
     providers: [],

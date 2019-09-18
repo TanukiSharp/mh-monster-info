@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 import { IMonsterInfo } from './data-structures/monster-info';
 import { IMonsterName } from './data-structures/monster-name';
@@ -8,7 +8,7 @@ import { Attribute, IAttributeInfo } from './data-structures/attribute-info';
 @Injectable()
 export class DataLoaderService {
 
-    constructor(private http: Http) { }
+    constructor(private http: HttpClient) { }
 
     // from attribute to display data
     public attributeToTranslationKey(type: Attribute): string {
@@ -84,15 +84,7 @@ export class DataLoaderService {
 
     async loadMonsterFile(monsterFilename: string): Promise<IMonsterInfo[]|null> {
 
-        const response: Response = await this.http.get(monsterFilename).toPromise();
-        let jsonRoot: any[];
-
-        try {
-            jsonRoot = response.json();
-        } catch (err) {
-            console.error(err);
-            return null;
-        }
+        const jsonRoot: any[] = <any[]>await this.http.get(monsterFilename).toPromise();
 
         if (jsonRoot.length === undefined) {
             console.error('Invalid root element, must be an array or objects');
