@@ -161,7 +161,7 @@ private _availableGames: IGameInfo[] = [
     { fileNamePart: 'mh3u', title: 'MH 3U' },
     { fileNamePart: 'mh4u', title: 'MH 4U' },
     { fileNamePart: 'mhxx', title: 'MH XX' },
-    { fileNamePart: 'mhw', title: 'MH World' },
+    { fileNamePart: 'mhwi', title: 'MH WI' },
     { fileNamePart: 'my', title: 'MH My' } // <-- add description of new game here
 ];
 ```
@@ -324,7 +324,7 @@ Casing of argument name and value do not matter.
 
 Hereafter are examples of links:
 
-- https://tanukisharp.github.io/mh-monster-info?lang=EN&game=mhw
+- https://tanukisharp.github.io/mh-monster-info?lang=EN&game=mhwi
 - https://tanukisharp.github.io/mh-monster-info?lang=JP&game=mhxx
 - https://tanukisharp.github.io/mh-monster-info?lang=FR
 - https://tanukisharp.github.io/mh-monster-info?game=mh3u

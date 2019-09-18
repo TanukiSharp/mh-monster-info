@@ -18,7 +18,7 @@ export class GlobalsService {
         { fileNamePart: 'mh3u', title: 'MH 3U' },
         { fileNamePart: 'mh4u', title: 'MH 4U' },
         { fileNamePart: 'mhxx', title: 'MH XX' },
-        { fileNamePart: 'mhw', title: 'MH World' }
+        { fileNamePart: 'mhwi', title: 'MH WI' }
     ];
 
     private _availableLanguages: string[] = [
