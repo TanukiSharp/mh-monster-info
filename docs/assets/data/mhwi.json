@@ -1058,5 +1058,27 @@
             "blast": 2,
             "stun": 2
         }
+    },
+    {
+        "icon": 44,
+        "names": {
+            "EN": "Brachydios",
+            "JP": "ブラキディオス",
+            "FR": "Brachydios"
+        },
+        "attack": {
+            "blast": 1
+        },
+        "weak": {
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
     }
 ]
