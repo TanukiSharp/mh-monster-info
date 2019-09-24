@@ -971,5 +971,92 @@
             "blast": 2,
             "stun": 2
         }
+    },
+    {
+        "icon": 40,
+        "names": {
+            "EN": "Coral Pukei-Pukei",
+            "JP": "プケプケ亜種",
+            "FR": "Pukei-Pukei Corail"
+        },
+        "attack": {
+            "water": 1
+        },
+        "weak": {
+            "fire": 1,
+            "thunder": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 41,
+        "names": {
+            "EN": "Barioth",
+            "JP": "ベリオロス",
+            "FR": "Barioth"
+        },
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 42,
+        "names": {
+            "EN": "Nargacuga",
+            "JP": "ナルガクルガ",
+            "FR": "Nargacuga"
+        },
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 2,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 43,
+        "names": {
+            "EN": "Glavenus",
+            "JP": "ディノバルド",
+            "FR": "Glavenus"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
     }
 ]
