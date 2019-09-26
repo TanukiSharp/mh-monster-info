@@ -1080,5 +1080,27 @@
             "blast": 1,
             "stun": 2
         }
+    },
+    {
+        "icon": 45,
+        "names": {
+            "EN": "Tigrex",
+            "JP": "ティガレックス",
+            "FR": "Tigrex"
+        },
+        "attack": {
+            "blast": 1
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
     }
 ]
