@@ -1102,5 +1102,93 @@
             "blast": 2,
             "stun": 2
         }
+    },
+    {
+        "icon": 46,
+        "names": {
+            "EN": "Shrieking Legiana",
+            "JP": "凍て刺すレイギエナ",
+            "FR": "Legiana blizzard"
+        },
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 47,
+        "names": {
+            "EN": "Velkhana",
+            "JP": "イヴェルカーナ",
+            "FR": "Velkhana"
+        },
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 3,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 48,
+        "names": {
+            "EN": "Fulgur Anjanath (not charged)",
+            "JP": "アンジャナフ亜種 (not charged)",
+            "FR": "Anjanath tonnerre (not charged)"
+        },
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 48,
+        "names": {
+            "EN": "Fulgur Anjanath (charged)",
+            "JP": "アンジャナフ亜種 (charged)",
+            "FR": "Anjanath tonnerre (charged)"
+        },
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
     }
 ]
