@@ -269,7 +269,7 @@ For the `attack` and `weak` members of the monster data, hereafter is the list o
 - ![Snowman][snowman] "snowman"
 - ![Soiled][soiled] "soiled"
 - ![Stun][stun] "stun"
-- ![Defense Down][defdown] "defsown"
+- ![Defense Down][defdown] "defdown"
 - ![Confusion][confusion] "confusion"
 
 ## Add a new language
