@@ -1190,5 +1190,51 @@
             "blast": 1,
             "stun": 2
         }
+    },
+    {
+        "icon": 49,
+        "names": {
+            "EN": "Acidic Glavenus (not crystallized)",
+            "JP": "ディノバルド亜種 (not crystallized)",
+            "FR": "Glavenus acide (not crystallized)"
+        },
+        "attack": {
+            "defdown": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 49,
+        "names": {
+            "EN": "Acidic Glavenus (crystallized)",
+            "JP": "ディノバルド亜種 (crystallized)",
+            "FR": "Glavenus acide (crystallized)"
+        },
+        "attack": {
+            "defdown": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
     }
 ]
