@@ -1089,7 +1089,6 @@
             "FR": "Tigrex"
         },
         "attack": {
-            "blast": 1
         },
         "weak": {
             "water": 1,
