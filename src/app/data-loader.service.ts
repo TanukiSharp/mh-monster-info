@@ -33,6 +33,7 @@ export class DataLoaderService {
             case Attribute.Stun: return 'STUN';
             case Attribute.DefenseDown: return 'DEFENSE_DOWN';
             case Attribute.Confusion: return 'CONFUSION';
+            case Attribute.Effluvial: return 'EFFLUVIAL';
         }
         return '?';
     }
@@ -60,6 +61,7 @@ export class DataLoaderService {
             case 'stun': return Attribute.Stun;
             case 'defdown': return Attribute.DefenseDown;
             case 'confusion': return Attribute.Confusion;
+            case 'effluvial': return Attribute.Effluvial;
         }
         return Attribute.Unknown;
     }

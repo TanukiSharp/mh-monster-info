@@ -271,6 +271,7 @@ For the `attack` and `weak` members of the monster data, hereafter is the list o
 - ![Stun][stun] "stun"
 - ![Defense Down][defdown] "defdown"
 - ![Confusion][confusion] "confusion"
+- ![Effluvial][effluvial] "effluvial"
 
 ## Add a new language
 
@@ -349,3 +350,4 @@ Hereafter are examples of links:
 [stun]: doc/images/stun.png "Stun"
 [defdown]: doc/images/defdown.png "Defense Down"
 [confusion]: doc/images/confusion.png "Confusion"
+[effluvial]: doc/images/effluvial.png "Effluvial"

@@ -19,7 +19,8 @@ export enum Attribute {
     Soiled,
     Stun,
     DefenseDown,
-    Confusion
+    Confusion,
+    Effluvial
 }
 
 export interface IAttributeInfo {

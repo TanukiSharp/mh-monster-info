@@ -607,6 +607,7 @@
             "FR": "Vaal Hazak"
         },
         "attack": {
+            "effluvial": 1
         },
         "weak": {
             "fire": 3,
@@ -1234,6 +1235,50 @@
             "paralysis": 2,
             "blast": 2,
             "stun": 2
+        }
+    },
+    {
+        "icon": 50,
+        "names": {
+            "EN": "Seething Bazelgeuse",
+            "JP": "紅蓮滾るバゼルギウス",
+            "FR": "Bazelgeuse vulcan"
+        },
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 3,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 51,
+        "names": {
+            "EN": "Blackveil Vaal Hazak",
+            "JP": "死を纏うヴァルハザク",
+            "FR": "Vaal Hazak fléau"
+        },
+        "attack": {
+            "effluvial": 1
+        },
+        "weak": {
+            "fire": 2,
+            "thunder": 1,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 1
         }
     }
 ]
