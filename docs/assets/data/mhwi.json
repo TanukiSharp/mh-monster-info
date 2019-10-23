@@ -1280,5 +1280,27 @@
             "blast": 2,
             "stun": 1
         }
+    },
+    {
+        "icon": 52,
+        "names": {
+            "EN": "Namielle",
+            "JP": "ネロミェール",
+            "FR": "Namielle"
+        },
+        "attack": {
+            "water": 1,
+            "thunder": 1
+        },
+        "weak": {
+            "fire": 3,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 3,
+            "stun": 2
+        }
     }
 ]
