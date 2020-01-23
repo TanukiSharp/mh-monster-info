@@ -1302,5 +1302,29 @@
             "blast": 3,
             "stun": 2
         }
+    },
+    {
+        "icon": 53,
+        "names": {
+            "EN": "Ebony Odogaron",
+            "JP": "オドガロン亜種",
+            "FR": "Odogaron désastre"
+        },
+        "attack": {
+            "dragon": 1,
+            "bleeding": 2
+        },
+        "weak": {
+            "fire": 2,
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 2
+        }
     }
 ]
