@@ -1,21 +1,25 @@
 <div class="rootPanel" [hidden]="globalsService.isHidden(monsterInfoViewModel.isVisible)" [ngClass]="{'shaded': globalsService.isShaded(monsterInfoViewModel.isVisible)}">
     <div class="monsterGrid">
-        <div class="monsterAttack">
-            <span style="font-size: 0.65em;">{{languageService.translate('ATTACK')}}</span>
-            <div class="monsterWeakDetails">
-                <div style="grid-column: 1">
-                    <div *ngFor="let attribute of monsterInfoViewModel.monsterInfo.attacks">
-                        <app-attribute [showValues]="false" [attribute]="attribute"></app-attribute>
+        <div class="monsterLeftPane">
+            <div class="monsterAttack">
+                <span style="font-size: 0.65em;">{{languageService.translateAsync('ATTACK') | async}}</span>
+                <div class="monsterWeakDetails">
+                    <div style="grid-column: 1">
+                        <div *ngFor="let attribute of monsterInfoViewModel.monsterInfo.attacks">
+                            <app-attribute [showValues]="false" [attribute]="attribute"></app-attribute>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <span class="monsterType">{{languageService.getMonsterType(monsterInfoViewModel.monsterInfo.type)}}</span>
         </div>
 
         <span class="monsterName"><b>{{languageService.getName(monsterInfoViewModel.monsterInfo.names)}}</b></span>
         <img class="monsterIcon" src="./assets/images/monsters/{{globalsService.selectedGame.fileNamePart}}/{{monsterInfoViewModel.monsterInfo.iconNumber}}.png" width="120" height="120"/>
 
         <div class="monsterWeak">
-            <span style="font-size: 0.65em;">{{languageService.translate('WEAKNESS')}}</span>
+            <span style="font-size: 0.65em;">{{languageService.translateAsync('WEAKNESS') | async}}</span>
             <div class="monsterWeakDetails">
                 <div style="grid-column: 1">
                     <div *ngFor="let attribute of filterElemental(monsterInfoViewModel.monsterInfo.weaks)">

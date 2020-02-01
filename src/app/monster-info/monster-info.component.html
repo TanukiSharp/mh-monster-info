@@ -3,14 +3,14 @@
 
     <br/>
 
-    <div style="font-size: 0.65em;">{{languageService.translate('TOTAL_ATTACKS')}}</div>
+    <div style="font-size: 0.65em;">{{languageService.translateAsync('TOTAL_ATTACKS') | async}}</div>
     <div style="display: flex;">
         <div *ngFor="let attribute of totalAttacks">
             <app-attribute [showValues]="false" [attribute]="attribute"></app-attribute>
         </div>
     </div>
 
-    <div style="font-size: 0.65em;">{{languageService.translate('AVERAGE_WEAKS')}}</div>
+    <div style="font-size: 0.65em;">{{languageService.translateAsync('AVERAGE_WEAKS') | async}}</div>
     <div style="display: flex;">
         <div *ngFor="let attribute of averageWeaks">
             <app-attribute [showValues]="true" [attribute]="attribute"></app-attribute>

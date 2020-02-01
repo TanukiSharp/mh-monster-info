@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { IGameInfo } from './data-structures/game-info';
 import { EventHandler, Event } from './utils';
 import { LanguageService } from './language.service';
+import { IMonsterType } from './data-structures/monster-type';
 
 export type GameChangedHandler = (gameInfo: IGameInfo) => void;
 export type LanguageChangedHandler = (language: string) => void;
@@ -25,6 +26,12 @@ export class GlobalsService {
     private _searchFilter = '';
     private _lastSearchFilter: string = this._searchFilter;
     private _searchFilterChangedEvent: Event<string> = new Event<string>();
+
+    private _isMonsterTypeFilteringAvailable: boolean;
+    private _availableMonsterTypes: IMonsterType[] = [];
+    private _availableMonsterTypesChangedEvent: Event<IMonsterType[]> = new Event<IMonsterType[]>();
+    private _selectedMonsterTypes: string[] = [];
+    private _selectedMonsterTypesChangedEvent: Event<string[]> = new Event<string[]>();
 
     private _languageChangedEvent: Event<string> = new Event<string>();
     private _gameChangedEvent: Event<IGameInfo> = new Event<IGameInfo>();
@@ -145,6 +152,7 @@ export class GlobalsService {
     public set selectedLanguage(value: string) {
         if (this._selectedLanguage !== value) {
             this._selectedLanguage = value;
+            this.languageService.clearRetardCache();
             this.saveSettings();
             this._languageChangedEvent.raise(this, value);
         }
@@ -211,6 +219,58 @@ export class GlobalsService {
         this._searchFilterChangedEvent.unregister(handler);
     }
 
+    // ============================================
+
+    public get isMonsterTypeFilteringAvailable(): boolean {
+        return this._isMonsterTypeFilteringAvailable;
+    }
+
+    private monsterTypeStringToMonsterType(type: string): IMonsterType {
+        const display = this.languageService.translate(type.toUpperCase());
+        return {
+            type,
+            display
+        };
+    }
+
+    public setAvailableMonsterTypes(monsterTypes: string[]): void {
+        const mappedMonsterTypes: IMonsterType[] = monsterTypes.map(x => this.monsterTypeStringToMonsterType(x));
+        this._availableMonsterTypes = mappedMonsterTypes;
+        this._availableMonsterTypesChangedEvent.raise(this, mappedMonsterTypes);
+        this._isMonsterTypeFilteringAvailable = monsterTypes.length > 0;
+    }
+
+    public get availableMonsterTypes(): IMonsterType[] {
+        return this._availableMonsterTypes;
+    }
+
+    public get selectedMonsterTypes(): string[] {
+        return this._selectedMonsterTypes;
+    }
+    public set selectedMonsterTypes(monsterTypes: string[]) {
+        this._selectedMonsterTypes = monsterTypes;
+        this._selectedMonsterTypesChangedEvent.raise(this, monsterTypes);
+        this.saveSettings();
+    }
+
+    public registerAvailableMonsterTypesChanged(handler: EventHandler<IMonsterType[]>) {
+        this._availableMonsterTypesChangedEvent.register(handler);
+    }
+
+    public unregisterAvailableMonsterTypesChanged(handler: EventHandler<IMonsterType[]>) {
+        this._availableMonsterTypesChangedEvent.unregister(handler);
+    }
+
+    public registerSelectedMonsterTypesChanged(handler: EventHandler<string[]>) {
+        this._selectedMonsterTypesChangedEvent.register(handler);
+    }
+
+    public unregisterSelectedMonsterTypesChanged(handler: EventHandler<string[]>) {
+        this._selectedMonsterTypesChangedEvent.unregister(handler);
+    }
+
+    // ============================================
+
     public loadSettings() {
 
         const value: string = document.cookie;
@@ -238,6 +298,9 @@ export class GlobalsService {
                 case 'filter':
                     this.searchFilter = keyValue[1];
                     break;
+                case 'types':
+                    this.selectedMonsterTypes = decodeURIComponent(keyValue[1]).split(';').filter(Boolean);
+                    break;
                 case 'lang':
                     this.selectedLanguage = keyValue[1].toUpperCase();
                     break;
@@ -258,6 +321,9 @@ export class GlobalsService {
         if (this.searchFilter) {
             value += `filter:${this.searchFilter}|`;
         }
+        if (this.selectedMonsterTypes) {
+            value += `types:${encodeURIComponent(this.selectedMonsterTypes.join(';'))}|`;
+        }
         if (this.selectedLanguage) {
             value += `lang:${this.selectedLanguage}|`;
         }
@@ -274,10 +340,11 @@ export class GlobalsService {
 
         const game = this.selectedGame.fileNamePart;
         const lang = this.selectedLanguage;
+        const types = this.selectedMonsterTypes.join(';');
         const filter = this.searchFilter;
         const fmode = this.filterModeToNumber(this.filterMode).toString();
 
-        const url: string = encodeURI(`?game=${game}&lang=${lang}&filter=${filter}&fmode=${fmode}`);
+        const url: string = encodeURI(`?game=${game}&lang=${lang}&filter=${filter}&types=${types}&fmode=${fmode}`);
 
         this.router.navigateByUrl(url);
     }

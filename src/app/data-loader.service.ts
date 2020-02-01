@@ -146,9 +146,10 @@ export class DataLoaderService {
 
             result.push({
                 iconNumber: jsonRoot[i].icon,
-                names: names,
-                attacks: attacks,
-                weaks: weaks
+                names,
+                type: jsonRoot[i].type,
+                attacks,
+                weaks
             });
         }
 

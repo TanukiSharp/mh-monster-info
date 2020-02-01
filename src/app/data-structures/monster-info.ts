@@ -4,6 +4,7 @@ import { IAttributeInfo } from './attribute-info';
 export interface IMonsterInfo {
     iconNumber: number;
     names: IMonsterName[];
+    type: string;
     attacks: IAttributeInfo[];
     weaks: IAttributeInfo[];
 }

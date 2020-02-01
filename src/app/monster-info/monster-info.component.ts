@@ -22,6 +22,9 @@ export class MonsterInfoComponent implements OnInit {
 
     public monsterInfoViewModels: IMonsterInfoViewModel[] | undefined = undefined;
 
+    private _searchFilter = '';
+    private _monsterTypes: string[] = [];
+
     private _totalAttacks: IAttributeInfo[] = [];
     private _averageWeaks: IAttributeInfo[] = [];
     private _monsterCountString = '0';
@@ -65,7 +68,14 @@ export class MonsterInfoComponent implements OnInit {
         });
 
         this.globalsService.registerSearchFilterChanged((sender, value) => {
-            this.applySearchFilter(value);
+            this._searchFilter = value;
+            this.applySearchFilter();
+            this.updateMonsterCount();
+        });
+
+        this.globalsService.registerSelectedMonsterTypesChanged((sender, value) => {
+            this._monsterTypes = value;
+            this.applySearchFilter();
             this.updateMonsterCount();
         });
     }
@@ -110,6 +120,8 @@ export class MonsterInfoComponent implements OnInit {
 
             return aStr.localeCompare(bStr);
         });
+
+        this.globalsService.setAvailableMonsterTypes(Utils.distinct(monsterInfo, x => x.type).filter(Boolean));
     }
 
     private deaccentString(inputs: string): string {
@@ -188,27 +200,27 @@ export class MonsterInfoComponent implements OnInit {
         }
     }
 
-    private applySearchFilter(value: string) {
+    private applySearchFilter() {
 
         if (!this.monsterInfoViewModels) {
             return;
         }
 
-        if (!value || value.length === 0) {
+        if ((!this._searchFilter || this._searchFilter.length === 0) && (!this._monsterTypes || this._monsterTypes.length === 0)) {
             this.showAll();
             return;
         }
 
-        const filters: string[] = value
+        const filters: string[] = this._searchFilter
             .toLowerCase()
             .split(',')
             .map(x => x.trim())
             .filter(x => x.length > 0);
 
         if (this.globalsService.isFilterAllLanguages) {
-            this.applySearchAllLanguages(value, filters);
+            this.applySearchAllLanguages(filters);
         } else {
-            this.applySearchCurrentLanguage(value, filters);
+            this.applySearchCurrentLanguage(filters);
         }
     }
 
@@ -286,15 +298,28 @@ export class MonsterInfoComponent implements OnInit {
         }
     }
 
-    private applySearchCurrentLanguage(value: string, filters: string[]) {
+    private isMatchingMonsterType(monsterInfo: IMonsterInfoViewModel, monsterTypes: string[]) {
+        if (monsterTypes.length === 0) {
+            return true;
+        }
+
+        return monsterTypes.includes(monsterInfo.monsterInfo.type);
+    }
+
+    private applySearchCurrentLanguage(filters: string[]) {
 
         if (!this.monsterInfoViewModels) {
             return;
         }
 
-        for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
+        for (const monsterInfoViewModel of this.monsterInfoViewModels) {
 
-            const vm = this.monsterInfoViewModels[i];
+            const vm = monsterInfoViewModel;
+
+            if (!this.isMatchingMonsterType(vm, this._monsterTypes)) {
+                vm.isVisible = false;
+                continue;
+            }
 
             const monsterName = this.languageService.getName(vm.monsterInfo.names).toLowerCase();
 
@@ -303,6 +328,11 @@ export class MonsterInfoComponent implements OnInit {
             }
 
             const altMonsterName = vm.deaccentedSearchString;
+
+            if (filters.length === 0) {
+                vm.isVisible = true;
+                continue;
+            }
 
             vm.isVisible = Utils.any(filters, f => {
                 if (f[0] === '=') {
@@ -315,20 +345,30 @@ export class MonsterInfoComponent implements OnInit {
         }
     }
 
-    private applySearchAllLanguages(value: string, filters: string[]) {
+    private applySearchAllLanguages(filters: string[]) {
 
         if (!this.monsterInfoViewModels) {
             return;
         }
 
-        for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
+        for (const monsterInfoViewModel of this.monsterInfoViewModels) {
 
             let isVisible = false;
-            const vm = this.monsterInfoViewModels[i];
+            const vm = monsterInfoViewModel;
 
-            for (let j = 0; j < vm.monsterInfo.names.length; j += 1) {
+            if (!this.isMatchingMonsterType(vm, this._monsterTypes)) {
+                vm.isVisible = false;
+                continue;
+            }
 
-                const monsterName = vm.monsterInfo.names[j].value.toLowerCase();
+            for (const rawMonsterName of vm.monsterInfo.names) {
+
+                if (filters.length === 0) {
+                    vm.isVisible = true;
+                    continue;
+                }
+
+                const monsterName = rawMonsterName.value.toLowerCase();
                 const altMonsterName = this.deaccentString(monsterName);
 
                 if (Utils.any(filters, f => {

@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { IMonsterName } from './data-structures/monster-name';
-import { resetFakeAsyncZone } from '@angular/core/testing';
-import { GlobalsService } from './globals.service';
+import { PromiseCompletionSource } from './utils';
 
 @Injectable()
 export class LanguageService {
@@ -16,10 +15,27 @@ export class LanguageService {
         'FR'
     ];
 
+    private _loaded: PromiseCompletionSource<void>;
+
+    // A retard cache of promise is necessary because Angular's async pipe feature (template stuff) is retard
+    // and if the same promise is not always returned, it does retard things, therefore need to cache promises,
+    // and clear promises cache when language changes.
+    private _retardCache: object = {};
+
+    public get availableLanguages(): string[] {
+        return this._availableLanguages;
+    }
+
     constructor(private http: HttpClient) {
+        this._loaded = new PromiseCompletionSource<void>();
+
         this.http.get('./assets/localization.json').subscribe(
             (response: any) => {
-            this.commonData = response;
+                this.commonData = response;
+                this._loaded.trySetResult();
+            },
+            (error: any) => {
+                this._loaded.trySetError(error);
             }
         );
     }
@@ -34,8 +50,33 @@ export class LanguageService {
         return '<< [' + names[0].language + '] ' + names[0].value + '>>';
     }
 
-    public translate(key: string) {
+    public get awaitReady(): Promise<void> {
+        return this._loaded.getPromise();
+    }
 
+    public clearRetardCache() {
+        this._retardCache = {};
+    }
+
+    // This intermediate function is necessary for translateAsync to be able to get a promise and cache it.
+    private async translateAsyncInternal(key: string): Promise<string> {
+        await this._loaded.getPromise();
+        const result = this.translate(key);
+        return result;
+    }
+
+    public translateAsync(key: string): Promise<string> {
+        let promise = this._retardCache[key];
+
+        if (!promise) {
+            promise = this.translateAsyncInternal(key);
+            this._retardCache[key] = promise;
+        }
+
+        return promise;
+    }
+
+    public translate(key: string): string {
         if (!this.commonData) {
             throw new Error('Language service not yet ready.');
         }
@@ -64,5 +105,13 @@ export class LanguageService {
         }
 
         return this.makeDefaultName(names);
+    }
+
+    public getMonsterType(type: string): string {
+        if (!type) {
+            return this.makeDefaultKey('???');
+        }
+
+        return this.translate(type.toUpperCase());
     }
 }

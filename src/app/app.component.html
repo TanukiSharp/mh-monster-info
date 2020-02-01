@@ -1,29 +1,41 @@
 <div class="rootGrid">
     <div class="toolBar">
-        <span>{{languageService.translate('GAME')}}:</span>
+        <span>{{languageService.translateAsync('GAME') | async}}:</span>
         <select style="margin-right: 20px" [(ngModel)]="globalsService.selectedGame">
             <option *ngFor="let game of globalsService.availableGames" [ngValue]="game">{{game.title}}</option>
         </select>
 
-        <span>{{languageService.translate('LANGUAGE')}}:</span>
+        <span>{{languageService.translateAsync('LANGUAGE') | async}}:</span>
         <select style="margin-right: 20px" [(ngModel)]="globalsService.selectedLanguage">
-            <option *ngFor="let language of globalsService.availableLanguages" [value]="language">{{language}}</option>
+            <option *ngFor="let language of languageService.availableLanguages" [value]="language">{{language}}</option>
         </select>
 
-        <span>{{languageService.translate('FILTER')}}:</span>
-        <input style="margin-right: 20px" autofocus type="text" [(ngModel)]="globalsService.searchFilter"/>
+        <span>{{languageService.translateAsync('FILTER') | async}}:</span>
+        <input style="margin-right: 20px; width: 120px;" autofocus type="text" [(ngModel)]="globalsService.searchFilter"/>
 
-        <span>{{languageService.translate('FILTER_MODE')}}:</span>
+        <span *ngIf="globalsService.isMonsterTypeFilteringAvailable">{{languageService.translateAsync('MONSTER_TYPE') | async}}:</span>
+        <ng-select
+            *ngIf="globalsService.isMonsterTypeFilteringAvailable"
+            style="margin-right: 20px; display: inline-block; width: 300px;"
+            [items]="globalsService.availableMonsterTypes"
+            [closeOnSelect]="false"
+            multiple="true"
+            bindValue="type"
+            bindLabel="display"
+            [(ngModel)]="globalsService.selectedMonsterTypes">
+        </ng-select>
+
+        <span>{{languageService.translateAsync('FILTER_MODE') | async}}:</span>
         <select style="margin-right: 20px" [(ngModel)]="globalsService.filterMode">
-            <option *ngFor="let filterMode of globalsService.availableFilterModes" [value]="filterMode">{{languageService.translate(filterMode)}}</option>
+            <option *ngFor="let filterMode of globalsService.availableFilterModes" [value]="filterMode">{{languageService.translateAsync(filterMode) | async}}</option>
         </select>
 
         <input id="filterAllLanguages" type="checkbox" [(ngModel)]="globalsService.isFilterAllLanguages"/>
-        <label style="margin-right: 20px" for="filterAllLanguages">{{languageService.translate('FILTER_ALL_LANGUAGES')}}</label>
+        <label style="margin-right: 20px" for="filterAllLanguages">{{languageService.translateAsync('FILTER_ALL_LANGUAGES') | async}}</label>
 
         <br/>
 
-        <span style="font-size: 0.75em">{{languageService.translate('FILTER_INFO')}}</span>
+        <span style="font-size: 0.75em">{{languageService.translateAsync('FILTER_INFO') | async}}</span>
         <br/>
         <br/>
     </div>
