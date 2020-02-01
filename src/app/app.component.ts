@@ -3,10 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { DataLoaderService } from './data-loader.service';
 import { GlobalsService, FilterMode } from './globals.service';
 import { LanguageService } from './language.service';
-import { IMonsterInfo } from './data-structures/monster-info';
-import { MonsterInfoComponent } from './monster-info/monster-info.component';
-import { IGitInfo } from './data-structures/git-info';
-import { IGameInfo } from './data-structures/game-info';
 
 @Component({
     selector: 'app-root',
@@ -55,8 +51,8 @@ export class AppComponent implements OnInit {
             .split('&')
             .map(decodeURI);
 
-        for (let i = 0; i < parts.length; i += 1) {
-            const subParts = parts[i].trim().split('=');
+        for (const part of parts) {
+            const subParts = part.trim().split('=');
 
             if (subParts.length < 2) {
                 continue;
@@ -66,7 +62,7 @@ export class AppComponent implements OnInit {
 
             if (subParts[0] === 'lang') {
                 const temp: string = argValue.toUpperCase();
-                if (this.globalsService.availableLanguages.indexOf(temp) >= 0) {
+                if (this.languageService.availableLanguages.indexOf(temp) >= 0) {
                     language = temp;
                 }
             } else if (subParts[0] === 'game') {
@@ -107,7 +103,7 @@ export class AppComponent implements OnInit {
     }
 
     async ngOnInit() {
-        this.languageService.currentLanguage = this.globalsService.availableLanguages[0];
+        this.languageService.currentLanguage = this.languageService.availableLanguages[0];
 
         await this.setupVersionInfo();
 

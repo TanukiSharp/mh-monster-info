@@ -86,7 +86,7 @@ export class DataLoaderService {
 
     async loadMonsterFile(monsterFilename: string): Promise<IMonsterInfo[]|null> {
 
-        const jsonRoot: any[] = <any[]>await this.http.get(monsterFilename).toPromise();
+        const jsonRoot: any[] = await this.http.get(monsterFilename).toPromise() as any[];
 
         if (jsonRoot.length === undefined) {
             console.error('Invalid root element, must be an array or objects');
@@ -105,10 +105,10 @@ export class DataLoaderService {
             const nameKeys: string[] = Object.keys(jsonRoot[i].names);
             const names: IMonsterName[] = [];
 
-            for (let j = 0; j < nameKeys.length; j += 1) {
+            for (const nameKey of nameKeys) {
                 names.push({
-                    language: nameKeys[j],
-                    value: jsonRoot[i].names[nameKeys[j]]
+                    language: nameKey,
+                    value: jsonRoot[i].names[nameKey]
                 });
             }
 
@@ -117,11 +117,11 @@ export class DataLoaderService {
             if (jsonRoot[i].attack) {
                 const attackKeys: string[] = Object.keys(jsonRoot[i].attack);
 
-                for (let j = 0; j < attackKeys.length; j += 1) {
+                for (const attackKey of attackKeys) {
 
                     attacks.push({
-                        type: this.stringToAttribute(attackKeys[j]),
-                        value: jsonRoot[i].attack[attackKeys[j]]
+                        type: this.stringToAttribute(attackKey),
+                        value: jsonRoot[i].attack[attackKey]
                     });
                 }
 
@@ -133,11 +133,11 @@ export class DataLoaderService {
             if (jsonRoot[i].weak) {
                 const weakKeys: string[] = Object.keys(jsonRoot[i].weak);
 
-                for (let j = 0; j < weakKeys.length; j += 1) {
+                for (const weakKey of weakKeys) {
 
                     weaks.push({
-                        type: this.stringToAttribute(weakKeys[j]),
-                        value: jsonRoot[i].weak[weakKeys[j]]
+                        type: this.stringToAttribute(weakKey),
+                        value: jsonRoot[i].weak[weakKey]
                     });
                 }
 

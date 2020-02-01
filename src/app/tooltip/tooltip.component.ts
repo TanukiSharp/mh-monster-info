@@ -7,8 +7,6 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 })
 export class TooltipComponent implements OnInit {
 
-    private parentElement: any;
-
     @ViewChild('root', { static: true })
     private rootChild: ElementRef | undefined;
 
@@ -24,7 +22,7 @@ export class TooltipComponent implements OnInit {
         const parentElement = this.elementRef.nativeElement.parentElement;
         const rootElement = this.rootChild.nativeElement;
 
-        parentElement.onmousemove = function (e: MouseEvent) {
+        parentElement.onmousemove = (e: MouseEvent) => {
 
             let x = e.clientX + 10;
             let y = e.clientY + 10;

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Attribute, IAttributeInfo } from '../data-structures/attribute-info';
+import { IAttributeInfo } from '../data-structures/attribute-info';
 import { DataLoaderService } from '../data-loader.service';
 import { LanguageService } from '../language.service';
 

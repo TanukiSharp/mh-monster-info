@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { IGameInfo } from './data-structures/game-info';
 import { EventHandler, Event } from './utils';
+import { LanguageService } from './language.service';
 
 export type GameChangedHandler = (gameInfo: IGameInfo) => void;
 export type LanguageChangedHandler = (language: string) => void;
@@ -21,12 +22,6 @@ export class GlobalsService {
         { fileNamePart: 'mhwi', title: 'MH WI' }
     ];
 
-    private _availableLanguages: string[] = [
-        'EN',
-        'JP',
-        'FR'
-    ];
-
     private _searchFilter = '';
     private _lastSearchFilter: string = this._searchFilter;
     private _searchFilterChangedEvent: Event<string> = new Event<string>();
@@ -36,7 +31,7 @@ export class GlobalsService {
     private _isFilterAllLanguagesChangedEvent: Event<boolean> = new Event<boolean>();
 
     private _selectedGame: IGameInfo = this._availableGames[0];
-    private _selectedLanguage: string = this._availableLanguages[0];
+    private _selectedLanguage: string = this.languageService.availableLanguages[0];
     private _filterMode: FilterMode = FilterMode.Shade;
     private _isFilterAllLanguages = false;
 
@@ -100,8 +95,8 @@ export class GlobalsService {
 
         game = game.toLowerCase();
 
-        for (let i = 0; i < this._availableGames.length; i += 1) {
-            if (this._availableGames[i].fileNamePart.toLowerCase() === game) {
+        for (const availableGame of this._availableGames) {
+            if (availableGame.fileNamePart.toLowerCase() === game) {
                 return true;
             }
         }
@@ -113,9 +108,9 @@ export class GlobalsService {
 
         game = game.toLowerCase();
 
-        for (let i = 0; i < this._availableGames.length; i += 1) {
-            if (this._availableGames[i].fileNamePart.toLowerCase() === game) {
-                this.selectedGame = this._availableGames[i];
+        for (const availableGame of this._availableGames) {
+            if (availableGame.fileNamePart.toLowerCase() === game) {
+                this.selectedGame = availableGame;
                 return true;
             }
         }
@@ -143,10 +138,6 @@ export class GlobalsService {
     }
 
     // ============================================
-
-    public get availableLanguages(): string[] {
-        return this._availableLanguages;
-    }
 
     public get selectedLanguage(): string {
         return this._selectedLanguage;
@@ -203,7 +194,7 @@ export class GlobalsService {
             this._lastSearchFilter = value;
             this._searchFilterChangedEvent.raise(this, value);
 
-            this.updateLink();
+            this.saveSettings();
         }
     }
     public reapplySearchFilter() {
@@ -230,8 +221,7 @@ export class GlobalsService {
 
         const parts: string[] = value.split('|');
 
-        for (let i = 0; i < parts.length; i += 1) {
-            const part: string = parts[i];
+        for (const part of parts) {
             if (!part) {
                 continue;
             }
@@ -249,7 +239,7 @@ export class GlobalsService {
                     this.selectedLanguage = keyValue[1].toUpperCase();
                     break;
                 case 'filterMode':
-                    this.filterMode = <FilterMode>keyValue[1].toUpperCase();
+                    this.filterMode = keyValue[1].toUpperCase() as FilterMode;
                     break;
             }
         }
@@ -288,7 +278,7 @@ export class GlobalsService {
 
     // ============================================
 
-    constructor(private router: Router) {
-        this._selectedLanguage = this.availableLanguages[0];
+    constructor(private router: Router, private languageService: LanguageService) {
+        this._selectedLanguage = this.languageService.availableLanguages[0];
     }
 }

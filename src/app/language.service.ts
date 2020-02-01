@@ -10,13 +10,21 @@ export class LanguageService {
 
     private commonData: any;
 
-    constructor(private http: HttpClient, private globalsService: GlobalsService) {
-        this.http.get('./assets/localization.json').subscribe((response: any) => {
+    private _availableLanguages: string[] = [
+        'EN',
+        'JP',
+        'FR'
+    ];
+
+    constructor(private http: HttpClient) {
+        this.http.get('./assets/localization.json').subscribe(
+            (response: any) => {
             this.commonData = response;
-        });
+            }
+        );
     }
 
-    public currentLanguage: string = this.globalsService.availableLanguages[0];
+    public currentLanguage: string = this._availableLanguages[0];
 
     private makeDefaultKey(key: string): string {
         return '<<' + key + '>>';
@@ -29,7 +37,7 @@ export class LanguageService {
     public translate(key: string) {
 
         if (!this.commonData) {
-            return null;
+            throw new Error('Language service not yet ready.');
         }
 
         const language = this.commonData[this.currentLanguage];
@@ -47,11 +55,11 @@ export class LanguageService {
         return result;
     }
 
-    public getName(names: IMonsterName[]) {
+    public getName(names: IMonsterName[]): string {
 
-        for (let i = 0; i < names.length; i += 1) {
-            if (names[i].language === this.currentLanguage) {
-                return names[i].value || this.makeDefaultName(names);
+        for (const name of names) {
+            if (name.language === this.currentLanguage) {
+                return name.value || this.makeDefaultName(names);
             }
         }
 

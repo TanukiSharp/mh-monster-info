@@ -112,12 +112,12 @@ export class MonsterInfoComponent implements OnInit {
         });
     }
 
-    private deaccentString(input: string): string {
+    private deaccentString(inputs: string): string {
 
         let result = '';
 
-        for (let i = 0; i < input.length; i += 1) {
-            const c = input[i];
+        for (const input of inputs) {
+            const c = input;
             switch (c) {
                 case 'à':
                 case 'á':
@@ -182,9 +182,9 @@ export class MonsterInfoComponent implements OnInit {
             return;
         }
 
-        for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
-            const monsterName = this.languageService.getName(this.monsterInfoViewModels[i].monsterInfo.names).toLowerCase();
-            this.monsterInfoViewModels[i].deaccentedSearchString = this.deaccentString(monsterName);
+        for (const monsterInfoViewModel of this.monsterInfoViewModels) {
+            const monsterName = this.languageService.getName(monsterInfoViewModel.monsterInfo.names).toLowerCase();
+            monsterInfoViewModel.deaccentedSearchString = this.deaccentString(monsterName);
         }
     }
 
@@ -224,28 +224,28 @@ export class MonsterInfoComponent implements OnInit {
         const averageWeaks: { [key: string]: number; } = {};
         const totalAttacks: Set<Attribute> = new Set<Attribute>();
 
-        for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
+        for (const monsterInfoViewModel of this.monsterInfoViewModels) {
 
-            if (this.monsterInfoViewModels[i].isVisible) {
+            if (monsterInfoViewModel.isVisible) {
 
-                const attacks = this.monsterInfoViewModels[i].monsterInfo.attacks;
-                const weaks = this.monsterInfoViewModels[i].monsterInfo.weaks;
+                const attacks = monsterInfoViewModel.monsterInfo.attacks;
+                const weaks = monsterInfoViewModel.monsterInfo.weaks;
 
-                for (let j = 0; j < attacks.length; j += 1) {
-                    totalAttacks.add(attacks[j].type);
+                for (const attack of attacks) {
+                    totalAttacks.add(attack.type);
                 }
 
-                for (let j = 0; j < weaks.length; j += 1) {
-                    const weakTypeStr: string = weaks[j].type.toString();
+                for (const weak of weaks) {
+                    const weakTypeStr: string = weak.type.toString();
                     if (averageWeaks[weakTypeStr] === undefined) {
                         averageWeaks[weakTypeStr] = 0;
                     }
-                    averageWeaks[weakTypeStr] += weaks[j].value;
+                    averageWeaks[weakTypeStr] += weak.value;
                 }
 
                 averageWeakCount += 1;
 
-                let name: string | null = this.monsterInfoViewModels[i].deaccentedSearchString;
+                let name: string | null = monsterInfoViewModel.deaccentedSearchString;
                 if (!name) {
                     continue;
                 }
@@ -267,7 +267,7 @@ export class MonsterInfoComponent implements OnInit {
         for (key in averageWeaks) {
             if (averageWeaks.hasOwnProperty(key)) {
                 this._averageWeaks.push({
-                    type: <Attribute>Number.parseInt(key, 10),
+                    type: Number.parseInt(key, 10) as Attribute,
                     value: averageWeaks[key] / averageWeakCount
                 });
             }
@@ -354,8 +354,8 @@ export class MonsterInfoComponent implements OnInit {
             return;
         }
 
-        for (let i = 0; i < this.monsterInfoViewModels.length; i += 1) {
-            this.monsterInfoViewModels[i].isVisible = true;
+        for (const monsterInfoViewModel of this.monsterInfoViewModels) {
+            monsterInfoViewModel.isVisible = true;
         }
     }
 
