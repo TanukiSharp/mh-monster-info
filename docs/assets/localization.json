@@ -2,6 +2,7 @@
     "EN": {
         "GAME": "Game",
         "LANGUAGE": "Language",
+        "MONSTER_TYPE": "Type",
         "FILTER": "Filter",
         "FILTER_MODE": "Filter mode",
         "HIDE": "Hide",
@@ -31,15 +32,23 @@
         "DEFENSE_DOWN": "Defense Down",
         "CONFUSION": "Confusion",
         "EFFLUVIAL": "Effluvial",
-        "NO_MONSTER": "No monster",
+        "NO_MONSTER": "No monsters",
         "ONE_MONSTER": "1 monster",
         "N_MONSTERS": " monsters",
         "TOTAL_ATTACKS": "All attacks",
-        "AVERAGE_WEAKS": "Average weaknesses"
+        "AVERAGE_WEAKS": "Average weaknesses",
+        "BRUTE": "Brute",
+        "FLYING": "Flying",
+        "FANGED": "Fanged",
+        "PISCINE": "Piscine",
+        "BIRD": "Bird",
+        "ELDER": "Elder",
+        "RELICT": "Relict"
     },
     "JP": {
         "GAME": "ゲーム",
         "LANGUAGE": "言語",
+        "MONSTER_TYPE": "タイプ",
         "FILTER": "フィルター",
         "FILTER_MODE": "フィルターモード",
         "HIDE": "非表示",
@@ -72,11 +81,19 @@
         "ONE_MONSTER": "1 モンスター",
         "N_MONSTERS": " モンスター",
         "TOTAL_ATTACKS": "すべての攻撃の属性",
-        "AVERAGE_WEAKS": "弱点属性の平均"
+        "AVERAGE_WEAKS": "弱点属性の平均",
+        "BRUTE": "獣竜種",
+        "FLYING": "飛竜種",
+        "FANGED": "牙竜種",
+        "PISCINE": "魚竜種",
+        "BIRD": "鳥竜種",
+        "ELDER": "古龍種",
+        "RELICT": "遺存種"
     },
     "FR": {
         "GAME": "Jeu",
         "LANGUAGE": "Langue",
+        "MONSTER_TYPE": "Type",
         "FILTER": "Filtre",
         "FILTER_MODE": "Mode de filtrage",
         "HIDE": "Cache",
@@ -109,6 +126,13 @@
         "ONE_MONSTER": "1 monstre",
         "N_MONSTERS": " monstres",
         "TOTAL_ATTACKS": "Toutes les attaques",
-        "AVERAGE_WEAKS": "Moyenne des faiblesses"
+        "AVERAGE_WEAKS": "Moyenne des faiblesses",
+        "BRUTE": "Wyverne de terre",
+        "FLYING": "Wyverne volante",
+        "FANGED": "Wyverne à crocs",
+        "PISCINE": "Wyverne aquatique",
+        "BIRD": "Wyverne rapace",
+        "ELDER": "Dragon ancien",
+        "RELICT": "Relique"
     }
 }

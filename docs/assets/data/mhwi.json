@@ -6,6 +6,7 @@
             "JP": "アンジャナフ",
             "FR": "Anjanath"
         },
+        "type": "brute",
         "attack": {
             "fire": 1
         },
@@ -28,6 +29,7 @@
             "FR": "Barroth (covered in mud)",
             "JP": "ボルボロス (covered in mud)"
         },
+        "type": "brute",
         "attack": {
             "muddy": 1,
             "water": 2
@@ -50,6 +52,7 @@
             "FR": "Barroth (not covered in mud)",
             "JP": "ボルボロス (not covered in mud)"
         },
+        "type": "brute",
         "attack": {
             "muddy": 1,
             "water": 2
@@ -72,6 +75,7 @@
             "JP": "ディアブロス",
             "FR": "Diablos"
         },
+        "type": "flying",
         "attack": {
         },
         "weak": {
@@ -93,6 +97,7 @@
             "JP": "ドスギルオス",
             "FR": "Grand Girros"
         },
+        "type": "fanged",
         "attack": {
             "paralysis": 1
         },
@@ -115,6 +120,7 @@
             "JP": "ドスジャグラス",
             "FR": "Grand Jagras"
         },
+        "type": "fanged",
         "attack": {
         },
         "weak": {
@@ -136,6 +142,7 @@
             "JP": "ジュラトドス (covered in mud)",
             "FR": "Jyuratodus (covered in mud)"
         },
+        "type": "piscine",
         "attack": {
             "water": 1,
             "muddy": 2
@@ -158,6 +165,7 @@
             "JP": "ジュラトドス (not covered in mud)",
             "FR": "Jyuratodus (not covered in mud)"
         },
+        "type": "piscine",
         "attack": {
             "water": 1,
             "muddy": 2
@@ -181,6 +189,7 @@
             "JP": "クルルヤック",
             "FR": "Kulu-Ya-Ku"
         },
+        "type": "bird",
         "attack": {
         },
         "weak": {
@@ -203,6 +212,7 @@
             "JP": "ヴォルガノス (when hardened)",
             "FR": "Lavasioth (when hardened)"
         },
+        "type": "piscine",
         "attack": {
             "fire": 1
         },
@@ -224,6 +234,7 @@
             "JP": "ヴォルガノス (not hardened)",
             "FR": "Lavasioth (not hardened)"
         },
+        "type": "piscine",
         "attack": {
             "fire": 1
         },
@@ -246,6 +257,7 @@
             "JP": "レイギエナ",
             "FR": "Legiana"
         },
+        "type": "flying",
         "attack": {
             "ice": 1
         },
@@ -268,6 +280,7 @@
             "JP": "ネルギガンテ",
             "FR": "Nergigante"
         },
+        "type": "elder",
         "attack": {
         },
         "weak": {
@@ -290,6 +303,7 @@
             "JP": "オドガロン",
             "FR": "Odogaron"
         },
+        "type": "fanged",
         "attack": {
             "bleeding": 1
         },
@@ -312,6 +326,7 @@
             "JP": "パオウルムー",
             "FR": "Paolumu"
         },
+        "type": "flying",
         "attack": {
         },
         "weak": {
@@ -333,6 +348,7 @@
             "JP": "プケプケ",
             "FR": "Pukei-Pukei"
         },
+        "type": "bird",
         "attack": {
             "poison": 1
         },
@@ -355,6 +371,7 @@
             "JP": "ラドバルキン",
             "FR": "Radobaan"
         },
+        "type": "brute",
         "attack": {
             "sleep": 1
         },
@@ -378,6 +395,7 @@
             "JP": "リオレウス",
             "FR": "Rathalos"
         },
+        "type": "flying",
         "attack": {
             "fire": 1,
             "stun": 2,
@@ -402,6 +420,7 @@
             "JP": "リオレイア",
             "FR": "Rathian"
         },
+        "type": "flying",
         "attack": {
             "fire": 1,
             "poison": 2
@@ -425,6 +444,7 @@
             "JP": "トビカガチ",
             "FR": "Tobi-Kadachi"
         },
+        "type": "fanged",
         "attack": {
             "thunder": 1
         },
@@ -447,6 +467,7 @@
             "JP": "ツィツィヤック",
             "FR": "Tzitzi-Ya-Ku"
         },
+        "type": "bird",
         "attack": {
             "stun": 1
         },
@@ -470,6 +491,7 @@
             "JP": "ウラガンキン",
             "FR": "Uragaan"
         },
+        "type": "brute",
         "attack": {
             "fire": 1,
             "sleep": 2
@@ -493,6 +515,7 @@
             "JP": "ゾラ・マグダラオス",
             "FR": "Zorah Magdaros"
         },
+        "type": "elder",
         "attack": {
             "fire": 1
         },
@@ -510,6 +533,7 @@
             "JP": "イビルジョー",
             "FR": "Deviljho"
         },
+        "type": "brute",
         "attack": {
             "dragon": 1,
             "defdown": 2,
@@ -537,6 +561,7 @@
             "JP": "ドドガマル",
             "FR": "Dodogama"
         },
+        "type": "fanged",
         "attack": {
             "blast": 1
         },
@@ -559,6 +584,7 @@
             "JP": "クシャルダオラ",
             "FR": "Kushala Daora"
         },
+        "type": "elder",
         "attack": {
             "dragon": 1,
             "ice": 2,
@@ -582,6 +608,7 @@
             "JP": "テオ・テスカトル",
             "FR": "Teostra"
         },
+        "type": "elder",
         "attack": {
             "fire": 1,
             "dragon": 2,
@@ -606,6 +633,7 @@
             "JP": "ヴァルハザク",
             "FR": "Vaal Hazak"
         },
+        "type": "elder",
         "attack": {
             "effluvial": 1
         },
@@ -628,6 +656,7 @@
             "JP": "キリン",
             "FR": "Kirin"
         },
+        "type": "elder",
         "attack": {
             "thunder": 1,
             "stun": 2
@@ -650,6 +679,7 @@
             "JP": "ディアブロス（亜種）",
             "FR": "Diablos Noire"
         },
+        "type": "flying",
         "attack": {
         },
         "weak": {
@@ -670,6 +700,7 @@
             "JP": "リオレウス亜種",
             "FR": "Rathalos Azur"
         },
+        "type": "flying",
         "attack": {
             "fire": 1,
             "stun": 2,
@@ -694,6 +725,7 @@
             "JP": "リオレイア（亜種）",
             "FR": "Rathian Sakura"
         },
+        "type": "flying",
         "attack": {
             "fire": 1,
             "poison": 2
@@ -717,6 +749,7 @@
             "JP": "ゼノ・ジーヴァ",
             "FR": "Xeno'jiiva"
         },
+        "type": "elder",
         "attack": {
             "dragon": 1,
             "fire": 2
@@ -740,6 +773,7 @@
             "JP": "バゼルギウス",
             "FR": "Bazelgeuse"
         },
+        "type": "flying",
         "attack": {
             "fire": 1
         },
@@ -762,6 +796,7 @@
             "JP": "マム・タロト (covered in gold)",
             "FR": "Kulve Taroth (covered in gold)"
         },
+        "type": "elder",
         "attack": {
             "fire": 1
         },
@@ -784,6 +819,7 @@
             "JP": "マム・タロト (not covered in gold)",
             "FR": "Kulve Taroth (not covered in gold)"
         },
+        "type": "elder",
         "attack": {
             "fire": 1
         },
@@ -805,6 +841,7 @@
             "JP": "ナナ・テスカトリ",
             "FR": "Lunastra"
         },
+        "type": "elder",
         "attack": {
             "fire": 1
         },
@@ -827,6 +864,7 @@
             "JP": "ベヒーモス",
             "FR": "Behemoth"
         },
+        "type": "elder",
         "attack": {
             "fire": 1,
             "thunder": 2,
@@ -852,6 +890,7 @@
             "JP": "レーシェン",
             "FR": "Leshen"
         },
+        "type": "relict",
         "attack": {
             "bleeding": 1
         },
@@ -873,6 +912,7 @@
             "JP": "エンシェント・レーシェン",
             "FR": "Vieux Leshen"
         },
+        "type": "relict",
         "attack": {
             "bleeding": 1
         },
@@ -894,6 +934,7 @@
             "JP": "ブラントドス",
             "FR": "Beotodus"
         },
+        "type": "piscine",
         "attack": {
             "ice": 1
         },
@@ -915,6 +956,7 @@
             "JP": "ヴァルハザク",
             "FR": "Banbaro"
         },
+        "type": "brute",
         "attack": {
         },
         "weak": {
@@ -935,6 +977,7 @@
             "JP": "パオウルムー亜種",
             "FR": "Tobi-Kadachi Vipère"
         },
+        "type": "fanged",
         "attack": {
             "npoison": 3,
             "poison": 2,
@@ -959,6 +1002,7 @@
             "JP": "パオウルムー亜種",
             "FR": "Paolumu Belladone"
         },
+        "type": "flying",
         "attack": {
             "sleep": 1
         },
@@ -980,6 +1024,7 @@
             "JP": "プケプケ亜種",
             "FR": "Pukei-Pukei Corail"
         },
+        "type": "bird",
         "attack": {
             "water": 1
         },
@@ -1002,6 +1047,7 @@
             "JP": "ベリオロス",
             "FR": "Barioth"
         },
+        "type": "flying",
         "attack": {
             "ice": 1
         },
@@ -1023,6 +1069,7 @@
             "JP": "ナルガクルガ",
             "FR": "Nargacuga"
         },
+        "type": "flying",
         "attack": {
             "bleeding": 1
         },
@@ -1045,6 +1092,7 @@
             "JP": "ディノバルド",
             "FR": "Glavenus"
         },
+        "type": "brute",
         "attack": {
             "fire": 1
         },
@@ -1067,6 +1115,7 @@
             "JP": "ブラキディオス",
             "FR": "Brachydios"
         },
+        "type": "brute",
         "attack": {
             "blast": 1
         },
@@ -1089,6 +1138,7 @@
             "JP": "ティガレックス",
             "FR": "Tigrex"
         },
+        "type": "flying",
         "attack": {
         },
         "weak": {
@@ -1110,6 +1160,7 @@
             "JP": "凍て刺すレイギエナ",
             "FR": "Legiana blizzard"
         },
+        "type": "flying",
         "attack": {
             "ice": 1
         },
@@ -1132,6 +1183,7 @@
             "JP": "イヴェルカーナ",
             "FR": "Velkhana"
         },
+        "type": "elder",
         "attack": {
             "ice": 1
         },
@@ -1154,6 +1206,7 @@
             "JP": "アンジャナフ亜種 (not charged)",
             "FR": "Anjanath tonnerre (not charged)"
         },
+        "type": "brute",
         "attack": {
             "thunder": 1
         },
@@ -1176,6 +1229,7 @@
             "JP": "アンジャナフ亜種 (charged)",
             "FR": "Anjanath tonnerre (charged)"
         },
+        "type": "brute",
         "attack": {
             "thunder": 1
         },
@@ -1198,6 +1252,7 @@
             "JP": "ディノバルド亜種 (not crystallized)",
             "FR": "Glavenus acide (not crystallized)"
         },
+        "type": "brute",
         "attack": {
             "defdown": 1
         },
@@ -1221,6 +1276,7 @@
             "JP": "ディノバルド亜種 (crystallized)",
             "FR": "Glavenus acide (crystallized)"
         },
+        "type": "brute",
         "attack": {
             "defdown": 1
         },
@@ -1244,6 +1300,7 @@
             "JP": "紅蓮滾るバゼルギウス",
             "FR": "Bazelgeuse vulcan"
         },
+        "type": "flying",
         "attack": {
             "fire": 1
         },
@@ -1266,6 +1323,7 @@
             "JP": "死を纏うヴァルハザク",
             "FR": "Vaal Hazak fléau"
         },
+        "type": "elder",
         "attack": {
             "effluvial": 1
         },
@@ -1288,6 +1346,7 @@
             "JP": "ネロミェール",
             "FR": "Namielle"
         },
+        "type": "elder",
         "attack": {
             "water": 1,
             "thunder": 1
@@ -1310,6 +1369,7 @@
             "JP": "オドガロン亜種",
             "FR": "Odogaron désastre"
         },
+        "type": "fanged",
         "attack": {
             "dragon": 1,
             "bleeding": 2
