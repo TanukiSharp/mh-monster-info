@@ -235,6 +235,9 @@ export class GlobalsService {
                 case 'game':
                     this.selectGameByName(keyValue[1].toLowerCase());
                     break;
+                case 'filter':
+                    this.searchFilter = keyValue[1];
+                    break;
                 case 'lang':
                     this.selectedLanguage = keyValue[1].toUpperCase();
                     break;
@@ -251,6 +254,9 @@ export class GlobalsService {
 
         if (this.selectedGame) {
             value += `game:${this.selectedGame.fileNamePart}|`;
+        }
+        if (this.searchFilter) {
+            value += `filter:${this.searchFilter}|`;
         }
         if (this.selectedLanguage) {
             value += `lang:${this.selectedLanguage}|`;
