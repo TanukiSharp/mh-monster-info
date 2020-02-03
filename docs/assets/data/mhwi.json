@@ -1386,5 +1386,53 @@
             "blast": 2,
             "stun": 2
         }
+    },
+    {
+        "icon": 54,
+        "names": {
+            "EN": "Savage Deviljho",
+            "JP": "怒り喰らうイビルジョー",
+            "FR": "Deviljho Carnage"
+        },
+        "type": "brute",
+        "attack": {
+            "dragon": 1,
+            "defdown": 2,
+            "fire": 3
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 3,
+            "sleep": 3,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 55,
+        "names": {
+            "EN": "Shara Ishvalda",
+            "JP": "地啼龍",
+            "FR": "Shara Ishvalda"
+        },
+        "type": "elder",
+        "attack": {
+            "stun": 1
+        },
+        "weak": {
+            "fire": 1,
+            "water": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "paralysis": 1,
+            "blast": 3,
+            "stun": 1
+        }
     }
 ]
