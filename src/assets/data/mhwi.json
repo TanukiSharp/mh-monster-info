@@ -1417,7 +1417,7 @@
         "icon": 55,
         "names": {
             "EN": "Shara Ishvalda",
-            "JP": "地啼龍",
+            "JP": "アン・イシュワルダ",
             "FR": "Shara Ishvalda"
         },
         "type": "elder",
@@ -1433,6 +1433,30 @@
             "paralysis": 1,
             "blast": 3,
             "stun": 1
+        }
+    },
+    {
+        "icon": 56,
+        "names": {
+            "EN": "Zinogre",
+            "JP": "ジンオウガ",
+            "FR": "Zinogre"
+        },
+        "type": "fanged",
+        "attack": {
+            "thunder": 1,
+            "paralysis": 2
+        },
+        "weak": {
+            "fire": 1,
+            "water": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
         }
     }
 ]
