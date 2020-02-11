@@ -1458,5 +1458,26 @@
             "blast": 2,
             "stun": 2
         }
+    },
+    {
+        "icon": 57,
+        "names": {
+            "EN": "Rajang",
+            "JP": "ラージャン",
+            "FR": "Rajang"
+        },
+        "type": "fanged",
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "water": 1,
+            "ice": 3,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 1
+        }
     }
 ]
