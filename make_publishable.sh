@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
+LOCAL_CHANGES=$(git status -s)
+
+if [[ -n ${LOCAL_CHANGES} ]]; then
+    echo "There are uncommitted changes."
+    exit 1
+fi
+
 # Build Angular stuffs
 rm -rf docs
 ng build --prod --base-href "/mh-monster-info/" --output-path docs
-
-# Commit newly generated assets
-git add docs/
-git commit -m "Updated github pages" -n
 
 # Generate the git info
 GIT_BRANCH=`git rev-parse --abbrev-ref HEAD`
@@ -17,5 +20,5 @@ echo -e "{\"gitBranch\": \"${GIT_BRANCH}\",\"gitCommit\": \"${GIT_COMMIT}\",\"gi
 cp src/assets/git-info.json docs/assets/git-info.json
 
 # Commit the git info
-git add docs/assets/git-info.json
-git commit -m "Updated git version info" -n
+git add docs/
+git commit -m "Updated github pages" -n
