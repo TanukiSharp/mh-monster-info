@@ -295,9 +295,6 @@ export class GlobalsService {
                 case 'game':
                     this.selectGameByName(keyValue[1].toLowerCase());
                     break;
-                case 'filter':
-                    this.searchFilter = keyValue[1];
-                    break;
                 case 'types':
                     this.selectedMonsterTypes = decodeURIComponent(keyValue[1]).split(';').filter(Boolean);
                     break;
@@ -317,9 +314,6 @@ export class GlobalsService {
 
         if (this.selectedGame) {
             value += `game:${this.selectedGame.fileNamePart}|`;
-        }
-        if (this.searchFilter) {
-            value += `filter:${this.searchFilter}|`;
         }
         if (this.selectedMonsterTypes) {
             value += `types:${encodeURIComponent(this.selectedMonsterTypes.join(';'))}|`;
