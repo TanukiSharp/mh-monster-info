@@ -1479,5 +1479,28 @@
             "blast": 2,
             "stun": 1
         }
+    },
+    {
+        "icon": 58,
+        "names": {
+            "EN": "Yian Garuga",
+            "JP": "イャンガルルガ",
+            "FR": "Yian Garuga"
+        },
+        "type": "bird",
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "water": 3,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 2
+        }
     }
 ]
