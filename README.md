@@ -21,14 +21,14 @@ All data and images are taken from:
 
 ## Goal
 
-The goal of this application is to help you properly choose your equipement for a given monster to hunt.
+The goal of this application is to help you properly choose your equipment for a given monster to hunt.
 
 ## Supported games
 
 Supported games are:
 - Monster Hunter 3 Ultimate
 - Monster Hunter 4 Ultimate
-- Monster Huner Double Cross
+- Monster Hunter Double Cross
 - Monster Hunter: World *(in development)*
 
 It is not planed to add other games for the moment. If you want to add another one, feel free to do so and make a pull request.
@@ -87,7 +87,7 @@ This is also useful when you want to learn the name of monsters in another langu
 
 ![Filter](doc/images/filter_07.png "Filter")
 
-The **filter mode** allow you to chose wether filtered out monsters are hidden or grayed. The *hide* filter mode is shown in above screen shots, hereafter is when the *shade* filter mode is used:
+The **filter mode** allow you to chose whether filtered out monsters are hidden or grayed. The *hide* filter mode is shown in above screen shots, hereafter is when the *shade* filter mode is used:
 
 ![Filter mode](doc/images/filter_08.png "Filter mode")
 
@@ -128,7 +128,7 @@ The way to proceed is as follow:
 
 ![Original input monster hit data](doc/images/original_monster_hit_data.png "Original input monster hit data")
 
-2. Paste data in the `input.txt` file watched by the tool ans save the file
+2. Paste data in the `input.txt` file watched by the tool and save the file
 
 ![Pasted input monster hit data](doc/images/monster_hit_data_input.png "Pasted input monster hit data")
 
@@ -218,7 +218,7 @@ The English `EN` is mandatory, others are optional and the name of the monster w
 The `attack` member contains the types of attribute damage (*element* and/or *ailment*) the monster deals.
 In this example, the monster deals ![Fire][fire] (fire), ![Stun][stun] (stun) and ![Poison][poison] (poison) damage.
 
-Some monsters do not deal attributed damade, in this case you can simply remove the whole `attack` member, or keep it empty.
+Some monsters do not deal attributed damage, in this case you can simply remove the whole `attack` member, or keep it empty.
 
 The number beside the attribute is not displayed in the UI, since it's more an indicator of the type of damages dealt than a numeric value.
 
@@ -313,7 +313,7 @@ If you want to provide a link to a friend, or bookmark one for yourself, you can
 
 At the end of the URL, add a `?` symbol, and then the arguments.
 It is possible to provide multiple arguments by separating them with a `&` symbol.
-Eventually, arguments are made of a key and value, which are separated by an `=` symbole.
+Eventually, arguments are made of a key and value, which are separated by an `=` symbol.
 
 Available arguments:
 
