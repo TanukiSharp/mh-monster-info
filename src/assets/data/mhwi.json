@@ -1614,5 +1614,56 @@
             "blast": 3,
             "stun": 2
         }
+    },
+    {
+        "icon": 63,
+        "names": {
+            "EN": "Silver Rathalos",
+            "JP": "リオレウス（希少種）",
+            "FR": "Rathalos d'argent"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 64,
+        "names": {
+            "EN": "Alatreon",
+            "JP": "アルバトリオン",
+            "FR": "Alatreon"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 3,
+            "ice": 4,
+            "dragon": 7
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 2,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
     }
 ]

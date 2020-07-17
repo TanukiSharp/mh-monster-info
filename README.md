@@ -301,7 +301,7 @@ The last part is the hard one, add monster names to all existing monster data fi
 
 *See the above section about adding a new game for more details.*
 
-## Hidden feature
+## Hidden features
 
 ### Cookies
 
