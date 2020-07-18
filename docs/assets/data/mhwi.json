@@ -1647,17 +1647,17 @@
         },
         "type": "elder",
         "attack": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 3,
+            "ice": 4,
+            "dragon": 5
+        },
+        "weak": {
             "water": 2,
             "thunder": 1,
             "ice": 3,
-            "dragon": 1
-        },
-        "weak": {
-            "fire": 2,
-            "water": 2,
-            "thunder": 2,
-            "ice": 3,
-            "dragon": 2,
+            "dragon": 1,
             "poison": 1,
             "sleep": 1,
             "paralysis": 1,
@@ -1675,16 +1675,16 @@
         "type": "elder",
         "attack": {
             "fire": 1,
+            "water": 2,
+            "thunder": 3,
+            "ice": 4,
+            "dragon": 5
+        },
+        "weak": {
+            "fire": 1,
             "water": 1,
             "thunder": 1,
             "ice": 1,
-            "dragon": 2
-        },
-        "weak": {
-            "fire": 2,
-            "water": 2,
-            "thunder": 2,
-            "ice": 3,
             "dragon": 2,
             "poison": 1,
             "sleep": 1,
@@ -1702,17 +1702,17 @@
         },
         "type": "elder",
         "attack": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 3,
+            "ice": 4,
+            "dragon": 5
+        },
+        "weak": {
             "fire": 3,
             "water": 1,
             "thunder": 2,
-            "dragon": 1
-        },
-        "weak": {
-            "fire": 2,
-            "water": 2,
-            "thunder": 2,
-            "ice": 3,
-            "dragon": 2,
+            "dragon": 1,
             "poison": 1,
             "sleep": 1,
             "paralysis": 1,
