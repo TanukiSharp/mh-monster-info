@@ -1641,17 +1641,71 @@
     {
         "icon": 64,
         "names": {
-            "EN": "Alatreon",
-            "JP": "アルバトリオン",
-            "FR": "Alatreon"
+            "EN": "Alatreon (on fire)",
+            "JP": "アルバトリオン (on fire)",
+            "FR": "Alatreon (on fire)"
+        },
+        "type": "elder",
+        "attack": {
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 2,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 64,
+        "names": {
+            "EN": "Alatreon (on dragon)",
+            "JP": "アルバトリオン (on dragon)",
+            "FR": "Alatreon (on dragon)"
         },
         "type": "elder",
         "attack": {
             "fire": 1,
+            "water": 1,
+            "thunder": 1,
+            "ice": 1,
+            "dragon": 2
+        },
+        "weak": {
+            "fire": 2,
             "water": 2,
-            "thunder": 3,
-            "ice": 4,
-            "dragon": 7
+            "thunder": 2,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 64,
+        "names": {
+            "EN": "Alatreon (on ice)",
+            "JP": "アルバトリオン (on ice)",
+            "FR": "Alatreon (on ice)"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "dragon": 1
         },
         "weak": {
             "fire": 2,
