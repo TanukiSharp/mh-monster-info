@@ -1719,5 +1719,50 @@
             "blast": 1,
             "stun": 1
         }
+    },
+    {
+        "icon": 65,
+        "names": {
+            "EN": "Furious Rajang",
+            "JP": "激昂ラージャン",
+            "FR": "Rajang orage"
+        },
+        "type": "fanged",
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "water": 1,
+            "ice": 3,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 66,
+        "names": {
+            "EN": "Raging Brachydios",
+            "JP": "猛り爆ぜるブラキディオス",
+            "FR": "Brachydios tempête"
+        },
+        "type": "brute",
+        "attack": {
+            "blast": 1,
+            "fire": 2
+        },
+        "weak": {
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
     }
 ]
