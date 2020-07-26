@@ -9,7 +9,7 @@ fi
 
 # Build Angular stuffs
 rm -rf docs
-ng build --prod --base-href "/mh-monster-info/" --output-path docs
+./node_modules/.bin/ng build --prod --base-href "/mh-monster-info/" --output-path docs
 
 # Generate the git info
 GIT_BRANCH=`git rev-parse --abbrev-ref HEAD`
