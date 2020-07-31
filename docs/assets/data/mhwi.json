@@ -1764,5 +1764,29 @@
             "blast": 1,
             "stun": 2
         }
+    },
+    {
+        "icon": 67,
+        "names": {
+            "EN": "Ruiner Nergigante",
+            "JP": "悉くを滅ぼすネルギガンテ",
+            "FR": "Nergigante chaos"
+        },
+        "type": "elder",
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 1
+        }
     }
 ]
