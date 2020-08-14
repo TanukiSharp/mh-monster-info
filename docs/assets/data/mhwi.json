@@ -1788,5 +1788,27 @@
             "blast": 3,
             "stun": 1
         }
+    },
+    {
+        "icon": 68,
+        "names": {
+            "EN": "Frostfang Barioth",
+            "JP": "氷刃佩くベリオロス",
+            "FR": "Barioth crocgivre"
+        },
+        "type": "flying",
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
     }
 ]
