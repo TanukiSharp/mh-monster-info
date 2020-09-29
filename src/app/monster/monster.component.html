@@ -11,12 +11,11 @@
                     </div>
                 </div>
             </div>
-
-            <span class="monsterType">{{languageService.getMonsterType(monsterInfoViewModel.monsterInfo.type)}}</span>
         </div>
 
         <span class="monsterName"><b>{{languageService.getName(monsterInfoViewModel.monsterInfo.names)}}</b></span>
         <img class="monsterIcon" src="./assets/images/monsters/{{globalsService.selectedGame.fileNamePart}}/{{monsterInfoViewModel.monsterInfo.iconNumber}}.png" width="120" height="120"/>
+        <span class="monsterType">{{languageService.getMonsterType(monsterInfoViewModel.monsterInfo.type)}}</span>
 
         <div class="monsterWeak">
             <span style="font-size: 0.65em;">{{languageService.translateAsync('WEAKNESS') | async}}</span>
