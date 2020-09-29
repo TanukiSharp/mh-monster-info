@@ -1,0 +1,96 @@
+[
+    {
+        "icon": 0,
+        "names": {
+            "EN": "Magnamalo",
+            "JP": "マガイマガド",
+            "FR": "Magnamalo"
+        },
+        "type": "fanged",
+        "attack": {
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 1,
+        "names": {
+            "EN": "Aknosom",
+            "JP": "アケノシルム",
+            "FR": "Aknosom"
+        },
+        "type": "bird",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 2,
+        "names": {
+            "EN": "Arzuros",
+            "JP": "アオアシラ",
+            "FR": "Arzuros"
+        },
+        "type": "fanged",
+        "attack": {
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 3,
+        "names": {
+            "EN": "Great Izuchi",
+            "JP": "オサイズチ",
+            "FR": "Grand Izuchi"
+        },
+        "type": "bird",
+        "attack": {
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 4,
+        "names": {
+            "EN": "Tetranadon",
+            "JP": "ヨツミワドウ",
+            "FR": "Tetranadon"
+        },
+        "type": "amphibian",
+        "attack": {
+            "water": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 5,
+        "names": {
+            "EN": "Tobi-Kadachi",
+            "JP": "トビカガチ",
+            "FR": "Tobi-Kadachi"
+        },
+        "type": "fanged",
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 6,
+        "names": {
+            "EN": "Yatsukadaki",
+            "JP": "ヤツカダキ",
+            "FR": "Yatsukadaki"
+        },
+        "type": "temnoceran",
+        "attack": {
+        },
+        "weak": {
+        }
+    }
+]

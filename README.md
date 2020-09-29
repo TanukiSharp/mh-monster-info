@@ -162,6 +162,7 @@ private _availableGames: IGameInfo[] = [
     { fileNamePart: 'mh4u', title: 'MH 4U' },
     { fileNamePart: 'mhxx', title: 'MH XX' },
     { fileNamePart: 'mhwi', title: 'MH WI' },
+    { fileNamePart: 'mhr', title: 'MH Rise' },
     { fileNamePart: 'my', title: 'MH My' } // <-- add description of new game here
 ];
 ```

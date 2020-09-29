@@ -43,7 +43,9 @@
         "PISCINE": "Piscine",
         "BIRD": "Bird",
         "ELDER": "Elder",
-        "RELICT": "Relict"
+        "RELICT": "Relict",
+        "AMPHIBIAN": "Amphibian",
+        "TEMNOCERAN": "Temnoceran"
     },
     "JP": {
         "GAME": "ゲーム",
@@ -88,7 +90,9 @@
         "PISCINE": "魚竜種",
         "BIRD": "鳥竜種",
         "ELDER": "古龍種",
-        "RELICT": "遺存種"
+        "RELICT": "遺存種",
+        "AMPHIBIAN": "両生種",
+        "TEMNOCERAN": " 鋏角種"
     },
     "FR": {
         "GAME": "Jeu",
@@ -133,6 +137,8 @@
         "PISCINE": "Wyverne aquatique",
         "BIRD": "Wyverne rapace",
         "ELDER": "Dragon ancien",
-        "RELICT": "Relique"
+        "RELICT": "Relique",
+        "AMPHIBIAN": "Amphibien",
+        "TEMNOCERAN": " Temnoceran"
     }
 }

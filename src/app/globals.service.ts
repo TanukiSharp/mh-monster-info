@@ -20,7 +20,8 @@ export class GlobalsService {
         { fileNamePart: 'mh3u', title: 'MH 3U' },
         { fileNamePart: 'mh4u', title: 'MH 4U' },
         { fileNamePart: 'mhxx', title: 'MH XX' },
-        { fileNamePart: 'mhwi', title: 'MH WI' }
+        { fileNamePart: 'mhwi', title: 'MH WI' },
+        { fileNamePart: 'mhr', title: 'MH Rise' }
     ];
 
     private _searchFilter = '';
