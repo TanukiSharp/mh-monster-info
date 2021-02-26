@@ -30,6 +30,7 @@ Supported games are:
 - Monster Hunter 4 Ultimate
 - Monster Hunter Double Cross
 - Monster Hunter: World *(in development)*
+- Monster Hunter: Rise *(in development)*
 
 It is not planed to add other games for the moment. If you want to add another one, feel free to do so and make a pull request.
 

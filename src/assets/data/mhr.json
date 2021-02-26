@@ -92,5 +92,196 @@
         },
         "weak": {
         }
+    },
+    {
+        "icon": 7,
+        "names": {
+            "EN": "Almudron",
+            "JP": "?",
+            "FR": "Almudron"
+        },
+        "type": "leviathan",
+        "attack": {
+            "water": 1,
+            "muddy": 2
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 8,
+        "names": {
+            "EN": "Anjanath",
+            "JP": "?",
+            "FR": "Anjanath"
+        },
+        "type": "brute",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 9,
+        "names": {
+            "EN": "Barioth",
+            "JP": "?",
+            "FR": "Barioth"
+        },
+        "type": "flying",
+        "attack": {
+            "ice": 1,
+            "snowman": 2
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 10,
+        "names": {
+            "EN": "Barroth",
+            "JP": "?",
+            "FR": "Barroth"
+        },
+        "type": "brute",
+        "attack": {
+            "water": 1,
+            "muddy": 2
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 11,
+        "names": {
+            "EN": "Basarios",
+            "JP": "?",
+            "FR": "Basarios"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1,
+            "poison": 2,
+            "sleep": 3
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 12,
+        "names": {
+            "EN": "Bishaten",
+            "JP": "?",
+            "FR": "Bishaten"
+        },
+        "type": "fanged",
+        "attack": {
+            "poison": 1,
+            "stun": 2
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 13,
+        "names": {
+            "EN": "Diablos",
+            "JP": "?",
+            "FR": "Diablos"
+        },
+        "type": "flying",
+        "attack": {
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 14,
+        "names": {
+            "EN": "Goss Harag",
+            "JP": "?",
+            "FR": "Goss Harag"
+        },
+        "type": "fanged",
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 15,
+        "names": {
+            "EN": "Great Baggi",
+            "JP": "?",
+            "FR": "Great Baggi"
+        },
+        "type": "bird",
+        "attack": {
+            "sleep": 1,
+            "ice": 2
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 16,
+        "names": {
+            "EN": "Great Izuchi",
+            "JP": "?",
+            "FR": "Great Izuchi"
+        },
+        "type": "bird",
+        "attack": {
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 17,
+        "names": {
+            "EN": "Great Wroggi",
+            "JP": "?",
+            "FR": "Great Wroggi"
+        },
+        "type": "bird",
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 18,
+        "names": {
+            "EN": "Jyuratodus",
+            "JP": "?",
+            "FR": "Jyuratodus"
+        },
+        "type": "piscine",
+        "attack": {
+            "water": 1,
+            "muddy": 2
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 19,
+        "names": {
+            "EN": "Khezu",
+            "JP": "?",
+            "FR": "Khezu"
+        },
+        "type": "flying",
+        "attack": {
+            "thunder": 1,
+            "paralysis": 2,
+            "stun": 3
+        },
+        "weak": {
+        }
     }
 ]
