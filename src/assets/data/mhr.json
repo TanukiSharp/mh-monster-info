@@ -283,5 +283,35 @@
         },
         "weak": {
         }
+    },
+    {
+        "icon": 20,
+        "names": {
+            "EN": "Kulu-Ya-Ku",
+            "JP": "?",
+            "FR": "Kulu-Ya-Ku"
+        },
+        "type": "bird",
+        "attack": {
+            "stun": 1
+        },
+        "weak": {
+        }
+    },
+    {
+        "icon": 21,
+        "names": {
+            "EN": "Lagombi",
+            "JP": "?",
+            "FR": "Lagombi"
+        },
+        "type": "fanged",
+        "attack": {
+            "ice": 1,
+            "snowman": 2
+        },
+        "weak": {
+        }
     }
+    
 ]
